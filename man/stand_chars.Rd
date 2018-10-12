@@ -4,7 +4,7 @@
 \alias{stand_chars}
 \title{Standardization of Strings}
 \usage{
-stand_chars(string, stand.table = NULL)
+stand_chars(string, stand.table = NULL, nthreads = 1)
 }
 \arguments{
 \item{string}{A string or a vector of strings to be standardized}
@@ -12,10 +12,32 @@ stand_chars(string, stand.table = NULL)
 \item{stand.table}{A table with standardizations (needs to have a column for the
 chracters that needs to be standardized (in hex values) and a column for the replacement)
 See the attached table as example. If no table is specified the default table will be used}
+
+\item{nthreads}{#' Number of threads for paralell processing (as integer) \cr
+nthreads = 1: No parallel processing (default) \cr
+nthreads = 0: All but one cores will be used (parallel::detectCores() - 1)}
 }
 \value{
 A string
 }
 \description{
 Standardization of Strings
+}
+\examples{
+# Replacement of non-ASCII characters to its nearest ASCII equivalent
+a <- "ḂḃḊḋḞḟṀṁṖṗṠṡṪṫẀẁẂẃẄẅẛỲỳƀƁƂƃƄƅƆƇƈƉƊƋƌƍƎƏƐƑƒƓƔƕƖƗƘƙƚƛƜƝƞƟƠơƢƣƤƥƦƧƨƩƪƫƬƭƮƯưƱƲƳƴƵƶƷƸƹ
+ƺƻƼƽƾƿǀǁǂǃǄǅǆǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǞǟǠǡǢǣǤǥǦǧǨǩǪǫǬǭǮǯǰǱǲǳǴǵǶǷǸǹǺǻǼǽǾǿȀȁȂȃȄȅ
+ȆȇȈȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝȞȟȠȡȢȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶȷȸȹȺȻȼȽȾȿɀɁɂɃɄɅɆɇɈɉɊɋɌɍɎɏĀāĂăĄą
+ĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘ
+řŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſ"
+stand_chars(a)
+
+# Standardization of some characters
+a <- c("A + B", "A AND B", "A & B", "( A and B  )")
+stand_chars(a)
+
+# Standardization with parallel processing
+a <- c("A + B", "A AND B", "A & B", "( A and B  )")
+stand_chars(a, nthreads = 0)
+
 }

@@ -14,7 +14,7 @@ db_clean <- readr::read_delim("00_tables/datastream_clean_regex.csv",
 
 devtools::use_data(db_clean, overwrite = TRUE)
 
-stand_table <- readr::read_delim("00_tables/utf-8_table_utf8.csv", ";")
+stand_table <- readr::read_delim("00_tables/standardization_table.csv", ";")
 devtools::use_data(stand_table, overwrite = TRUE)
 
 word_replace <- readr::read_delim(
