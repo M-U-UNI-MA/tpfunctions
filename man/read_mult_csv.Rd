@@ -5,7 +5,7 @@
 \title{Read multiple csv files into a dataframe}
 \usage{
 read_mult_csv(path, recursive = FALSE, delim = ";",
-  col.types = cols(.default = col_guess()))
+  col.types = readr::cols(.default = readr::col_guess()))
 }
 \arguments{
 \item{path}{path to the csv files}

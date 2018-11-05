@@ -7,10 +7,8 @@
 #'
 #' @return A dataframe
 #' @export
-read_mult_csv <- function(path,
-                          recursive = FALSE,
-                          delim = ";",
-                          col.types = cols(.default = col_guess())) {
+read_mult_csv <- function(path, recursive = FALSE, delim = ";",
+                          col.types = readr::cols(.default = readr::col_guess())) {
 
   `%>%` <- magrittr::`%>%`
 
@@ -24,7 +22,11 @@ read_mult_csv <- function(path,
 
   df <- lapply(v.files, function(x) {
     readr::read_delim(file = x, delim = ";", progress = FALSE, col_types = col.types)
-  }) %>% dplyr::bind_rows()
+  })
+
+  names(df) <- stringi::stri_replace_all_regex(basename(v.files), "\\.csv$", "")
+  df <- df %>%
+    dplyr::bind_rows(., .id = "file_origin")
 
   return(df)
 }

@@ -1,0 +1,1123 @@
+﻿abbr.;LEN;full_name_local;full_name_english;country
+;0;Společný podnik;Joint venture;CZ
+;0;Zájmové sdružení;Special interest club;CZ
+;0;Nadace;Foundation;CZ
+;0;Nadační fond;Foundation fund;CZ
+;0;Komoditní burza;Commodity exchange;CZ
+;0;Garanční fond obchodníků s cennými papíry;Guarantee Fund of Investment Firms;CZ
+;0;Ústav;Institute;CZ
+;0;Družstvo;Cooperative;CZ
+;0;Česká národní banka;Czech National Bank;CZ
+;0;Organizační složka státu;Organisational unit of the state;CZ
+;0;Stálý rozhodčí soud;Permanent Court of Arbitration;CZ
+;0;Příspěvková organizace;Subsidised organisation, semi-budgetary organisation;CZ
+;0;Správa železniční dopravní cesty, státní organizace;Railway Transport Route Administration (state organisation);CZ
+;0;Rada pro veřejný dohled nad auditem;Council for Public Audit Supervision;CZ
+;0;Veřejnoprávní instituce (ČT,ČRo,ČTK);Public law institution (Czech Television, Czech Radio, Czech Press Agency);CZ
+;0;Fond (ze zákona);Fund (statutory);CZ
+;0;Zdravotní pojišťovna;Health insurance company;CZ
+;0;Odštěpný závod nebo jiná organizační složka podniku zapisující se do obchodního rejstříku;Branch or other organisational unit of an incorporated enterprise;CZ
+;0;Samostatná drobná provozovna obecního úřadu;Independent small office of a municipal office;CZ
+;0;Podílový nebo penzijní fond;Unit trust or pension fund;CZ
+;0;Vysoká škola;University, college;CZ
+;0;Školská právnická osoba;Educational legal entity;CZ
+;0;Veřejná výzkumná instituce;Public research institution;CZ
+;0;Odborová organizace a organizace zaměstnavatelů;Trade union organisation and emloyers’ organisation;CZ
+;0;Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích;Special organisation to represent Czech interests in international non-governmental organisations;CZ
+;0;Podnik nebo hospodářské zařízení sdružení;Enterprise or economic organisation of an association;CZ
+;0;Spolek;Society;CZ
+;0;Politická strana, politické hnutí;Political party, political movement;CZ
+;0;Podnik nebo hospodářské zařízení politické strany;Enterprise or economic organisation of a political party;CZ
+;0;Církevní organizace a náboženské společnosti;Church organisation and religious societes;CZ
+;0;Evidované církevní právnické osoby;Registered church (legal entity);CZ
+;0;Svazy církví a náboženských společností ;Unions of churches and religious societies;CZ
+;0;Organizační jednotka sdružení;Organisational unit of an association;CZ
+;0;Organizační jednotka politické strany nebo politického hnutí;Organisational unit of a political party or political movement;CZ
+;0;Organizační jednotka odborové organizace a organizace zaměstnavatelů;Organisational unit of a trade union organisation and emloyers’ organisation;CZ
+;0;Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích;Organisational unit of the special organisation to represent Czech interests in international non-governmental organisations;CZ
+;0;Pobočný spolek;Subsidiary society;CZ
+;0;Stavovská organizace - profesní komora;Professional chamber;CZ
+;0;Komora (s výjimkou profesních komor);Chamber (excluding professional chambers);CZ
+;0;Zájmové sdružení právnických osob;Special interest club of legal entities;CZ
+;0;Honební společenstvo;Hunting society;CZ
+;0;Svazek obcí;Union of municipalities;CZ
+;0;Obec nebo městská část hlavního města Prahy;Municipality or city district of Prague;CZ
+;0;Kraj a hlavní město Praha;Region or capital city Prague;CZ
+;0;Regionální rada regionu soudržnosti;Regional Council of a cohesion region;CZ
+;0;Zastupitelský orgán jiných států;Representative office of another state;CZ
+;0;Mezinárodní odborová organizace;International trade union organisation;CZ
+;0;Mezinárodní organizace zaměstnavatelů;International organisation of employers;CZ
+;0;Mezinárodní nevládní organizace;International non-governmental organisation;CZ
+;0;Organizační jednotka mezinárodní nevládní organizace;Organisational unit of the international non-governmental organisation;CZ
+;0;Pobočná mezinárodní odborová organizace;Subsidiary international trade union organisation;CZ
+;0;Pobočná mezinárodní organizace zaměstnavatelů;Subsidiary international organisation of employers;CZ
+;0;Subjekt právním řádem výslovně neupravený;Entity not explicitly defined by law;CZ
+;0;Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku;Legal entity of an public register established by the special law;CZ
+;0;Sonstige Organisation ohne Erwerbszweck;Other non-profit organisation;DE
+;0;Erhvervsdrivende fond;Commercial foundation;DK
+;0;Forening;Association ;DK
+;0;Frivillig forening;Voluntary association;DK
+;0;Andelsselskab (-forening);Cooperative society;DK
+;0;Forening eller selskab med begr. ansvar;Limited liability association or company;DK
+;0;Dødsbo;Estate of deceased person;DK
+;0;Statslig administrativ enhed;Entitiy of central government;DK
+;0;Selvstændig offentlig virksomhed;Independent public company;DK
+;0;Amtskommune;County;DK
+;0;Region;Region;DK
+;0;Primærkommune;Municipality;DK
+;0;Folkekirkelige Institutioner;Establishmentarian church institution;DK
+;0;Enhed under oprettelse i E&S;Unit under creation in business register;DK
+;0;Øvrige virksomhedsformer;Other companies;DK
+;0;Særlig Finansiel virksomhed;Special financial company;DK
+;0;Interessentskab;General partnership;DK
+;0;Kommanditselskab;Limited partnership;DK
+;0;Medarbejderinvesteringsselskab;Employee investment company;DK
+;0;Partrederi;Shipping partnership;DK
+;0;Aktieselskab;Limited company ;DK
+;0;Kommanditaktieselskab;Limited partnership with a share capital;DK
+;0;Fonde og andre selvejende institutioner;Self-governing institution, association, foundation etc.;DK
+;0;Uoplyst virksomhedsform;Unknown legal form;DK
+;0;Sociedad Civil con personalidad jurídica;Non-commercial partnership with independent legal status;ES
+;0;Mutua;Mutual company;ES
+;0;Otras formas jurídicas;Other legal forms;ES
+;0;Fundación;Foundation;ES
+;0;Asociaciones y otras instituciones sin fines de lucro a servicio de los hogares;Associations and other non-profit institutions serving households;ES
+;0;Entidad de derecho público;Public law entity;ES
+;0;Patrimonio de inversión sin personalidad jurídica;Investment funds without independent legal status;ES
+;0;Avoin yhtiö;General partnership;FI
+;0;Keskinäinen kiinteistö-Oy;Mutual joint-stock property company;FI
+;0;Muu kiinteistö Oy (ei-keskinäinen);Other joint-stock property company (not mutual);FI
+;0;Konserni;Enterprise group;FI
+;0;Muu yhtiö;Other enterprise;FI
+;0;Aatteellinen yhdistys;Voluntary association;FI
+;0;Erityislainsäädäntöön perustuva yhdistys;Association based on separate legislation;FI
+;0;Keskinäinen vahinkovakuutusyhdistys;Mutual indemnity insurance association;FI
+;0;Metsänhoitoyhdistys;Forestry society;FI
+;0;Avustuskassa;Mutual benefit society;FI
+;0;Työttömyyskassa;Unemployment fund;FI
+;0;Muu taloudellinen yhdistys;Other economic association;FI
+;0;Muu yhdistys;Other association;FI
+;0;Eläkesäätiö (säädekirjalla perustettu);Pension foundation (founded by a charter of foundation);FI
+;0;Työeläkekassa;Pension fund;FI
+;0;Hypoteekkiyhdistys;Mortgage society;FI
+;0;Muu säätiö;Other foundation;FI
+;0;Valtio ja sen laitokset;State and its agencies;FI
+;0;Kunta;Municipality;FI
+;0;Kuntayhtymä;Joint municipal board;FI
+;0;Ahvenanmaan maakunta ja sen virastot;Region of Åland and its agencies;FI
+;0;Evankelis-luterilainen kirkko;Evangelical Lutheran Church;FI
+;0;Ortodoksinen kirkko;Greek Orthodox Church;FI
+;0;Rekisteröity uskonnollinen yhdyskunta;Registered religious community;FI
+;0;Ylioppilaskunta tai osakunta;Students' union or association;FI
+;0;Erillishallinnollinen valtion laitos;Governmental institution with separate administration;FI
+;0;Muu julkisoikeudellinen oikeushenkilö;Other legal person subject to public law;FI
+;0;Yhteisetuudet (esim. kalastuskunta);Mutual interest bodies (e.g. fishery collectives);FI
+;0;Yhteismetsä;Jointly owned forest;FI
+;0;Maatila;Farm;FI
+;0;Valtion liikelaitos;State-owned company;FI
+;0;Kunnallinen liikelaitos;Municipally-owned company;FI
+;0;Kuntainliiton (kuntayhtymän) liikelaitos;Joint local authority company;FI
+;0;Ahvenanmaan liikelaitos;Company owned by the Regional Government of Åland;FI
+;0;Muut (esim. tilapäinen oikeudellinen muoto);Others (e.g. temporary legal form);FI
+;0;Indivision avec personne morale ;Co-ownership with the status of legal entity;FR
+;0;Société créée de fait entre personnes physiques ;De facto company created between natural persons;FR
+;0;Société créée de fait avec personne morale ;De facto company created with a legal entity;FR
+;0;Société en participation entre personnes physiques ;Joint venture between natural persons;FR
+;0;Société en participation avec personne morale ;Joint venture with a legal entity;FR
+;0;Société en participation de professions libérales ;Joint venture between professionals;FR
+;0;Fiducie ;Trust;FR
+;0;Paroisse hors zone concordataire ;Parish not subject to concordat law;FR
+;0;Autre groupement de droit privé non doté de la personnalité morale ;Other private-law group not having legal personality;FR
+;0;Établissement public national à caractère industriel ou commercial doté d'un comptable public ;National industrial or commercial public undertaking having a public accountant;FR
+;0;Établissement public national à caractère industriel ou commercial non doté d'un comptable public ;National industrial or commercial public undertaking not having a public accountant;FR
+;0;Exploitant public ;Public operator;FR
+;0;Établissement public local à caractère industriel ou commercial ;Local industrial or commercial public undertaking;FR
+;0;Régie d'une collectivité locale à caractère industriel ou commercial ;Management of an industrial or commercial local authority;FR
+;0;Institution Banque de France ;Bank of France institution;FR
+;0;Société de caution mutuelle ;Mutual guarantee company;FR
+;0;Société coopérative de banque populaire ;A popular bank cooperative;FR
+;0;Caisse de crédit maritime mutuel ;Mutual maritime lending institution;FR
+;0;Caisse (fédérale) de crédit mutuel ;(Federal) mutal lending institution;FR
+;0;Association coopérative inscrite (droit local Alsace Moselle) ;Registered cooperative association (local law of Alsace Moselle);FR
+;0;Caisse d'épargne et de prévoyance à forme coopérative ;Cooperative savings and provident bank;FR
+;0;Société en nom collectif ;Commercial partnership;FR
+;0;Société en nom collectif coopérative ;Cooperative commercial partnership;FR
+;0;Société en commandite simple ;Ordinary limited partnership;FR
+;0;Société en commandite simple coopérative ;Ordinary cooperative limited partnership;FR
+;0;Société en commandite par actions ;Partnership limited by shares;FR
+;0;Société en commandite par actions coopérative ;Cooperative partnership limited by shares;FR
+;0;Société d'exercice libéral en commandite par actions ;Partnership limited by shares for a professional private practice;FR
+;0;SARL nationale ;National limited liability company;FR
+;0;SARL d'économie mixte ;Mixed economy limited liability company;FR
+;0;SARL immobilière pour le commerce et l'industrie (SICOMI) ;Limited liability real estate company for trade and industry;FR
+;0;SARL immobilière de gestion;Limited liability real estate management company;FR
+;0;SARL d'aménagement foncier et d'équipement rural (SAFER);Limited liability company for land development and rural establishment;FR
+;0;SARL mixte d'intérêt agricole (SMIA) ;Limited liability company with mixed agricultural purposes;FR
+;0;SARL d'intérêt collectif agricole (SICA) ;Limited liability company for collective agricultural purposes;FR
+;0;SARL d'attribution ;Limited liability allocation company;FR
+;0;SARL coopérative de construction ;Cooperative construction limited liability company;FR
+;0;SARL coopérative de consommation ;Cooperative consumer limited liability company;FR
+;0;SARL coopérative artisanale ;Cooperative craftworkers' limited liability company;FR
+;0;SARL coopérative d'intérêt maritime ;Cooperative limited liability company for maritime purposes;FR
+;0;SARL coopérative de transport;Cooperative limited liability transport company;FR
+;0;SARL coopérative ouvrière de production (SCOP);Cooperative workers' production limited liability company;FR
+;0;SARL union de sociétés coopératives ;Limited liability union of cooperative companies;FR
+;0;Autre SARL coopérative ;Other cooperative limited liability company;FR
+;0;Société d'exercice libéral à responsabilité limitée ;Limited liability company for a professional private practice;FR
+;0;SARL unipersonnelle ;Single-person limited liability company;FR
+;0;Société à responsabilité limitée (sans autre indication);Limited liability company (with no further details);FR
+;0;SA à participation ouvrière à conseil d'administration ;Workers' cooperative in the form of a public limited company with a board of directors;FR
+;0;SA nationale à conseil d'administration ;National public limited company with a board of directors;FR
+;0;SA d'économie mixte à conseil d'administration ;Mixed economy public limited company with a board of directors;FR
+;0;Société d'investissement à capital variable (SICAV) à conseil d'administration ;Open-end investment company with a board of directors;FR
+;0;SA immobilière pour le commerce et l'industrie (SICOMI) à conseil d'administration;Real estate public limited company for trade and industry with a board of directors;FR
+;0;SA immobilière d'investissement à conseil d'administration;Real estate investment public limited company with a board of directors;FR
+;0;SA d'aménagement foncier et d'équipement rural (SAFER) à conseil d'administration;Public limited company for land development and rural establishment with a board of directors;FR
+;0;Société anonyme mixte d'intérêt agricole (SMIA) à conseil d'administration ;Public limited company with mixed agricultural purposes with a board of directors;FR
+;0;SA d'intérêt collectif agricole (SICA) à conseil d'administration;Public limited company for collective agricultural purposes with a board of directors;FR
+;0;SA d'attribution à conseil d'administration;Public limited allocation company with a board of directors;FR
+;0;SA coopérative de construction à conseil d'administration;Public limited cooperative construction company with a board of directors;FR
+;0;SA de HLM à conseil d'administration ;Affordable housing public limited company with a board of directors;FR
+;0;SA coopérative de production de HLM à conseil d'administration ;Cooperative affordable housing production public limited company with a board of directors;FR
+;0;SA de crédit immobilier à conseil d'administration ;Real estate lending public limited company with a board of directors;FR
+;0;SA coopérative de consommation à conseil d'administration ;Consumer cooperative public limited company with a board of directors;FR
+;0;SA coopérative de commerçants-détaillants à conseil d'administration;Retailers' cooperative public limited company with a board of directors ;FR
+;0;SA coopérative artisanale à conseil d'administration ;Cooperative craftworkers' public limited company with a board of directors;FR
+;0;SA coopérative (d'intérêt) maritime à conseil d'administration ;Cooperative public limited company for maritime purposes with a board of directors;FR
+;0;SA coopérative de transport à conseil d'administration;Cooperative transport public limited company with a board of directors;FR
+;0;SA coopérative ouvrière de production (SCOP) à conseil d'administration;Cooperative workers' production public limited company with a board of directors;FR
+;0;SA union de sociétés coopératives à conseil d'administration ;Union of cooperative companies public limited company with a board of directors;FR
+;0;Autre SA coopérative à conseil d'administration ;Other cooperative public limited company with a board of directors;FR
+;0;Société de Participations Financières de Profession Libérale Société anonyme à conseil d'administration (SPFPL SA à conseil d'administration);Professional holding company Public liability company with a board of directors;FR
+;0;Société d'exercice libéral à forme anonyme à conseil d'administration ;Public limited company for a professional private practice with a board of directors;FR
+;0;SA à conseil d'administration (s.a.i.);Public limited company with a board of directors (real estate public limited company);FR
+;0;SA à participation ouvrière à directoire ;Workers' cooperative in the form of a public limited company with a management board;FR
+;0;SA nationale à directoire ;National public limited company with a management board;FR
+;0;SA d'économie mixte à directoire ;Mixed economy public limited company with a management board;FR
+;0;Société d'investissement à capital variable (SICAV) à directoire ;Open-end investment company with a management board;FR
+;0;SA immobilière pour le commerce et l'industrie (SICOMI) à directoire;Real estate public limited company for trade and industry with a management board;FR
+;0;SA immobilière d'investissement à directoire ;Real estate investment public limited company with a management board ;FR
+;0;Safer anonyme à directoire ;Public limited company for land development and rural establishment with a management board ;FR
+;0;SA mixte d'intérêt agricole (SMIA);Public limited company with mixed agricultural purposes with a management board;FR
+;0;SA d'intérêt collectif agricole (SICA);Public limited company for collective agricultural purposes with a management board;FR
+;0;SA d'attribution à directoire;Public limited allocation company with a management board;FR
+;0;SA coopérative de construction à directoire;Public limited cooperative construction company with a management board;FR
+;0;SA de HLM à directoire;Affordable housing public limited company with a management board;FR
+;0;Société coopérative de production de HLM anonyme à directoire ;Cooperative affordable housing production public limited company with a management board;FR
+;0;SA de crédit immobilier à directoire ;Real estate lending public limited company with a management board;FR
+;0;SA coopérative de consommation à directoire ;Consumer cooperative public limited company with a management board;FR
+;0;SA coopérative de commerçants-détaillants à directoire;Retailers' cooperative public limited company with a management board;FR
+;0;SA coopérative artisanale à directoire ;Cooperative craftworkers' public limited company with a management board;FR
+;0;SA coopérative d'intérêt maritime à directoire ;Cooperative public limited company for maritime purposes with a management board;FR
+;0;SA coopérative de transport à directoire ;Cooperative transport public limited company with a management board;FR
+;0;SA coopérative ouvrière de production (SCOP) à directoire;Cooperative workers' production public limited company with a management board;FR
+;0;SA union de sociétés coopératives à directoire ;Union of cooperative companies public limited company with a management board;FR
+;0;Autre SA coopérative à directoire;Other cooperative public limited company with a management board;FR
+;0;Société de Participations Financières de Profession Libérale Société anonyme à Directoire (SPFPL SA à directoire);Professional holding company Public limited company with a management board;FR
+;0;Société d'exercice libéral à forme anonyme à directoire ;Public limited company for a professional private practice with a management board;FR
+;0;SA à directoire (s.a.i.);Public limited company with a management board (real estate public limited company);FR
+;0;SAS, société par actions simplifiée;Simplified joint stock company;FR
+;0;Société par actions simplifiée à associé unique ou société par actions simplifiée unipersonnelle ;Simplified joint stock company with a single shareholder or single person simplified joint stock company;FR
+;0;Société d'exercice libéral par action simplifiée ;Simplifed joint stock company for a professional private practice;FR
+;0;Société européenne ;European company;FR
+;0;Caisse d'Épargne et de Prévoyance ;Savings and provident bank;FR
+;0;Société coopérative agricole ;Agricultural cooperative;FR
+;0;Union de sociétés coopératives agricoles ;Union of agricultural cooperatives;FR
+;0;Société d'assurance à forme mutuelle;Mutual insurance company;FR
+;0;Sociétés Interprofessionnelles de Soins Ambulatoires ;Inter-professional outpatient care companies;FR
+;0;Société civile d'intérêt collectif agricole (SICA);Civil-law company for collective agricultural purposes;FR
+;0;Groupement foncier agricole ;Agricultural land grouping;FR
+;0;Groupement agricole foncier ;Agricultural land grouping;FR
+;0;Groupement forestier ;Forestry grouping;FR
+;0;Groupement pastoral ;Pastoral grouping;FR
+;0;Groupement foncier et rural;Land and rural grouping;FR
+;0;Société civile foncière ;Land civil-law company;FR
+;0;Société civile immobilière ;Property civil-law company;FR
+;0;Société civile immobilière de construction-vente;Property civil-law company for construction and sale;FR
+;0;Société civile d'attribution ;Civil-law allocation company;FR
+;0;Société civile coopérative de construction ;Civil-law construction cooperative company;FR
+;0;Société civile immobilière d' accession progressive à la propriété;Property civil-law company for gradual accession to ownership;FR
+;0;Société civile coopérative de consommation ;Civil-law cooperative consumer company;FR
+;0;Société civile coopérative d'intérêt maritime ;Civil-law company for maritime purposes;FR
+;0;Société civile coopérative entre médecins ;Civil-law cooperative company between doctors;FR
+;0;Autre société civile coopérative ;Other civil-law cooperative company;FR
+;0;SCP d'avocats ;Civil-law professional partnership of lawyers ;FR
+;0;SCP d'avocats aux conseils ;Civil-law professional partnership of legal counsel;FR
+;0;SCP d'avoués d'appel ;Civil-law professional partnership of solicitors;FR
+;0;SCP d'huissiers ;Civil-law professional partnership of bailiffs;FR
+;0;SCP de notaires ;Civil-law professional partnership of notaries;FR
+;0;SCP de commissaires-priseurs ;Civil-law professional partnership of valuers and auctioneers;FR
+;0;SCP de greffiers de tribunal de commerce ;Civil-law professional partnership of clerks of the commercial court;FR
+;0;SCP de conseils juridiques ;Civil-law professional partnership of legal advisors;FR
+;0;SCP de commissaires aux comptes ;Civil-law professional partnership of auditors;FR
+;0;SCP de médecins ;Civil-law professional partnership of doctors;FR
+;0;SCP de dentistes ;Civil-law professional partnership of dentists;FR
+;0;SCP d'infirmiers ;Civil-law professional partnership of nurses;FR
+;0;SCP de masseurs-kinésithérapeutes;Civil-law professional partnership of masseurs and physiotherapists;FR
+;0;SCP de directeurs de laboratoire d'analyse médicale ;Civil-law professional partnership of directors of medical analysis laboratories;FR
+;0;SCP de vétérinaires ;Civil-law professional partnership of veterinary surgeons;FR
+;0;SCP de géomètres experts;Civil-law professional partnership of expert surveyors;FR
+;0;SCP d'architectes ;Civil-law professional partnership of architects;FR
+;0;Autre société civile professionnelle;Other civil-law professional partnership;FR
+;0;Société civile laitière ;Dairy civil-law partnership;FR
+;0;Société civile de moyens ;Resourcing civil-law partnership;FR
+;0;Caisse locale de crédit mutuel ;Local mutual lending bank;FR
+;0;Caisse de crédit agricole mutuel ;Mutual agricultural lending bank;FR
+;0;Société civile d'exploitation agricole ;Civil-law partnership for agricultural operations;FR
+;0;Exploitation agricole à responsabilité limitée ;Limited liability farm;FR
+;0;Autre société civile ;Other civil-law company;FR
+;0;Autre personne de droit privé inscrite au registre du commerce et des sociétés;Other private-law person registered in the trade and companies register;FR
+;0;Autorité constitutionnelle ;Constitutional authority;FR
+;0;Autorité administrative indépendante ;Independent administrative authority;FR
+;0;Ministère ;Ministry;FR
+;0;Service central d'un ministère ;Central department of a ministry;FR
+;0;Service du ministère de la Défense ;Ministry of Defence department;FR
+;0;Service déconcentré à compétence nationale d'un ministère (hors Défense);Decentralised department of a ministry (excluding Defence) with national jurisdiction;FR
+;0;Service déconcentré de l'État à compétence (inter) régionale ;Decentralised State department with (inter-)regional jurisdiction;FR
+;0;Service déconcentré de l'État à compétence (inter) départementale ;Decentralised State department with (inter-)departmental jurisdiction;FR
+;0;(Autre) Service déconcentré de l'État à compétence territoriale ;(Other) decentralised State department with territorial jurisdiction;FR
+;0;Ecole nationale non dotée de la personnalité morale ;National school not having legal entity status;FR
+;0;Commune et commune nouvelle ;Municipality and new municipality;FR
+;0;Département ;Department;FR
+;0;Collectivité et territoire d'Outre Mer;Overseas collectivity and territory;FR
+;0;(Autre) Collectivité territoriale ;(Other) territorial collectivity;FR
+;0;Région ;Region;FR
+;0;Commune associée et commune déléguée ;Associated municipality and delegated municipality;FR
+;0;Section de commune ;Section of a municipality;FR
+;0;Ensemble urbain ;Conurbation;FR
+;0;Association syndicale autorisée ;Authorised trade union association;FR
+;0;Association foncière urbaine ;Urban land association;FR
+;0;Association foncière de remembrement ;Land consolidation association;FR
+;0;Établissement public local d'enseignement ;Local public information undertaking;FR
+;0;Pôle métropolitain;Metropolitan centre;FR
+;0;Secteur de commune ;Sector of a municipality;FR
+;0;District urbain ;Urban district;FR
+;0;Communauté urbaine ;Urban community;FR
+;0;Métropole;Metropolis;FR
+;0;Communauté de communes ;Community of districts;FR
+;0;Communauté de villes ;Community of towns;FR
+;0;Communauté d'agglomération ;Community of an urban area;FR
+;0;Autre établissement public local de coopération non spécialisé ou entente ;Other local non-specialist public cooperation entity or agreement;FR
+;0;Institution interdépartementale ou entente;Inter-departmental institution or agreement;FR
+;0;Institution interrégionale ou entente ;Inter-regional institution or agreement;FR
+;0;Syndicat mixte fermé ;Mixed closed syndicate;FR
+;0;Syndicat mixte ouvert;Mixed open syndicate;FR
+;0;Commission syndicale pour la gestion des biens indivis des communes ;Trade union committee for the management of shared property of municipalities;FR
+;0;Centre communal d'action sociale ;Municipal social welfare centre;FR
+;0;Caisse des écoles ;Education funding authority;FR
+;0;Caisse de crédit municipal ;Municipal lending bank;FR
+;0;Établissement d'hospitalisation ;Hospital establishment;FR
+;0;Syndicat inter hospitalier ;Inter-hospital syndicate;FR
+;0;Établissement public local social et médico-social ;Local public social and medical/social undertaking;FR
+;0;Établissement public local culturel ;Local public cultural undertaking;FR
+;0;Régie d'une collectivité locale à caractère administratif ;Management of a local authority of an administrative nature;FR
+;0;(Autre) Établissement public administratif local ;(Other) local public administrative undertaking;FR
+;0;Organisme consulaire ;Consular body;FR
+;0;Établissement public national ayant fonction d'administration centrale ;National public undertaking having a central administration role;FR
+;0;Établissement public national à caractère scientifique culturel et professionnel ;National public undertaking of a scientific, cultural and professional nature;FR
+;0;Autre établissement public national d'enseignement ;Other national public teaching undertaking;FR
+;0;Autre établissement public national administratif à compétence territoriale limitée ;Other national public administrative undertaking with limited territorial jurisdiction;FR
+;0;Établissement public national à caractère administratif ;National public undertaking of an administrative nature;FR
+;0;Établissement public des cultes d'Alsace-Lorraine ;Public religious undertaking of Alsace-Lorraine;FR
+;0;Etablissement public administratif, cercle et foyer dans les armées ;Public administrative undertaking, army assistance centres;FR
+;0;Groupement de coopération sanitaire à gestion publique ;Publicly-managed cooperative healthcare group;FR
+;0;Autre personne morale de droit administratif ;Other administrative law legal entity;FR
+;0;Régime général de la Sécurité Sociale;General social security scheme;FR
+;0;Régime spécial de Sécurité Sociale;Special social security scheme;FR
+;0;Institution de retraite complémentaire ;Supplementary pension institution;FR
+;0;Mutualité sociale agricole ;Agricultural social mutual fund;FR
+;0;Régime maladie des non-salariés non agricoles ;Sickness scheme for non-employed, non-agricultural workers;FR
+;0;Régime vieillesse ne dépendant pas du régime général de la Sécurité Sociale;Retirement scheme not forming part of the general social security scheme;FR
+;0;Régime d'assurance chômage ;Unemployment insurance scheme;FR
+;0;Autre régime de prévoyance sociale ;Other social welfare scheme;FR
+;0;Mutuelle ;Mutual fund;FR
+;0;Assurance mutuelle agricole ;Mutual agricultural insurance;FR
+;0;Autre organisme mutualiste ;Other mutual organisation;FR
+;0;Comité central d'entreprise ;Central works council;FR
+;0;Comité d'établissement ;Works committee;FR
+;0;Syndicat de salariés ;Employees' trade union;FR
+;0;Syndicat patronal ;Employers' association;FR
+;0;Ordre professionnel ou assimilé ;Professional body or similar;FR
+;0;Centre technique industriel ou comité professionnel du développement économique ;Technical industrial centre or professional committee for economic development;FR
+;0;Autre organisme professionnel ;Other professional organisation;FR
+;0;Institution de prévoyance ;Welfare institution;FR
+;0;Institution de retraite supplémentaire ;Supplementary pension institution;FR
+;0;Syndicat de copropriété ;Association of co-owners;FR
+;0;Association syndicale libre ;Voluntary landowners' association;FR
+;0;Association non déclarée ;Undeclared association;FR
+;0;Association déclarée ;Declared association;FR
+;0;Association déclarée d'insertion par l'économique;Declared association for integration through work;FR
+;0;Association intermédiaire ;Intermediary association;FR
+;0;Groupement d'employeurs ;Grouping of employers;FR
+;0;Association d'avocats à responsabilité professionnelle individuelle;Association of lawyers with individual professional liability;FR
+;0;Association déclarée, reconnue d'utilité publique;Declared recognised public interest association;FR
+;0;Congrégation ;Religious order;FR
+;0;Association de droit local (Bas-Rhin, Haut-Rhin et Moselle);Local law association (Bas-Rhin, Haut-Rhin and Moselle);FR
+;0;Fondation ;Foundation;FR
+;0;Autre personne morale de droit privé ;Other private-law legal entity;FR
+;0;Groupement de coopération sanitaire à gestion privée ;Privately-managed cooperative healthcare grouping;FR
+;0;Corporations;Corporations;GB
+;0;Cooperatives;Cooperatives;GB
+;0;Partnerships;Partnerships;GB
+;0;Sole traders;Sole traders;GB
+;0;Limited liability company;Limited liability company;GB
+;0;Other;Any other legal form not included in the above list;GB
+;0;Ustanova;Institution;HR
+;0;Nedefinirano ;Other;HR
+;0;Druga osoba za koje je upis propisan zakonom;Other entities as prescribed by law;HR
+;0;Društvene organizacije;Public organisations;HR
+;0;Društveno poduzeće;Socially-owned enterprise;HR
+;0;Društvo s neograničenom solidarnom odgovornošću;Unlimited joint and several liability company;HR
+;0;Fondovi;Funds;HR
+;0;Fundacije;Foundations;HR
+;0;Gospodarska udruženja;Economic cooperations;HR
+;0;Grad;Town;HR
+;0;Gradsko poglavarstvo;City government;HR
+;0;Gradsko vijeće;City council;HR
+;0;Hrvatska narodna banka;Croatian National Bank;HR
+;0;Hrvatski sabor;Croatian Parliament;HR
+;0;Investicijski i mirovinski fondovi;Investment and pension funds;HR
+;0;Javno poduzeće;Public enterprise;HR
+;0;Ministarstva i ostali samostalni organi državne uprave;"Ministries and other independent bodies of 
+government administration";HR
+;0;Mirovinski fondovi;Pension funds;HR
+;0;Mjesni odbor, gradski kotar i gradska četvrt;Local committee, town district and town block;HR
+;0;Nenovčani investicijski fondovi;Non-money market investment funds;HR
+;0;Općina;Municipality;HR
+;0;Općinsko poglavarstvo;Municipal government;HR
+;0;Općinsko vijeće;Municipal council;HR
+;0;Organ društveno političke zajednice;Public organ;HR
+;0;Ostale organizacije;Other organisations;HR
+;0;Ostali oblici organiziranja;Other organisational forms;HR
+;0;Poduzeće za zapošljavanje invalida;Company for the employment of persons with disabilities;HR
+;0;Političke stranke;Political parties;HR
+;0;Pravosuđe;Justice;HR
+;0;Predsjednik Republike Hrvatske;President of the Republic of Croatia;HR
+;0;Privatno poduzeće;Private enterprise;HR
+;0;Republika Hrvatska;Republic of Croatia;HR
+;0;Složeni oblik udruživanja;Compound pooling system;HR
+;0;Stručne službe, uredi i druga tijela;Administrative staffs, offices and other bodies;HR
+;0;Udruga;Association;HR
+;0;Udruge građana;Civil cooperatives;HR
+;0;Udruge više razine;Higher-level association;HR
+;0;Ugovorno poduzeće;Contracted company;HR
+;0;Ustavni sud Republike Hrvatske;Constitutional Court of the Republic of Croatia;HR
+;0;Vlada Republike Hrvatske;Government of the Republic of Croatia;HR
+;0;Zadruga;Cooperative;HR
+;0;Zadružno poduzeće;Cooperative undertaking/Cooperative company;HR
+;0;Zajednica ustanova;Communities of institutions;HR
+;0;Zajednička financijska organizacija;Joint financial organisation;HR
+;0;Zaklade;Trusts;HR
+;0;Županija;County;HR
+;0;Županijska skupština;County Assembly;HR
+;0;Županijsko poglavarstvo;County government;HR
+;0;Novčani investicijski fondovi;Money market investment funds;HR
+;0;Takarék- és hitelszövetkezet;Savings and loan association savings and credit cooperative;HU
+;0;Egyéb szövetkezet;Other cooperative;HU
+;0;Egyéb szövetség ;Union (except sport union);HU
+;0;Kölcsönös biztosító egyesület;Mutual insurance association;HU
+;0;Egyéb egyesület;Other association;HU
+;0;Egyéb köztestület;Other public corporation;HU
+;0;Egyéb alapítvány;Other foundation;HU
+;0;Önkéntes kölcsönös biztosítópénztár;Voluntary mutual insurance fund;HU
+;0;Magánnyugdíjpénztár;Private pension fund;HU
+;0;Befektetési alap;Investment fund;HU
+;0;Egyéb adóalany;Other taxpayer;HU
+;0;Egyéb jogi forma;Other legal form;HU
+;0;Industrial and Provident Society;;IE
+;0;Friendly Society;;IE
+;0;Trade union;;IE
+;0;Local authority;;IE
+;0;Statutory corporation;;IE
+;0;Other legal form;;IE
+;0;General Government;General Government;MT
+;0;Corporations;Corporations;MT
+;0;Coöperatie;cooperative;NL
+;0;Vereniging;association, society;NL
+;0;Kerkgenootschap;church or spiritual organisation;NL
+;0;Stichting;foundation, trust;NL
+;0;Overige privaatrechtelijke personen;other legal entities governed by private law;NL
+;0;Publiekrechtelijke rechtspersonen op basis van artikel 2:1 lid 1 BW;Legal entities governed by public law under Section 2:1(1) of the Dutch Civil Code, legal entities under public law as referred to in Section 2:1(1) of the DCC;NL
+;0;Publiekrechtelijke rechtspersonen op basis van artikel 2:1 lid 2 BW;Legal entities governed by public law under Section 2:1(2) of the Dutch Civil Code, legal entities under public law as referred to in Section 2:1(2) of the DCC;NL
+;0;uczelnie;higher education institution;PL
+;0;partie polityczne;political party;PL
+;0;wspólnoty mieszkaniowe;condominium;PL
+;0;osoby fizyczne prowadzące działalność gospodarczą;sole proprietor;PL
+;0;przedsiębiorstwa państwowe;state-owned enterprise (SOE);PL
+;0;instytucje gospodarki budżetowej;state budget entity;PL
+;0;towarzystwa reasekuracji wzajemnej;mutual reinsurance society;PL
+;0;spółdzielnie;co-operative;PL
+;0;samodzielne publiczne zakłady opieki zdrowotnej;independent public health care unit;PL
+;0;fundacje;foundation;PL
+;0;kółka rolnicze;machinery ring;PL
+;0;spółdzielcze kasy oszczędnościowo-kredytowe;co-operative savings and credit union;PL
+;0;wspólnoty samorządowe;self-governed community;PL
+;0;Skarb Państwa;the State Treasury;PL
+;0;państwowe jednostki organizacyjne;state organizational unit;PL
+;0;kościoły i związki wyznaniowe;churches and religious unions;PL
+;0;stowarzyszenia i związki stowarzyszeń;association or union of associations;PL
+;0;organizacje społeczne i zawodowe;non-profit or professional organisatoin;PL
+;0;związki zawodowe;trade union;PL
+;0;zrzeszenia;federation;PL
+;0;związki inne niż zawodowe;union other than a trade union;PL
+;0;instytuty badawcze;research institute ;PL
+;0;cechy i izby rzemieślnicze, izby gospodarcze;guild and craft chamber, chamber of commerce;PL
+;0;placówki systemu oświaty;education system institution;PL
+;0;organy władzy, administracji rządowej, kontroli państwowej i ochrony prawa oraz sądy i trybunały;public authority body, government administration authority, state inspection authority;PL
+;0;samorządowe jednostki organizacyjne;self-government organizational unit;PL
+;0;fundusze inwestycyjne;investment fund;PL
+;0;fundusze inne niż inwestycyjne i inne niż otwarte fundusze emerytalne;fund other than investment fund or open pension fund ;PL
+;0;Sociedade Irregular;Unregistered company;PT
+;0;Fundos;Funds;PT
+;0;Alte forme de proprietate;Other legal forms;RO
+;0;Cooperativă de consum;Consumer cooperative;RO
+;0;Cooperativă de credit;Credit cooperative;RO
+;0;Cooperativă meșteșugărească;Handicraft cooperative;RO
+;0;Reprezentanta;Representative Office;RO
+;0;Reprezentant fiscal;Fiscal representative;RO
+;0;Societate agricolă;Agricultural company;RO
+;0;Enkelt bolag;Regulated partnership between two parts;SE
+;0;Partrederier;Limited shipping partnerships;SE
+;0;Gruvbolag;Mining partnerships;SE
+;0;Kooperativ hyresrättsförening;Cooperative renting rights associations;SE
+;0;Ideell förening;Non-profit organisation;SE
+;0;Samfälligheter;Joint-ownership associations;SE
+;0;Registrerat trossamfund;Registered religious communities;SE
+;0;Familjestiftelser;Family foundations;SE
+;0;Övriga stiftelser och fonder, inkl pensionsstiftelser och personalstiftelser;Other foundations and funds;SE
+;0;Statliga enheter;Entities of central government;SE
+;0;Kommuner;Municipalities;SE
+;0;Kommunalförbund;Federations of local government authorities;SE
+;0;Landsting;County councils;SE
+;0;Allmänna försäkringskassor;Social security offices;SE
+;0;Offentliga korporationer och anstalter;Public corporate bodies and institutions;SE
+;0;Hypoteksföreningar;Mortgage associations;SE
+;0;Regionala statliga myndigheter;Regional entities of central government;SE
+;0;Oskiftade dödsbon;Estates of deceased persons;SE
+;0;Ömsesidiga försäkringsbolag;Mutual insurance corporations;SE
+;0;Understödsföreningar, Försäkringsföreningar;Friendly societies;SE
+;0;Arbetslöshetskassor;Unemployment benefit funds;SE
+;0;Övriga svenska juridiska personer bildade enligt särskild lagstiftning;Other Swedish legal persons subject to special legislation;SE
+;0;Centralna banka;Central Bank;SI
+;0;Sklad;Trust;SI
+;0;Javni sklad;Public Fund;SI
+;0;Javna agencija;Public Agency;SI
+;0;Republika Slovenija;Republic of Slovenia;SI
+;0;Predsednik republike;President of the Republic;SI
+;0;Predstavniški organ (DZ, DS);Representative body (parliament, National council);SI
+;0;Varuh človekovih pravic;Human rights ombudsman;SI
+;0;Ustavno sodišče;Constitutional Court;SI
+;0;Računsko sodišče;The court of Auditors;SI
+;0;Vlada, vladna služba;Government, government service;SI
+;0;Ministrstvo;Ministry;SI
+;0;Sodišče (vrhovno, višja, okrožna, okrajna);Court (supreme, higher, district, county);SI
+;0;Tožilstvo;The prosecutor's office;SI
+;0;Pravobranilstvo;Attorneys Office;SI
+;0;Upravni organ v sestavi;Administrative body;SI
+;0;Upravna enota;Administrative unit;SI
+;0;Organ, organizacija širše lokalne skupnosti;Authority, organization wider local community;SI
+;0;Lokalne skupnosti;Local communities;SI
+;0;Krajevna skupnost, druge ožje lokalne skupnosti;The local community, other local community;SI
+;0;Pooblaščenec za dostop do informacij javnega značaja;The Commissioner for Access to Public Information;SI
+;0;Samostojni in neodvisni državni organ;Autonomous and independent state authority;SI
+;0;Javno podjetje;Public company;SI
+;0;Javni gospodarski zavod;Public economic institute;SI
+;0;Zavod;Institute;SI
+;0;Javni zavod;Public institute;SI
+;0;Skupnost zavodov;Community of institutes;SI
+;0;Zbornica;Chamber;SI
+;0;Članica univerze;University member;SI
+;0;Gospodarska zbornica;Chamber of Commerce;SI
+;0;Javni raziskovalni zavod;Public research institut;SI
+;0;Skupnost lastnikov stanovanj;Community of homeowners;SI
+;0;Ustanova;Institution;SI
+;0;Agrarne, pašne in vaške skupnosti;Agriculture, grazing and village communities;SI
+;0;Druge skupnosti;Other communities;SI
+;0;Mladinski svet;Youth Council;SI
+;0;Narodnostna skupnost;Ethnic community;SI
+;0;Študentska organizacija;Student organization;SI
+;0;Nevladna organizacija;Non-government organization;SI
+;0;Politična stranka;Political party;SI
+;0;Sindikat;Union;SI
+;0;Društvo, zveza društev;Association, Federation;SI
+;0;Verska skupnost in podobne verske organizacije;Religious community and religious organizations;SI
+;0;Stanovanjska zadruga;Housing Association;SI
+;0;Obrtna zadruga;Chamber of Crafts;SI
+;0;Hran. kredit. služba;Savings and credit services;SI
+;0;Kmetijska zadruga;Agricultural cooperative;SI
+;0;zavod v zaseb. last.;Institute in private property;SI
+;0;Družbeno podj., p. o.;Social enterprise;SI
+;0;zadruga;Cooperative;SI
+;0;Druge oblike poslovnih subjektov;Other forms of business entities;SI
+;0;Režijski obrat;Overheads plant;SI
+;0;Poslovna enota;Business unit;SI
+;0;Zadružna enota;The cooperative unit;SI
+;0;Organizacijska enota;Organizational unit;SI
+;0;Druge oblike delov poslovnih subjektov;Other forms of parts of business entities;SI
+;0;Nadácia;Foundation;SK
+;0; Neinvestičný fond;Non-investment fund;SK
+;0;Nezisková organizácia poskytujúca všeobecne prospešné služby;Non-profit organization providing community services;SK
+;0;Jednoduchá spoločnosť na akcie;Simple joint stock company;SK
+;0;Družstvo;Cooperative;SK
+;0;Spoločenstvá vlastníkov pozemkov, bytov a pod.;Associations of land owners, flats owner etc.;SK
+;0;Národná banka Slovenska;National Bank of Slovakia;SK
+;0;Banka-štátny peňažný ústav;Bank - state monetary institution;SK
+;0;Rozpočtová organizácia;Budgetary organization;SK
+;0;Príspevková organizácia;Organization based on state contributions;SK
+;0;Fondy;Funds;SK
+;0;Verejnoprávna inštitúcia;Public legal institution;SK
+;0;Iná organizácia verejnej správy;Other organization of public administration;SK
+;0;Doplnková dôchodková poisťovňa;Complementary pension funding;SK
+;0;Komoditná burza;Commodity Exchange;SK
+;0;Združenie (zväz, spolok, spoločnosť, klub ai.);Association (league, union, society, club, etc.);SK
+;0;Politická strana, politické hnutie;Political party, political movement;SK
+;0;Cirkevná organizácia;Ecclesiastical organization;SK
+;0;Stavovská organizácia - profesná komora;Professional organization - professional chamber;SK
+;0;Komora (s výnimkou profesných komôr);Chamber (except professional chambers);SK
+;0;Záujmové združenie právnických osôb;Interest association of legal persons;SK
+;0;Obec (obecný úrad), mesto (mestský úrad);Municipality (municipal office);SK
+;0;Zastupiteľské orgány iných štátov;Diplomatic corps of foreign country;SK
+;0;Zahraničné kultúrne, informačné stredisko, rozhlasová, tlačová a televízna agentúra;Foreign centre for culture and information, agency for radio, press and television;SK
+;0;Medzinárodné organizácie a združenia;International organization and association;SK
+;0;Corporations;Corporations;-
+;0;Cooperatives;Cooperatives;-
+;0;Partnerships;Partnerships;-
+;0;Sole traders;Sole traders;-
+;0;Limited liability company;Limited liability company;-
+;0;Other;Any other legal form not included in the above list;-
+;0;Conventional legal form for Special funds;Special funds are unincorporated investment funds comprising investment portfolios owned by the group of participants and whose management is undertaken, in general, by other financial corporations. Such funds are institutional units that are separate from the managing financial corporation;-
+OG;2;Offene Gesellschaft;General partnership;AT
+KG;2;Kommanditgesellschaft;Limited partnership;AT
+AG;2;Aktiengesellschaft;Plc (UK);AT
+SR;2;Sonstiger Rechtsträger;Other Legal Entity;AT
+EG;2;Eigentümergemeinschaft;owner association;AT
+AD;2;Акционерно дружество (АД);Joint-stock company;BG
+KD;2;Командиртно дружество (КД);Limited partnership;BG
+SD;2;Събирателно дружество (СД);General partnership;BG
+ET;2;Едноличен търговец (ЕТ);Sole proprietor;BG
+SP;2;Αυτοτελώς εργαζόμενος;Sole proprietorship;CY
+SF;2;Σωματεία και Ιδρυμάτα ;Societies & Foundations;CY
+PF;2;Ταμεία Προνοίας;Pension/ Provident Funds;CY
+NA;2;Odborová organizace;Trade union organisation;CZ
+NA;2;Organizace zaměstnavatelů;Employers organisation;CZ
+NA;2;Svěřenský fond;Trust fund;CZ
+KG;2;Kommanditgesellschaft;Limited partnership;DE
+AG;2;Aktiengesellschaft;Public limited company;DE
+wV;2;Wirtschaftlicher Verein;Registered association by charter ;DE
+eG;2;Eingetragene Genossenschaft;Registered cooperative company;DE
+AS;2;Aktsiaselts;Public limited company ;EE
+OÜ;2;Osaühing;Private limited company;EE
+TÜ;2;Täisühing;General partnership;EE
+UÜ;2;Usaldusühing;Limited partnership;EE
+SA;2;Sihtasutus;Foundation;EE
+SA;2;Sociedad Anónima;Public limited company;ES
+SL;2;Sociedad de responsabilidad limitada;Private limited company;ES
+SC;2;Sociedad colectiva;General partnerships;ES
+SP;2;Sociedad profesional;Private company of professional members;ES
+ky;2;Kommandiittiyhtiö;Limited partnership;FI
+kb;2;Kommandiittiyhtiö;Limited partnership;FI
+oy;2;Osakeyhtiö;Limited company;FI
+ab;2;Osakeyhtiö;Limited company;FI
+op;2;Osuuspankki;Cooperative bank;FI
+sr;2;Säätiö (säätiölain mukainen);Foundation (according to the Foundations Act);FI
+sp;2;Säästöpankki;Savings bank;FI
+OE;2;Ομόρρυθμη Εταιρεία ;General Partnership;GR
+EE;2;Ετερόρρυθμη Εταιρεία ;Limited partnership (partnership company);GR
+SA;2;Ανώνυμη Εταιρεία ;Public Limited Company, Societe Anonyme, Incorporated Company, Joint-stock Company;GR
+SC;2;Ναυτική εταιρία ;Shipping Company;GR
+JV;2;Κοινοπραξία ;Joint Venture;GR
+PL;2;Νομικά Πρόσωπα Δημοσίου Δικαίου ;Legal Entities of Public Law;GR
+AB;2;Akcinė bendrovė;Public Limited Company;LT
+KO;2;Kooperatinė bendrovė (kooperatyvas);Cooperative Society (Cooperative);LT
+MB;2;Mažoji bendrija;Small Partnership;LT
+II;2;Individuali įmonė;Individual Enterprise / Sole proprietorship;LT
+VI;2;Valstybės įmonė;State Enterprise;LT
+SI;2;Savivaldybės įmonė;Municipal Enterprise;LT
+VS;2;Viešoji įstaiga;Public Institution;LT
+BI;2;Biudžetinė įstaiga;Budgetary Institution;LT
+LF;2;Labdaros ir paramos fondas;Charity and Sponsorship Fund;LT
+BN;2;Bendrija;Partnership;LT
+SD;2;Sodininkų bendrija;Gardeners’ Partnership;LT
+PP;2;Politinė partija;Political Party;LT
+TR;2;Tradicinė religinė bendruomenė ar bendrija;Traditional Lithuanian Religious Congregation or Community;LT
+RB;2;Religinė bendruomenė ar bendrija;Religious Community and Association;LT
+PS;2;Profesinė sąjunga ar susivienijimas;Trade Union;LT
+NA;2;Nuolatinė komercinio arbitražo institucija;Domicile Arbitration Institution;LT
+PR;2;Prekybos, pramonės ir amatų rūmai;Chamber of commerce, industry and crafts;LT
+SS;2;Šaulių sąjunga;Riflemen’s Union;LT
+CB;2;Centrinis bankas;Central Bank;LT
+EI;2;Entreprise individuelle;Sole proprietorship;LU
+SC;2;Société civile;Civil company ;LU
+AM;2;Association momentanée;Temporary partnership;LU
+AA;2;Association agricole;Agricultural association ;LU
+EP;2;Etablissement public;Public establishment;LU
+SP;2;Secteur public;Public sector;LU
+AS;2;Akciju sabiedrība;Stock company;LV
+VU;2;Valsts uzņēmums ;State enterprise;LV
+PS;2;Pilnsabiedrība;General partnership;LV
+KS;2;Komandītsabiedrība;Limited partnership;LV
+IK;2;Individuālais komersants;Individual merchant;LV
+KB;2;Kooperatīvā sabiedrība ;Cooperative society;LV
+OC;2;Overseas Company;Overseas Company;MT
+SV;2;SICAV (Société d’Investissement à Capital Variable);Investment companies with variable share capital;MT
+VO;2;Voluntary;Voluntary/Non-for profit Organisations;MT
+BV;2;Besloten vennootschap;private limited company;NL
+NV;2;Naamloze vennootschap;public limited company;NL
+OI;2;Organizações Internacionais;International Organizations;PT
+RA;2;Regie autonomă;Public company;RO
+AB;2;Bankaktiebolag (AB);Limited banking companies;SE
+AB;2;Försäkringsaktiebolag (AB);Limited insurance companies;SE
+AB;2;Övriga aktiebolag (AB);Other limited companies;SE
+SE;2;Societas Europea;European company (a type of public, limited-liability company regulated under EU law);-
+GEN;3;Erwerbs- und Wirtschaftsgenossenschaft;Cooperative;AT
+ÖrK;3;Öffentlich rechtliche Körperschaften;public corporation, corporation of public law;AT
+ÖrS;3;Öffentlich rechtliche Stiftungen;public trust, corporation of public law;AT
+VER;3;Vereine;registered association, corporation of public law;AT
+SA ;3;Société anonyme ;Public limited company;BE
+ AG;3; Aktiengesellschaft;Public limited company;BE
+UP ;3;Union professionnelle ;Professional association;BE
+ BV;3; Berufsvereinigung;Professional association;BE
+ LG;3; Landwirtschaftliche Gesellschaft;Agricultural company;BE
+ ÖE;3; Öffentliche Einrichtung;Public institution;BE
+ LH;3; Pfandleihhaus;Pawnshop;BE
+PW ;3;Polder - wateringue ;Polder - watering;BE
+SF ;3;Société en formation ;Company under formation;BE
+RW ;3;Autorité de la Région wallonne ;Authorities of the Walloon Region;BE
+ WR;3; Behörde der Wallonischen Region;Authorities of the Walloon Region;BE
+ DG;3; Behörde der Deutschsprachigen Gemeinschaft;Authorities of the German-speaking Community;BE
+ LP;3; Lokale Polizeizone;Local Police;BE
+IC ;3;Intercommunale ;Intermunicipal company;BE
+ IK;3; Interkommunale;Intermunicipal company;BE
+OOD;3;Дружество с ограничена отговорност (ООД);Limited liability company;BG
+KDA;3;Командиртно дружество с акции (КДА);Partnership limited by shares;BG
+EAD;3;Еднолично акционерно дружество (ЕАД);Single person joint-stock company;BG
+LTD;3;Ιδιωτική Εταιρεία;Private limited company/ Ltd;CY
+PLC;3;Δημόσια Εταιρεία;Public limited company/ Plc;CY
+OTH;3;Άλλη νομική μορφή;Other legal form;CY
+svj;3;Společenství vlastníků jednotek;Owners’ association (apartment owners’ association);CZ
+GbR;3;Gesellschaft bürgerlichen Rechts ;Partnership under civil law;DE
+OHG;3;Offene Handelsgesellschaft;General partnership;DE
+AöR;3;Anstalt des öffentlichen Rechts;Institution established under public law;DE
+KöR;3;Körperschaft des öffentlichen Rechts;Public body / statutory company;DE
+SöR;3;Stiftung des öffentlichen Rechts;Public foundation;DE
+BeG;3;Betriebe der Gebietskörperschaften;Municipal undertaking;DE
+SpR;3;Stiftung des privaten Rechts;Private foundation;DE
+WuR;3;Weltanschauungs- und Religionsgemeinschaft;Religious community;DE
+ApS;3;Anpartselskab;Private limited company ;DK
+IVS;3;Iværksætterselskab;Entrepreneurial limited company;DK
+MTÜ;3;Mittetulundusühing;Non-profit association;EE
+TuÜ;3;Tulundusühistu;Commercial association;EE
+SAU;3;Sociedad Anónima Unipersonal;Single-member public limited company;ES
+SAL;3;Sociedad Anónima Laboral;Worker-owned public limited company ;ES
+SRL;3;Sociedad de responsabilidad limitada;Private limited company;ES
+SLU;3;Sociedad Limitada Unipersonal;Single-member private limited company;ES
+SLL;3;Sociedad Limitada Laboral;Worker-owned private limited company ;ES
+SRC;3;Sociedad colectiva;General partnerships;ES
+SGR;3;Sociedad de garantía recíproca;Mutual Guarantee Company;ES
+SAT;3;Sociedad agraria de transformación;Farming partnerships;ES
+AIE;3;Agrupación de Interés económico;Economic interest grouping;ES
+oyj;3;Osakeyhtiö;Limited company;FI
+osk;3;Osuuskunta;Co-operative society;FI
+GIE;3;Groupement d'intérêt économique ;Economic interest grouping;FR
+GIP;3;Groupement d'intérêt public ;Public interest grouping;FR
+CLA;3;Αστική  Εταιρεία ;Civil-law Association;GR
+SLP;3;Αφανής Εταιρεία ;Silent Partnership;GR
+EPE;3;Εταιρεία Περιορισμένης Ευθύνης ;Limited Liability Company;GR
+IKE;3;Ιδιωτική Κεφαλαιουχική Εταιρεία ;Private Capital Company;GR
+JSO;3;Συμπλοιοκτησία ;Joint Ship-ownership;GR
+CLF;3;Σωματεία - Ιδρύματα ;Club, Union, Syndicate, Foundation;GR
+GIU;3;Gospodarsko interesno udruženje;Economic interest grouping;HR
+Rt.;3;Részvénytársaság;Limited company;HU
+Bt.;3;Betéti társaság;Limited partnership;HU
+OBA;3;Országos betétbiztosítási alap;National deposit insurance fund;HU
+LTD;3;Private Company Limited by Shares (LTD company);;IE
+DAC;3;Designated Activity Company (DAC) – (limited by shares). ;;IE
+DAC;3;Designated Activity Company Limited by Guarantee (DAC) – (limited by guarantee);;IE
+CLG;3;Company Limited by Guarantee (CLG) (limited by guarantee not having a share capital);;IE
+PLC;3;Public Limited Company (PLC);;IE
+SMC;3;Single Member Company;;IE
+UC ;3;Unlimited company ;;IE
+UAB;3;Uždaroji akcinė bendrovė;Private Limited Company;LT
+TUB;3;Tikroji ūkinė bendrija;General Partnership;LT
+KUB;3;Komanditinė ūkinė bendrija;Limited Partnership;LT
+ZUB;3;Žemės ūkio bendrovė;Agricultural Company;LT
+APB;3;Advokatų profesinė bendrija;Lawyers' Professional Partnership;LT
+PDB;3;Privačių detektyvų bendrija;Society of Private Detectives;LT
+CRC;3;Bendras valdymo ir pranešimų centras;Combined Control and Reporting Centre;LT
+RTK;3;Lietuvos radijo ir televizijos komisija;The Radio and Television Commission of Lithuania;LT
+SA ;3;Société anonyme;Public limited company;LU
+GIE;3;Groupement d'intérêt économique;Economic interest group;LU
+FON;3;Fondation;Foundation;LU
+AAM;3;Association d'assurances mutuelles;Mutual Insurance Association ;LU
+SNC;3;Société en nom collectif;Partnership;LU
+FCP;3;Fonds commun de placement;Mutual Funds;LU
+AUT;3;Autres personnes morales dont l'immatriculation est prévue par l'article 1 de la loi modifiée du 19 décembre 2002 concernant le registre de commerce et des sociétésdes entreprises;Other legal person;LU
+SIA;3;Sabiedrība ar ierobežotu atbildību;Limited liability company;LV
+PSV;3;Pašvaldības uzņēmums ;Municipal enterprise;LV
+UZN;3;Uzņēmējsabiedrības uzņēmums ;Enterprise of the company;LV
+LIG;3;Līgumsabiedrība ar pilnu atbildību ;Partnership with full responsibility;LV
+PAJ;3;Paju sabiedrība ;Joint stock company;LV
+PAP;3;Sabiedrība ar papildu atbildību;Additional liability company;LV
+GIM;3;Ģimenes uzņēmums ;Sole proprietorship (family enterprise)  ;LV
+IND;3;Individuālais uzņēmums ;Sole proprietorship (individual enterprise)  ;LV
+KBS;3;Kooperatīvo biedrību savienība ;Union of cooperative societies;LV
+KBU;3;Kooperatīvo biedrību uzņēmums ;Enterprise of cooperative societies;LV
+KSS;3;Kooperatīvo biedrību savienības uzņēmums ;Enterprise of union of cooperative societies;LV
+ZEM;3;Zemnieku saimniecība ;Farm (farming enterprise);LV
+ZVJ;3;Zvejnieku saimniecība ;Farm (fishing enterprise);LV
+REL;3;Reliģiskas organizācijas uzņēmums ;Enterprise of religious organisation;LV
+SOU;3;Sabiedriskās organizācijas uzņēmums ;Enterprise of NGO;LV
+PAR;3;Pārstāvniecība;Permanent representative office;LV
+LTD;3;Limited;Private limited company;MT
+PCC;3;Protected cell company;Protected cell company;MT
+PLC;3;Public limited company;Public limited company;MT
+OWM;3;Onderlinge waarborgmaatschappij;mutual insurance association;NL
+VVE;3;Vereniging van eigenaars;(home) owners' association;NL
+TUW;3;towarzystwa ubezpieczeń wzajemnych;mutual insurance society;PL
+OFE;3;otwarte fundusze emerytalne;open pension fund;PL
+ACE;3;Agrupamento Complementar de Empresas (ACE);Complementary Grouping of Companies ;PT
+Lda;3;Sociedade por Quotas;Private limited company;PT
+SA ;3;Sociedade Anónima;Public limited company;PT
+SNC;3;Sociedades em Nome Coletivo;Partnerships;PT
+SAD;3;Sociedade Anónima Desportiva;Public limited sports company;PT
+EPE;3;Entidade Pública Empresarial;Public corporation;PT
+OAP;3;Organismo da Administração Pública;Public Institution;PT
+PCR;3;Pessoa Colectiva Religiosa;Religious legal person;PT
+SA ;3;Societate pe acţiuni;Joint Stock Company;RO
+SRL;3;Societate cu răspundere limitată;Limited Liability Company (Ltd);RO
+SCS;3;Societate în comandită simplă;Limited partnership;RO
+SCA;3;Societate în comandită pe acţiuni;Limited partnership with shares;RO
+ONG;3;Organizație non-guvernamentală;Non-Governmental Organization/Non-Profit institution;RO
+SNC;3;Societate în nume colectiv;General partnership;RO
+GIE;3;Grupul de interes economic;Economic interest grouping;RO
+BRF;3;Bostadsrättsförening (BRF) ;Tenant owners’ associations;SE
+Spb;3;Sparbanker (Spb);Savings banks;SE
+GIZ;3;Gospodarsko interesno združenje GIZ;Economic Interest Grouping EIG;SI
+VÚC;3;Samosprávny kraj (úrad samosprávneho kraja);Office of local government (regional level);SK
+SCE;3;Societas Cooperativa Europea;European cooperative society;-
+GmbH;4;Gesellschaft mit beschränkter Haftung;Ltd (UK);AT
+OFP ;4;Organisme de financement de pensions / Organisme voor de Financiering van Pensioenen / Organismus für die Finanzierung von Pensionen;Organisation for financing pensions;BE
+SNC ;4;Société en nom collectif ;General partnership;BE
+ OHG;4; Offene Handelsgesellschaft;General partnership;BE
+SCS ;4;Société en commandite simple ;Ordinary limited partnership;BE
+ EKG;4; Einfache Kommanditgesellschaft;Ordinary limited partnership;BE
+SCA ;4;Société en commandite par actions ;Partnership limited by shares;BE
+ NV ;4; Naamloze vennootschap ;Public limited company;BE
+ VoG;4; Vereinigung ohne Gewinnerzielungsabsicht;Non-profit association;BE
+ BV ;4; Beroepsvereniging ;Professional association;BE
+AAM ;4;Association d'assurances mutuelles ;Mutual insurance association / Mutual insurance fund under private law;BE
+ LV ;4; Landbouwvennootschap ;Agricultural company;BE
+ EoG;4; Einrichtung ohne Gewinnerzielungsabsicht;Non-profit institution;BE
+FUP ;4;Fondation d'utilité publique ;Public utility foundation;BE
+ gnS;4; Gemeinnützige Stiftung;Public utility foundation;BE
+GIE ;4;Groupement d'intérêt économique ;Economic interest grouping;BE
+ WIV;4; Wirtschaftliche Interessenvereinigung;Economic interest grouping;BE
+ACP ;4;Association des copropriétaires ;Joint owners' association;BE
+ MEV;4; Miteigentümervereinigung;Joint owners' association;BE
+ OI ;4; Openbare instelling ;Public institution;BE
+ PW ;4; Polder - Watering ;Polder - watering;BE
+AFJ ;4;Autre forme juridique  (active) ;Other legal form (active);BE
+ AV ;4;  Andere rechtsvorm (actief) ;Other legal form (active);BE
+ ARF;4;  Andere Rechtsform (tätig);Other legal form (active);BE
+ VV ;4; Vennootschap in oprichting ;Company under formation;BE
+ GbG;4; In Gründung befindliche Gesellschaft;Company under formation;BE
+PPEU;4;Europese politieke partij;European political party;BE
+PPEU;4;Parti politique européen;European political party;BE
+EUPP;4;Europäische politische Partei;European political party;BE
+FPEU;4;Europese politieke stichting;European political foundation;BE
+FPEU;4;Fondation politique européenne;European political foundation;BE
+EUPS;4;Europäische politische Stiftung;European political foundation;BE
+SPF ;4;Service public fédéral ;Federal Public Service;BE
+ FÖD;4; Föderaler öffentlicher Dienst;Federal Public Service;BE
+SPP ;4;Service public fédéral de programmation ;Federal Public Planning Service ;BE
+ FÖP;4; Föderaler öffentlicher Programmierungsdienst;Federal Public Planning Service ;BE
+ WG ;4; Overheid van het Waalse Gewest ;Authorities of the Walloon Region;BE
+ RBH;4; Behörde der Region Brüssel-Hauptstadt;Authorities of the Brussels Capital Region;BE
+ FrG;4; Behörde der Französischen Gemeinschaft;Authorities of the French Community;BE
+ IC ;4; Intercommunale ;Intermunicipal company;BE
+ZDS ;4;Zone de secours ;Relief zone;BE
+ HLZ;4; Hilfeleistungszone;Relief zone;BE
+SDC ;4;Société de droit commun ;Partnership;BE
+ MS ;4; Maatschap ;Partnership;BE
+ GaR;4; Gesellschaft des allgemeinen Rechts;Partnership;BE
+EOOD;4;Еднолично дружество с ограничена отговорност (ЕООД);Single person limited liability company;BG
+S-ie;4;Съдружие (С-ие);General partnership;BG
+Coop;4;Кооперация;Cooperation/Cooperative society;BG
+DZZD;4;Дружество учредено по Закона за задълженията и договорите (ДЗЗД);Partnership by Law of Obligations And Contracts;BG
+COOP;4;Συνεργατικά Πιστωτικά Ιδρύματα ;Cooperative Credit Societies;CY
+k.s.;4;Společnost komanditní;Limited partnership;CZ
+a.s.;4;Akciová společnost;Plc (UK);CZ
+s.p.;4;Státní podnik;State enterprise;CZ
+EZHS;4;Evropské zájmové hospodářské sdružení;An eu legal entity designed to enable cross-border cooperation between companies;CZ
+KGaA;4;Kommanditgesellschaft auf Aktien;Partnership limited by shares;DE
+GmbH;4;Gesellschaft mit beschränkter Haftung;Private limited company;DE
+VVaG;4;Versicherungsverein auf Gegenseitigkeit;Mutual insurance company;DE
+SPöR;4;Sonstige juristische Person des öffentlichen Rechts;Other public legal form;DE
+e.V.;4;Eingetragener Verein;Registered association;DE
+RKOA;4;Riigi ja kohaliku omavalitsuse asutused;Central and local government authorities ;EE
+SRLU;4;Sociedad Limitada Unipersonal;Single-member private limited company;ES
+SLNE;4;Sociedad Limitada Nueva Empresa;"""New firm"" private limited company ";ES
+GEIE;4;Groupement européen d'intérêt économique;European economic interest grouping;FR
+CUMA;4;Coopérative d'utilisation de matériel agricole en commun ;Cooperative for shared use of agricultural equipment;FR
+SCPI;4;Société civile de placement collectif immobilier;Collective real estate investment civil-law company;FR
+GAEC;4;Groupement agricole d'exploitation en commun;Collective farming grouping ;FR
+SIVU;4;Syndicat intercommunal à vocation unique ;Inter-municipality syndicate with a single aim;FR
+PETR;4;Pôle d'équilibre territorial et rural ;Centre for territorial and rural balance;FR
+CIAS;4;Centre Intercommunal d'action sociale ;Inter-municipality social welfare centre;FR
+SDIS;4;Service départemental d'incendie et de secours ;Departmental fire and safety department;FR
+COOP;4;Συνεταιρισμός ;Cooperative Company, Association;GR
+d.d.;4;Dioničko društvo;Joint stock company;HR
+k.d.;4;Komanditno društvo;Limited partnership;HR
+Kft.;4;Korlátolt felelosségu társaság;Private limited-liability company;HU
+Kkt.;4;Közkereseti társaság;General partnership;HU
+Kht.;4;Közhasznú társaság;Public benefit nonprofit institution;HU
+PA  ;4;PUBBLICA AMMINISTRAZIONE;General government;IT
+SNC ;4;SOCIETA' IN NOME COLLETTIVO;General partnership (commercial);IT
+SAS ;4;SOCIETA' IN ACCOMANDITA SEMPLICE;Limited partnership;IT
+SS  ;4;SOCIETA' SEMPLICE;General partnership (non commercial);IT
+SDF ;4;SOCIETA' DI FATTO;De facto corporation;IT
+AIMP;4;AZIENDA PROVINCIALE;Consortium;IT
+COOP;4;SOCIETA' COOPERATIVA;Cooperative society;IT
+SPA ;4;SOCIETA' PER AZIONI;Plc (UK);IT
+SAA ;4;SOCIETA' IN ACCOMANDITA PER AZIONI;Partnership limited by shares;IT
+SRL ;4;SOCIETA' A RESPONSABILITA' LIMITATA;Ltd (UK);IT
+LPRA;4;Lietuvos prekybos, pramonės ir amatų rūmų asociacija;The Association of Lithuanian Chambers of Commerce, Industry and Crafts ;LT
+SECS;4;Société en commandite simple ;Limited partnership;LU
+SECA;4;Société en commandite par actions;Partnership limited by shares;LU
+SCOP;4;Société coopérative ;Cooperative company;LU
+ASBL;4;Association sans but lucratif;Non-profit association ;LU
+FIAR;4;Fonds d'investissement alternatif reservé ;Alternative investment funds reserved;LU
+COOP;4;Cooperatives;Cooperatives;MT
+s.c.;4;spółki cywilne;civil law partnership;PL
+S.A.;4;spółki akcyjne;joint-stock company;PL
+s.j.;4;spółki jawne;registered partnership;PL
+SUni;4;Sociedade Unipessoal Por Quotas;Single holder private limited company;PT
+SOCI;4;Sociedade Civil;Civil society;PT
+EIRL;4;Estabelecimento Individual de Responsabilidade Limitada;Individual business with limited liability;PT
+Coop;4;Cooperativa;Cooperative;PT
+Fund;4;Fundação;Foundation;PT
+PCDP;4;Pessoa Coletiva de Direito Público;Public law institution;PT
+EPMR;4;Entidade Pública Municipal, Intermunicipal e Regional;Municipal, Intermunicipal and Regional public company;PT
+k.d.;4;Komanditna družba k.d.;Limited partnership (UK);SI
+d.d.;4;Delniška družba d.d.;Plc (UK);SI
+N.O.;4;Nezisková organizácia;Not profitable organization;SK
+a.s.;4;Akciová spoločnosť;Joint stock company;SK
+š.p.;4;Štátny podnik;State enterprise;SK
+EEIG;4;European Economic Interest Grouping;European economic interest grouping;-
+EGTC;4;European Grouping of Territorial cooperation;European Grouping of Territorial cooperation;-
+UTVA ;5;Unité TVA ;VAT Group;BE
+ MWSE;5; Mehrwertsteuereinheit;VAT Group;BE
+SCRI ;5;Société coopérative à responsabilité illimitée ;Cooperative partnership with unlimited liability;BE
+SCRL ;5;Société coopérative à responsabilité limitée ;Cooperative company with limited liability;BE
+ KGaA;5; Kommanditgesellschaft auf Aktien;Partnership limited by shares;BE
+SPRL ;5;Société privée à responsabilité limitée ;Private limited liability company;BE
+ASBL ;5;Association sans but lucratif ;Non-profit association;BE
+ VZW ;5; Vereniging zonder winstoogmerk ;Non-profit association;BE
+MUTU ;5;Mutualité ;Mutual health fund / Mutual Benefit Society / National Union of mutual health funds;BE
+ OVV ;5; Caisse commune d'assurances de droit privé ;Mutual insurance association / Mutual insurance fund under private law;BE
+ PrSt;5; Privatstiftung;Private Foundation;BE
+ISBL ;5;Institution sans but lucratif ;Non-profit institution;BE
+ IZW ;5; Instelling zonder winstoogmerk ;Non-profit institution;BE
+ SON ;5; Stichting van openbaar nut ;Public utility foundation;BE
+ PRV ;5; Andere privaatrechtelijke vorm met rechtspersoonlijkheid ;Other private-law form with legal personality;BE
+ ESV ;5; Economisch samenwerkingsverband  ;Economic interest grouping;BE
+ VME ;5; Vereniging van mede-eigenaars ;Joint owners' association;BE
+ IVoG;5; Internationale Vereinigung ohne Gewinnerzielungsabsicht;International non-profit association;BE
+ BVB ;5; Berg van Barmhartigheid ;Pawnshop;BE
+ FOD ;5; Federale overheidsdienst ;Federal Public Service;BE
+ POD ;5; Programmatorische federale overheidsdienst ;Federal Public Planning Service ;BE
+ FödD;5; Anderer föderale Dienst;Other federal service;BE
+ FlRG;5; Behörde der Flämischen Region und der Flämischen Gemeinschaft;Authorities of the Flemish Region and the Flemish Community;BE
+CPAS ;5;Centre public d'action sociale ;Public social welfare centre;BE
+ ÖSHZ;5; Öffentliches Sozialhilfezentrum;Public social welfare centre;BE
+ HVZ ;5; Hulpverleningszone ;Relief zone;BE
+ADSIC;5;Акционерно дружество със специална инвестиционна цел (АДСИЦ);Joint-Stock Special Investment Company;BG
+PartG;5;Partnerschaftsgesellschaft;Registered partnership company;DE
+InvAG;5;Investmentaktiengesellschaft;Public limited investment company;DE
+JPahR;5;Juristische Person alten hamburgischen Rechts;Legal entity under old Hamburg law;DE
+as oy;5;Asunto-osakeyhtiö;Housing company;FI
+SIVOM;5;Syndicat intercommunal à vocation multiple ;Inter-municipality syndicate with multiple aims;FR
+OPHLM;5;Office public d'habitation à loyer modéré ;Public affordable housing office;FR
+Other;5;Λοιπά ;Other Legal Forms;GR
+j.t.d;5;Javno trgovačko društvo;Public company;HR
+s.d.d;5;Športsko dioničko društvo;Sport joint-stock company;HR
+UCITS;5;Undertakings for Collective Investment in Transferable Securities (UCITS) ;;IE
+Other;5;ALTRI, e.g. FONDAZIONE, ASSOCIAZIONE, NO-PROFIT;Other, e.g. Foundation, Association, No profit organization;IT
+SARL ;5;Société à responsabilité limitée;Limited liability company;LU
+SARLS;5;Société à responsabilité limitée simplifiée;Simplified limited liability company;LU
+SECSP;5;Société en commandite speciale;Special limited partnership;LU
+SICAV;5;Société d'investissement à capital variable;Open-ended investment company;LU
+SICAF;5;Société d'investissement à capital fixe;Closed-ended investment company;LU
+ASSEP;5;Association d'épargne pension;Pensions Savings Association ;LU
+SICAR;5;Société d'investissement à capital risque ;Risk capital investment company ;LU
+PCOMM;5;En commandite;A limited Partnership;MT
+INVCO;5;Investment Company;Investment companies with fixed share capital;MT
+sp.p.;5;spółki partnerskie;professional partnership;PL
+sp.k.;5;spółki komandytowe;limited partnership;PL
+Coman;5;Sociedades em Comandita;Limited partnership;PT
+Assoc;5;Associação;Association;PT
+k. s.;5;Komanditná spoločnosť;Société commandite;SK
+ BTWE ;6; BTW-eenheid ;VAT Group;BE
+ CVOA ;6; Coöperatieve vennootschap met onbeperkte aansprakelijkheid ;Cooperative partnership with unlimited liability;BE
+ CVBA ;6; Coöperatieve vennootschap met beperkte aansprakelijkheid ;Cooperative company with limited liability;BE
+ BVBA ;6; Besloten vennootschap met beperkte aansprakelijkheid ;Private limited liability company;BE
+ PGmbH;6; Privatgesellschaft mit beschränkter Haftung;Private limited liability company;BE
+AISBL ;6;Association internationale sans but lucratif ;International non-profit association;BE
+ IVZW ;6; Internationale vereniging zonder winstoogmerk ;International non-profit association;BE
+PIETE ;6;Monts-de-Piété ;Pawnshop;BE
+SC SA ;6;Société civile sous forme de société anonyme ;Non-trading company in the form of a public limited company;BE
+ OCMW ;6; Openbaar centrum voor maatschappelijk welzijn ;Public social welfare centre;BE
+APROJ ;6;Association de projet ;Project association;BE
+ DlvFL;6; Dienstleistungsvereinigung (Flämische Region);Services provider association (Flemish Region);BE
+ VÖSHZ;6; Vereinigung von öffentlichen Sozialhilfezentren;Association of public centres for social welfare;BE
+ GuHsZ;6; Genossenschaft mit unbeschränkter Haftung mit sozialer Zielsetzung;Cooperative company with unlimited liability with a social purpose;BE
+ GbHsZ;6; Genossenschaft mit beschränkter Haftung mit sozialer Zielsetzung;Cooperative company with limited liability with a social purpose;BE
+SA FS ;6;Société anonyme à finalité sociale ;Public limited company with a social purpose;BE
+ AGmsZ;6; Aktiengesellschaft mit sozialer Zielsetzung;Public limited company with a social purpose;BE
+ RFmsZ;6; Andere öffentlich-rechtliche Rechtsform mit sozialer Zielsetzung;Other form with a social purpose, governed by public law;BE
+SASPJ ;6;Société ou association sans personnalité juridique ;Company or association without legal personality;BE
+ GVoRP;6; Gesellschaften oder Vereinigungen ohne Rechtspersönlichkeit;Company or association without legal personality;BE
+PUBLaw;6;Οντότητες που διέπονται από το δημόσιο δίκαιο;Entities governed by public law;CY
+v.o.s.;6;Veřejná obchodní společnost;General partnership;CZ
+s.r.o.;6;Společnost s ručením omezeným;Ltd (UK);CZ
+o.p.s.;6;Obecně prospěšná společnost;One of the legal forms for non-governmental non-profit organizations;CZ
+ZweckV;6;Zweckverband;Special-purpose association;DE
+S COOP;6;Sociedad Cooperativa;Cooperative company;ES
+d.o.o.;6;Društvo s ograničenom odgovornošću;Limited liability company;HR
+SEPCAV;6;Société d’épargne-pension à capital variable ;Variable Capital Pension Savings Company ;LU
+S.K.A.;6;spółki komandytowo - akcyjne;limited joint-stock partnership;PL
+HB, KB;6;Handelsbolag, kommanditbolag (HB, KB) ;Limited partnership;SE
+d.n.o.;6;Družba z neomejeno odgovornostjo d.n.o.;Unlimited company (UK);SI
+d.o.o.;6;Družba z omejeno odgovornostjo d.o.o.;Ltd (UK);SI
+k.d.d.;6;Komanditna delniška družba k.d.d.;Limited partnership with share capital;SI
+z.o.o.;6;Zadruga z.o.o.;Cooperative z.o.o.;SI
+z.b.o.;6;Zadruga z.b.o.;Cooperative z.b.o.;SI
+d.v.z.;6;Družba za vzajemno zavarovanje d.v.z.;Mutual insurance company d.v.z.;SI
+v.o.s.;6;Verejná obchodná spoločnosť;Public commercial company;SK
+s.r.o.;6;Spoločnosť s ručením obmedzeným;Limited liability company;SK
+ PRVGaG;7; Onderlinge verzekeringsvereniging ;Mutual insurance association / Mutual insurance fund under private law;BE
+FDP PJ ;7;Autre forme de droit privé avec personnalité juridique ;Other private-law form with legal personality;BE
+ GmuHGB;7; Öffentlich-rechtliche Genossenschaft mit unbeschränkter Haftung, Genossenschaft auf Beteiligung;Cooperative company with unlimited liability, Participating cooperative, governed by public law;BE
+SA DPU ;7;Société anonyme de droit public ;Public limited company, governed by public law;BE
+ NV PR ;7; Naamloze vennootschap van publiek recht ;Public limited company, governed by public law;BE
+ ÖrVgGe;7; Öffentlich-rechtliche Versicherungsvereinigung auf Gegenseitigkeit;Mutual insurance association, governed by public law;BE
+ ZvGGbH;7; Zivilrechtliche Gesellschaft in der Rechtsform einer Genossenschaft mit beschränkter Haftung;Non-trading company in the form of a cooperative company with limited liability;BE
+SC SNC ;7;Société civile sous forme de société en nom collectif ;Non-trading company in the form of a general partnership;BE
+SC SCS ;7;Société civile sous forme de société en commandite simple ;Non-trading company in the form of an ordinary limited partnership;BE
+SC SCA ;7;Société civile sous forme de société en commandite par actions ;Non-trading company in the form of a partnership limited by shares;BE
+ BV NV ;7; Burgerlijke vennootschap onder vorm van naamloze vennootschap ;Non-trading company in the form of a public limited company;BE
+ ZRG AG;7; Zivilrechtliche Gesellschaft in der Rechtsform einer Aktiengesellschaft;Non-trading company in the form of a public limited company;BE
+ BV LV ;7; Burgerlijke Vennootschap onder vorm van Landbouwvennootschap (BV LV) ;Non-trading company in the form of an agricultural company;BE
+ ZRG LG;7; Zivilrechtliche Gesellschaft in der Rechtsform einer landwirtschaftlichen Gesellschaft;Non-trading company in the form of an agricultural company;BE
+POLLOC ;7;Police locale ;Local Police;BE
+ACMISS ;7;Association chargée de mission (Région flamande) ;Project entrusted association (Flemish Region);BE
+ BVerFL;7; Beauftragte Vereinigung (Flämische Region);Project entrusted association (Flemish Region);BE
+SNC FS ;7;Société en nom collectif à finalité sociale ;General partnership with a social purpose;BE
+ OHGmsZ;7; Offene Handelsgesellschaft mit sozialer Zielsetzung;General partnership with a social purpose;BE
+SCS FS ;7;Société en commandite simple à finalité sociale ;Ordinary limited partnership with a social purpose;BE
+ EKGmsZ;7; Einfache Kommanditgesellschaft mit sozialer Zielsetzung;Ordinary limited partnership with a social purpose;BE
+SCA FS ;7;Société en commandite par actions à finalité sociale ;Partnership limited by shares with a social purpose;BE
+ NV SO ;7; Naamloze vennootschap met een sociaal oogmerk ;Public limited company with a social purpose;BE
+ PmbHsZ;7; Privatgesellschaft mit beschränkter Haftung mit sozialer Zielsetzung;Private limited liability company with a social purpose;BE
+GIE FS ;7;Groupement d'intérêt économique à finalité sociale ;Economic interest grouping with a social purpose;BE
+ WIVmsZ;7; Wirtschaftliche Interessenvereinigung mit sozialer Zielsetzung;Economic interest grouping with a social purpose;BE
+ VVZRL ;7; Vennootschap of vereniging zonder rechtspersoonlijkheid ;Company or association without legal personality;BE
+ Gen.mbH;8; Genossenschaft mit beschränkter Haftung;Cooperative company with limited liability;BE
+ V.O.F. ;8; Vennootschap onder firma ;General partnership;BE
+ Comm.V ;8; Gewone commanditaire vennootschap ;Ordinary limited partnership;BE
+ ZIEK F ;8; Ziekenfonds ;Mutual health fund / Mutual Benefit Society / National Union of mutual health funds;BE
+S. Agr. ;8;Société agricole ;Agricultural company;BE
+ PRRFmRP;8; Andere privatrechtliche Rechtsform mit Rechtspersönlichkeit;Other private-law form with legal personality;BE
+SCRI CP ;8;Coopérative à responsabilité illimitée, coopérative de participation, de droit public ;Cooperative company with unlimited liability, Participating cooperative, governed by public law;BE
+ ÖfrGmbH;8; Öffentlich-rechtliche Genossenschaft mit beschränkter Haftung;Cooperative company with limited liability, governed by public law;BE
+ Ö.-r.AG;8; Öffentlich-rechtliche Aktiengesellschaft;Public limited company, governed by public law;BE
+ VZW PR ;8; Vereniging zonder winstoogmerk van publiek recht ;Non-profit association, governed by public law;BE
+SAM DPU ;8;Association d'assurances mutuelles de droit public ;Mutual insurance association, governed by public law;BE
+ OVV PR ;8; Onderlinge verzekeringsvereniging van publiek recht ;Mutual insurance association, governed by public law;BE
+ Ewg-Bwg;8; Entwässerungsgenossenschaft - Bewässerungsgenossenschaft;Polder - watering;BE
+SC SCRI ;8;Société civile sous forme de société coopérative à responsabilité illimitée ;Non-trading company in the form of a cooperative company with unlimited liability;BE
+SC SCRL ;8;Société civile sous forme de société coopérative à responsabilité limitée ;Non-trading company in the form of a cooperative company with limited liability;BE
+ BV VOF ;8; Burgerlijke vennootschap onder vorm van vennootschap onder firma ;Non-trading company in the form of a general partnership;BE
+ ZRG OHG;8; Zivilrechtliche Gesellschaft in der Rechtsform einer offenen Handelsgesellschaft;Non-trading company in the form of a general partnership;BE
+ BV GCV ;8; Burgerlijke vennootschap onder vorm van gewone commanditaire vennootschap ;Non-trading company in the form of an ordinary limited partnership;BE
+ ZRG EKG;8; Zivilrechtliche Gesellschaft in der Rechtsform einer einfachen Kommanditgesellschaft;Non-trading company in the form of an ordinary limited partnership;BE
+ BV CVA ;8; Burgerlijke vennootschap onder vorm van commanditaire vennootschap op aandelen ;Non-trading company in the form of a partnership limited by shares;BE
+SC SPRL ;8;Société civile sous forme de société privée à responsabilité limitée ;Non-trading company in the form of a private limited liability company;BE
+ ZvGPgbH;8; Zivilrechtliche Gesellschaft in der Rechtsform einer Privatgesellschaft mit beschränkter Haftung;Non-trading company in the form of a private limited liability company;BE
+SC SAGR ;8;Société civile sous forme de société agricole ;Non-trading company in the form of an agricultural company;BE
+ LOKPOL ;8; Lokale politiezone ;Local Police;BE
+ PROJ V ;8; Projectvereniging ;Project association;BE
+RCOMAUT ;8;Régie communale autonome ;Autonomous municipal company;BE
+SCRI FS ;8;Société coopérative à responsabilité illimitée à finalité sociale ;Cooperative company with unlimited liability with a social purpose;BE
+SCRL FS ;8;Société coopérative à responsabilité limitée à finalité sociale ;Cooperative company with limited liability with a social purpose;BE
+ VOF SO ;8; Vennootschap onder firma met een sociaal oogmerk ;General partnership with a social purpose;BE
+ GCW SO ;8; Gewone commanditaire vennootschap met een sociaal oogmerk ;Ordinary limited partnership with a social purpose;BE
+ CVA SO ;8; Commanditaire vennootschap op aandelen met een sociaal oogmerk ;Partnership limited by shares with a social purpose;BE
+ KGaAmsZ;8; Kommanditgesellschaft auf Aktien mit sozialer Zielsetzung;Partnership limited by shares with a social purpose;BE
+SPRL FS ;8;Société privée à responsabilité limitée à finalité sociale ;Private limited liability company with a social purpose;BE
+ ESV SO ;8; Economisch samenwerkingsverband met een sociaal oogmerk ;Economic interest grouping with a social purpose;BE
+a.m.b.a.;8;Andelsselskab (-forening) begr. ansvar;Limited liability cooperative society;DK
+s.m.b.a.;8;Selskab med begrænset ansvar;Limited liability company;DK
+f.m.b.a.;8;Forening med begrænset ansvar;Limited liability association;DK
+j.d.o.o.;8;Jednostavno društvo s ograničenom odgovornošću;Simple limited liability company;HR
+Ek. för.;8;Ekonomisk förening (Ek. för.) ;Economic association (minimum three members);SE
+ Gen.mubH;9; Genossenschaft mit unbeschränkter Haftung;Cooperative partnership with unlimited liability;BE
+ Comm.VA ;9; Commanditaire vennootschap op aandelen ;Partnership limited by shares;BE
+ Kankenka;9; Krankenkasse ;Mutual health fund / Mutual Benefit Society / National Union of mutual health funds;BE
+FONDPRIV ;9;Fondation privée ;Private Foundation;BE
+ CVOA CD ;9; Coöperatieve vennootschap met onbeperkte aansprakelijkheid, bij wijze van deelneming van publiek recht ;Cooperative company with unlimited liability, Participating cooperative, governed by public law;BE
+SCRL DPU ;9;Société coopérative à responsabilité limitée de droit public ;Cooperative company with limited liability, governed by public law;BE
+ CVBA PR ;9; Coöperatieve vennootschap met beperkte aansprakelijkheid van publiek recht ;Cooperative company with limited liability, governed by public law;BE
+ASBL DPU ;9;Association sans but lucratif de droit public ;Non-profit association, governed by public law;BE
+ ÖrVohGza;9; Öffentlich-rechtliche Vereinigung ohne Gewinnerzielungsabsicht;Non-profit association, governed by public law;BE
+ETSPUBLI ;9;Etablissement public ;Public institution;BE
+ BV CVOA ;9; Burgerlijke vennootschap onder vorm van coöperatieve vennootschap met onbeperkte aansprakelijkheid ;Non-trading company in the form of a cooperative company with unlimited liability;BE
+ ZvGGugcH;9; Zivilrechtliche Gesellschaft in der Rechtsform einer Genossenschaft mit unbeschränkter Haftung;Non-trading company in the form of a cooperative company with unlimited liability;BE
+ BV CVBA ;9; Burgerlijke vennootschap onder vorm van coöperatieve vennootschap met beperkte aansprakelijkheid ;Non-trading company in the form of a cooperative company with limited liability;BE
+ ZRG KGaA;9; Zivilrechtliche Gesellschaft in der Rechtsform einer Kommanditgesellschaft auf Aktien;Non-trading company in the form of a partnership limited by shares;BE
+ BV BVBA ;9; Burgerlijke vennootschap onder vorm van besloten vennootschap met beperkte aansprakelijkheid ;Non-trading company in the form of a private limited liability company;BE
+SERVFEDE ;9;Autre service fédéral ;Other federal service;BE
+REGCOMNL ;9;Autorité de la Région flamande et de la Communauté flamande ;Authorities of the Flemish Region and the Flemish Community;BE
+REGBRXCA ;9;Autorité de la Région de Bruxelles-Capitale ;Authorities of the Brussels Capital Region;BE
+COMMFRAN ;9;Autorité de la Communauté française ;Authorities of the French Community;BE
+COMGERMA ;9;Autorité de la Communauté germanophone ;Authorities of the German-speaking Community;BE
+AUTOPROV ;9;Autorité provinciale ;Provincial Authority;BE
+ Provbehö;9; Provinzialbehörde;Provincial Authority;BE
+COMMUNES ;9;Ville ;City / municipality;BE
+ Gemeinde;9; Stad ;City / municipality;BE
+ Prjverng;9; Projektvereinigung;Project association;BE
+ASS SERV ;9;Association prestataire de services (Région flamande) ;Services provider association (Flemish Region);BE
+ DIENSTV ;9; Dienstverlenende vereniging (Vlaams Gewest) ;Services provider association (Flemish Region);BE
+ AutGemRg;9; Autonome Gemeinderegie;Autonomous municipal company;BE
+RPROVAUT ;9;Régie provinciale autonome ;Autonomous provincial company;BE
+ AUTOPRB ;9; Autonoom provinciebedrijf ;Autonomous provincial company;BE
+ AutPrvRg;9; Autonome Provinzialregie;Autonomous provincial company;BE
+Ass.CPAS ;9;Association de CPAS ;Association of public centres for social welfare;BE
+ CVOA SO ;9; Coöperatieve vennootschap met onbeperkte aansprakelijkheid met een sociaal oogmerk ;Cooperative company with unlimited liability with a social purpose;BE
+ CVBA SO ;9; Coöperatieve vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk ;Cooperative company with limited liability with a social purpose;BE
+ BVBA SO ;9; Besloten vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk ;Private limited liability company with a social purpose;BE
+FORME FS ;9;Autre forme à finalité sociale de droit public ;Other form with a social purpose, governed by public law;BE
+ VORM SO ;9; Andere vorm met een sociaal oogmerk van publiek recht ;Other form with a social purpose, governed by public law;BE
+SPFPL SCA;9;Société de Participations Financières de Profession Libérale Société en commandite par actions;Professional holding company Partnership limited by shares;FR
+SPFPL SAS;9;Société de Participations Financières de Profession Libérale Société par actions simplifiée;Professional holding company Simplified joint stock company;FR
+ PRIV ST. ;10; Private stichting ;Private Foundation;BE
+ FEDEDIEN ;10; Andere federale dienst ;Other federal service;BE
+ VLGEWGEM ;10; Overheid van het Vlaamse Gewest en van de Vlaamse Gemeenschap ;Authorities of the Flemish Region and the Flemish Community;BE
+ BRUHOOGE ;10; Overheid van het Brusselse Hoofdstedelijk Gewest ;Authorities of the Brussels Capital Region;BE
+ FRAGEMEE ;10; Overheid van de Franse Gemeenschap ;Authorities of the French Community;BE
+ DUITGEME ;10; Overheid van de Duitstalige Gemeenschap ;Authorities of the German-speaking Community;BE
+ PROVOVER ;10; Provinciale overheid ;Provincial Authority;BE
+ GEMEENTE ;10; commune ;City / municipality;BE
+ OPDRAVER ;10; Opdrachthoudende vereniging (Vlaams Gewest) ;Project entrusted association (Flemish Region);BE
+ AUTOGEMB ;10; Autonoom gemeentebedrijf ;Autonomous municipal company;BE
+ Ver.OCMW ;10; Vereniging van OCMW's ;Association of public centres for social welfare;BE
+SA LABORAL;10;Sociedad Anónima Laboral;Worker-owned public limited company ;ES
+SL LABORAL;10;Sociedad Limitada Laboral;Worker-owned private limited company ;ES
+SPFPL SARL;10;Société de Participations Financières de Profession Libérale Société à responsabilité limitée;Professional holding company Limited liability company;FR
+sp. z o.o.;10;spółki z ograniczoną odpowiedzialnością;limited liability company;PL
+.. & Co. KG;11;Kommanditgesellschaft mit haftungsbeschränktem Komplementär;Limited partnership (fully limited) ;DE
+.. & Co. OHG;12;Offene Handelsgesellschaft mit haftungsbeschränktem Gesellschafter;General partnership (partially limited);DE
+S. COM. P.A.;12;Sociedad Comanditaria por acciones;Limited stock partnership;ES
+.. & Co. KGaA;13;Kommanditgesellschaft auf Aktien mit haftungsbeschränktem Komplementär;Partnership limited by shares (fully lmited);DE
+S. EN C. o S. COM.;18;Sociedad Comanditaria Simple;Simple limited partnership;ES
+UG (haftungsbeschränkt);23;Unternehmergesellschaft (haftungsbeschränkt);Entrepreneurial company (limited liability);DE

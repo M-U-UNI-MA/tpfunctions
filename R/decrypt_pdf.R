@@ -16,7 +16,7 @@
 #' @export
 decrypt_pdf <- function(file.in, file.out) {
   tryCatch({
-    system(paste('qpdf --decrypt', path.in, path.out))
+    system(paste('qpdf --decrypt', file.in, file.out))
   }, error = function(e)
     "error")
 }

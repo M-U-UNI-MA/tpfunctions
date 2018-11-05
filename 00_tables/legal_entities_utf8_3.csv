@@ -1,0 +1,585 @@
+﻿le_id;occurance;le_abbr;le_full;le_stand;le_country;source
+1;End;AA;Association agricole;AA;LU;ECB
+2;End;AAM;Association d'assurances mutuelles;AAM;LU;ECB
+3;End;AAM;Association d'assurances mutuelles;AAM;BE;ECB
+4;End;AB;Bankaktiebolag;AB;SE;ECB
+5;End;AB;Försäkringsaktiebolag;AB;SE;ECB
+6;End;AB;Övriga aktiebolag;AB;SE;ECB
+7;End;ab;Osakeyhtiö;AB;FI;ECB
+8;End;AB;Akcinė bendrovė;AB;LT;ECB
+9;End;AB (PUBL);Public Bankaktiebolag;AB (PUBL);SE;OWN
+10;End;ACE;Agrupamento Complementar de Empresas;ACE;PT;ECB
+11;End;ACMISS;Association chargée de mission;ACMISS;BE;ECB
+12;End;ACP;Association des copropriétaires;ACP;BE;ECB
+13;End;AD;Акционерно дружество;AD;BG;ECB
+14;End;ADSIC;Акционерно дружество със специална инвестиционна цел;ADSIC;BG;ECB
+15;End;AG;Aktiengesellschaft;AG;AT;ECB
+16;End;AG;Aktiengesellschaft;AG;DE;ECB
+17;End;AG;Aktiengesellschaft;AG;BE;ECB
+18;End;AG & Co KG;Aktiengesellschaft & Compagnie Kommanditgesellschaft;AG & CO KG;DE;ECB
+19;End;AG & Co KGaA;Aktiengesellschaft & Compagnie Kommanditgesellschaft an Aktien;AG & CO KGAA;DE;ECB
+20;End;AG & Co OHG;Aktiengesellschaft & Compagnie offene Handelsgesellschaft;AG & CO OHG;DE;ECB
+21;End;AGmsZ;Aktiengesellschaft mit sozialer Zielsetzung;AGMSZ;BE;ECB
+22;End;AIE;Agrupación de Interés económico;AIE;ES;ECB
+23;End;AIMP;AZIENDA PROVINCIALE;AIMP;IT;ECB
+24;End;AISBL;Association internationale sans but lucratif;AISBL;BE;ECB
+25;End;AM;Association momentanée;AM;LU;ECB
+26;End;amba;Andelsselskab (-forening) begr. ansvar;AMBA;DK;ECB
+27;End;AöR;Anstalt des öffentlichen Rechts;AÖR;DE;ECB
+28;End;APB;Advokatų profesinė bendrija;APB;LT;ECB
+29;End;APROJ;Association de projet;APROJ;BE;ECB
+30;End;ApS;Anpartselskab;APS;DK;ECB
+31;End;as;Akciová společnost;AS;CZ;ECB
+32;End;as;Akciová spoločnosť;AS;SK;ECB
+33;End;AS;Aktsiaselts;AS;EE;ECB
+34;End;AS;Akciju sabiedrība;AS;LV;ECB
+35;End;AS;anonim şirketi;AS;TR;OWN
+36;End;AS;anonim şirketler;AS;TR;OWN
+37;End;AS;Anonim Şirket;AS;TR;OWN
+38;End;as oy;Asunto-osakeyhtiö;AS OY;FI;ECB
+39;End;ASA;Allmennaksjeselskap ;ASA;NO;OWN
+40;End;ASBL;Association sans but lucratif;ASBL;LU;ECB
+41;End;ASBL;Association sans but lucratif;ASBL;BE;ECB
+42;End;ASBL DPU;Association sans but lucratif de droit public;ASBL DPU;BE;ECB
+43;End;ASS SERV;Association prestataire de services;ASS SERV;BE;ECB
+44;End;AssCPAS;Association de CPAS;ASSCPAS;BE;ECB
+45;End;ASSEP;Association d'épargne pension;ASSEP;LU;ECB
+46;End;Assoc;Associação;ASSOC;PT;ECB
+47;End;AutGemRg;Autonome Gemeinderegie;AUTGEMRG;BE;ECB
+48;End;AUTOGEMB;Autonoom gemeentebedrijf;AUTOGEMB;BE;ECB
+49;End;AUTOPRB;Autonoom provinciebedrijf;AUTOPRB;BE;ECB
+50;End;AUTOPROV;Autorité provinciale;AUTOPROV;BE;ECB
+51;End;AutPrvRg;Autonome Provinzialregie;AUTPRVRG;BE;ECB
+52;End;BeG;Betriebe der Gebietskörperschaften;BEG;DE;ECB
+53;End;BHD;Berhad;BHD;MY;Own
+54;End;BI;Biudžetinė įstaiga;BI;LT;ECB
+55;End;BN;Bendrija;BN;LT;ECB
+56;End;BRF;Bostadsrättsförening;BRF;SE;ECB
+57;End;BRUHOOGE;Overheid van het Brusselse Hoofdstedelijk Gewest;BRUHOOGE;BE;ECB
+58;End;Bt;Betéti társaság;BT;HU;ECB
+59;End;BTWE;BTW-eenheid;BTWE;BE;ECB
+60;End;BV;Besloten vennootschap;BV;NL;ECB
+61;End;BV;Berufsvereinigung;BV;BE;ECB
+62;End;BV;Beroepsvereniging;BV;BE;ECB
+63;End;BV BVBA;Burgerlijke vennootschap onder vorm van besloten vennootschap met beperkte aansprakelijkheid;BV BVBA;BE;ECB
+64;End;BV CVA;Burgerlijke vennootschap onder vorm van commanditaire vennootschap op aandelen;BV CVA;BE;ECB
+65;End;BV CVBA;Burgerlijke vennootschap onder vorm van coöperatieve vennootschap met beperkte aansprakelijkheid;BV CVBA;BE;ECB
+66;End;BV CVOA;Burgerlijke vennootschap onder vorm van coöperatieve vennootschap met onbeperkte aansprakelijkheid;BV CVOA;BE;ECB
+67;End;BV GCV;Burgerlijke vennootschap onder vorm van gewone commanditaire vennootschap;BV GCV;BE;ECB
+68;End;BV LV;Burgerlijke Vennootschap onder vorm van Landbouwvennootschap;BV LV;BE;ECB
+69;End;BV NV;Burgerlijke vennootschap onder vorm van naamloze vennootschap;BV NV;BE;ECB
+70;End;BV VOF;Burgerlijke vennootschap onder vorm van vennootschap onder firma;BV VOF;BE;ECB
+71;End;BVB;Berg van Barmhartigheid;BVB;BE;ECB
+72;End;BVBA;Besloten vennootschap met beperkte aansprakelijkheid;BVBA;BE;ECB
+73;End;BVBA SO;Besloten vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk;BVBA SO;BE;ECB
+74;End;BVerFL;Beauftragte Vereinigung;BVERFL;BE;ECB
+75;End;CB;Centrinis bankas;CB;LT;ECB
+76;End;CIAS;Centre Intercommunal d'action sociale;CIAS;FR;ECB
+77;End;CLA;Αστική Εταιρεία;CLA;GR;ECB
+78;End;CLF;Σωματεία - Ιδρύματα;CLF;GR;ECB
+79;End;CLG;Company Limited by Guarantee;CLG;IE;ECB
+80;End;Co Inc;Company Incorporated;CO INC;GB;Own
+81;End;CO LLC;Limited Liability Company;CO LLC;GB;OWN
+82;End;CO LTD;Limited Liability Company;CO LTD;GB;OWN
+83;End;CO WLL;Company with Limited Liabilities;CO WLL;JP;OWN
+84;End;Coman;Sociedades em Comandita;COMAN;PT;ECB
+85;End;COMGERMA;Autorité de la Communauté germanophone;COMGERMA;BE;ECB
+86;End;COMMFRAN;Autorité de la Communauté française;COMMFRAN;BE;ECB
+87;End;COMMUNES;Ville;COMMUNES;BE;ECB
+88;End;CommV;Gewone commanditaire vennootschap;COMMV;BE;ECB
+89;End;CommVA;Commanditaire vennootschap op aandelen;COMMVA;BE;ECB
+90;End;Company Limited;Limited Liability Company;CO LTD;GB;OWN
+91;End;Company LTD;Company Limited;CO LTD;GB;OWN
+92;End;Coop;Кооперация;COOP;BG;ECB
+93;End;COOP;Συνεργατικά Πιστωτικά Ιδρύματα;COOP;CY;ECB
+94;End;COOP;Συνεταιρισμός;COOP;GR;ECB
+95;End;COOP;SOCIETA' COOPERATIVA;COOP;IT;ECB
+96;End;COOP;Cooperatives;COOP;MT;ECB
+97;End;Coop;Cooperativa;COOP;PT;ECB
+98;End;CORP;Corporation;CORP;GB;OWN
+99;End;CORP;Corporation;CORP;GB;OWN
+100;End;corporation;Corporation;CORP;GB;OWN
+101;End;CPAS;Centre public d'action sociale;CPAS;BE;ECB
+102;End;CRC;Bendras valdymo ir pranešimų centras;CRC;LT;ECB
+103;End;CUMA;Coopérative d'utilisation de matériel agricole en commun;CUMA;FR;ECB
+104;End;CVA SO;Commanditaire vennootschap op aandelen met een sociaal oogmerk;CVA SO;BE;ECB
+105;End;CVBA;Coöperatieve vennootschap met beperkte aansprakelijkheid;CVBA;BE;ECB
+106;End;CVBA PR;Coöperatieve vennootschap met beperkte aansprakelijkheid van publiek recht;CVBA PR;BE;ECB
+107;End;CVBA SO;Coöperatieve vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk;CVBA SO;BE;ECB
+108;End;CVOA;Coöperatieve vennootschap met onbeperkte aansprakelijkheid;CVOA;BE;ECB
+109;End;CVOA CD;Coöperatieve vennootschap met onbeperkte aansprakelijkheid, bij wijze van deelneming van publiek recht;CVOA CD;BE;ECB
+110;End;CVOA SO;Coöperatieve vennootschap met onbeperkte aansprakelijkheid met een sociaal oogmerk;CVOA SO;BE;ECB
+111;End;DAC;Designated Activity Company;DAC;IE;ECB
+112;End;DAC;Designated Activity Company Limited by Guarantee;DAC;IE;ECB
+113;End;dd;Dioničko društvo;DD;HR;ECB
+114;End;dd;Delniška družba;DD;SI;ECB
+115;End;DG;Behörde der Deutschsprachigen Gemeinschaft;DG;BE;ECB
+116;End;DIENSTV;Dienstverlenende vereniging;DIENSTV;BE;ECB
+117;End;DlvFL;Dienstleistungsvereinigung;DLVFL;BE;ECB
+118;End;dno;Družba z neomejeno odgovornostjo;DNO;SI;ECB
+119;End;doo;Društvo s ograničenom odgovornošću;DOO;HR;ECB
+120;End;doo;Družba z omejeno odgovornostjo;DOO;SI;ECB
+121;End;DUITGEME;Overheid van de Duitstalige Gemeenschap;DUITGEME;BE;ECB
+122;End;dvz;Družba za vzajemno zavarovanje;DVZ;SI;ECB
+123;End;DZZD;Дружество учредено по Закона за задълженията и договорите;DZZD;BG;ECB
+124;End;EAD;Еднолично акционерно дружество;EAD;BG;ECB
+125;End;EE;Ετερόρρυθμη Εταιρεία;EE;GR;ECB
+126;End;EEIG;European Economic Interest Grouping;EEIG;-;ECB
+127;End;EG;Eigentümergemeinschaft;EG;AT;ECB
+128;End;eG;Eingetragene Genossenschaft;EG;DE;ECB
+129;End;EGTC;European Grouping of Territorial cooperation;EGTC;-;ECB
+130;End;EI;Entreprise individuelle;EI;LU;ECB
+131;End;EIRL;Estabelecimento Individual de Responsabilidade Limitada;EIRL;PT;ECB
+132;End;Ek för;Ekonomisk förening;EK FÖR;SE;ECB
+133;End;EKG;Einfache Kommanditgesellschaft;EKG;BE;ECB
+134;End;EKGmsZ;Einfache Kommanditgesellschaft mit sozialer Zielsetzung;EKGMSZ;BE;ECB
+135;End;EoG;Einrichtung ohne Gewinnerzielungsabsicht;EOG;BE;ECB
+136;End;EOOD;Еднолично дружество с ограничена отговорност;EOOD;BG;ECB
+137;End;EP;Etablissement public;EP;LU;ECB
+138;End;EPE;Εταιρεία Περιορισμένης Ευθύνης;EPE;GR;ECB
+139;End;EPE;Entidade Pública Empresarial;EPE;PT;ECB
+140;End;EPMR;Entidade Pública Municipal, Intermunicipal e Regional;EPMR;PT;ECB
+141;End;ESV;Economisch samenwerkingsverband;ESV;BE;ECB
+142;End;ESV SO;Economisch samenwerkingsverband met een sociaal oogmerk;ESV SO;BE;ECB
+143;End;ET;Едноличен търговец;ET;BG;ECB
+144;End;ETSPUBLI;Etablissement public;ETSPUBLI;BE;ECB
+145;End;EUPP;Europäische politische Partei;EUPP;BE;ECB
+146;End;EUPS;Europäische politische Stiftung;EUPS;BE;ECB
+147;End;eV;Eingetragener Verein;EV;DE;ECB
+148;End;Ewg-Bwg;Entwässerungsgenossenschaft - Bewässerungsgenossenschaft;EWG-BWG;BE;ECB
+149;End;EZHS;Evropské zájmové hospodářské sdružení;EZHS;CZ;ECB
+150;End;FCP;Fonds commun de placement;FCP;LU;ECB
+151;End;FDP PJ;Autre forme de droit privé avec personnalité juridique;FDP PJ;BE;ECB
+152;End;FEDEDIEN;Andere federale dienst;FEDEDIEN;BE;ECB
+153;End;FIAR;Fonds d'investissement alternatif reservé;FIAR;LU;ECB
+154;End;FlRG;Behörde der Flämischen Region und der Flämischen Gemeinschaft;FLRG;BE;ECB
+155;End;fmba;Forening med begrænset ansvar;FMBA;DK;ECB
+156;End;FOD;Federale overheidsdienst;FOD;BE;ECB
+157;End;FÖD;Föderaler öffentlicher Dienst;FÖD;BE;ECB
+158;End;FödD;Anderer föderale Dienst;FÖDD;BE;ECB
+159;End;FON;Fondation;FON;LU;ECB
+160;End;FONDPRIV;Fondation privée;FONDPRIV;BE;ECB
+161;End;FÖP;Föderaler öffentlicher Programmierungsdienst;FÖP;BE;ECB
+162;End;FORME FS;Autre forme à finalité sociale de droit public;FORME FS;BE;ECB
+163;End;FPEU;Europese politieke stichting;FPEU;BE;ECB
+164;End;FPEU;Fondation politique européenne;FPEU;BE;ECB
+165;End;FRAGEMEE;Overheid van de Franse Gemeenschap;FRAGEMEE;BE;ECB
+166;End;FrG;Behörde der Französischen Gemeinschaft;FRG;BE;ECB
+167;End;Fund;Fundação;FUND;PT;ECB
+168;End;FUP;Fondation d'utilité publique;FUP;BE;ECB
+169;End;GAEC;Groupement agricole d'exploitation en commun;GAEC;FR;ECB
+170;End;GaR;Gesellschaft des allgemeinen Rechts;GAR;BE;ECB
+171;End;GbG;In Gründung befindliche Gesellschaft;GBG;BE;ECB
+172;End;GbHsZ;Genossenschaft mit beschränkter Haftung mit sozialer Zielsetzung;GBHSZ;BE;ECB
+173;End;GbR;Gesellschaft bürgerlichen Rechts;GBR;DE;ECB
+174;End;GCW SO;Gewone commanditaire vennootschap met een sociaal oogmerk;GCW SO;BE;ECB
+175;End;GEIE;Groupement européen d'intérêt économique;GEIE;FR;ECB
+176;End;GEMEENTE;commune;GEMEENTE;BE;ECB
+177;End;Gemeinde;Stad;GEMEINDE;BE;ECB
+178;End;GEN;Erwerbs- und Wirtschaftsgenossenschaft;GEN;AT;ECB
+179;End;GenmbH;Genossenschaft mit beschränkter Haftung;GENMBH;BE;ECB
+180;End;GenmubH;Genossenschaft mit unbeschränkter Haftung;GENMUBH;BE;ECB
+181;End;GIE;Groupement d'intérêt économique;GIE;FR;ECB
+182;End;GIE;Groupement d'intérêt économique;GIE;LU;ECB
+183;End;GIE;Grupul de interes economic;GIE;RO;ECB
+184;End;GIE;Groupement d'intérêt économique;GIE;BE;ECB
+185;End;GIE FS;Groupement d'intérêt économique à finalité sociale;GIE FS;BE;ECB
+186;End;GIM;Ģimenes uzņēmums;GIM;LV;ECB
+187;End;GIP;Groupement d'intérêt public;GIP;FR;ECB
+188;End;GIU;Gospodarsko interesno udruženje;GIU;HR;ECB
+189;End;GIZ;Gospodarsko interesno združenje GIZ;GIZ;SI;ECB
+190;End;GmbH;Gesellschaft mit beschränkter Haftung;GMBH;AT;ECB
+191;End;GmbH;Gesellschaft mit beschränkter Haftung;GMBH;DE;ECB
+192;End;GmbH & Co KG;Gesellschaft mit beschränkter Haftung & Compagnie Kommanditgesellschaft;GMBH & CO KG;DE;ECB
+193;End;GmbH & Co KGaA;Gesellschaft mit beschränkter Haftung & Compagnie Kommanditgesellschaft an Aktien;GMBH & CO KGAA;DE;ECB
+194;End;GmbH & Co OHG;Gesellschaft mit beschränkter Haftung & Compagnie offene Handelsgesellschaft;GMBH & CO OHG;DE;ECB
+195;End;GmuHGB;Öffentlich-rechtliche Genossenschaft mit unbeschränkter Haftung, Genossenschaft auf Beteiligung;GMUHGB;BE;ECB
+196;End;gnS;Gemeinnützige Stiftung;GNS;BE;ECB
+197;End;GuHsZ;Genossenschaft mit unbeschränkter Haftung mit sozialer Zielsetzung;GUHSZ;BE;ECB
+198;End;GVoRP;Gesellschaften oder Vereinigungen ohne Rechtspersönlichkeit;GVORP;BE;ECB
+199;End;HB, KB;Handelsbolag, kommanditbolag;HB, KB;SE;ECB
+200;End;HF;helseforetak;HF;NO;OWN
+201;End;HVZ;Hulpverleningszone;HVZ;BE;ECB
+202;End;IC;Intercommunale;IC;BE;ECB
+203;End;II;Individuali įmonė;II;LT;ECB
+204;End;IK;Individuālais komersants;IK;LV;ECB
+205;End;IK;Interkommunale;IK;BE;ECB
+206;End;IKE;Ιδιωτική Κεφαλαιουχική Εταιρεία;IKE;GR;ECB
+207;End;Inc;Incorporated;INC;GB;Own
+208;End;incorporated;incorporated;INC;GB;OWN
+209;End;Incorporated;Incorporated;INC;GB;OWN
+210;End;IND;Individuālais uzņēmums;IND;LV;ECB
+211;End;InvAG;Investmentaktiengesellschaft;INVAG;DE;ECB
+212;End;INVCO;Investment Company;INVCO;MT;ECB
+213;End;ISBL;Institution sans but lucratif;ISBL;BE;ECB
+214;End;IVoG;Internationale Vereinigung ohne Gewinnerzielungsabsicht;IVOG;BE;ECB
+215;End;IVS;Iværksætterselskab;IVS;DK;ECB
+216;End;IVZW;Internationale vereniging zonder winstoogmerk;IVZW;BE;ECB
+217;End;IZW;Instelling zonder winstoogmerk;IZW;BE;ECB
+218;End;jdoo;Jednostavno društvo s ograničenom odgovornošću;JDOO;HR;ECB
+219;End;JPahR;Juristische Person alten hamburgischen Rechts;JPAHR;DE;ECB
+220;End;JSC;Joint Stock Company;JSC;...;OWN
+221;End;JSO;Συμπλοιοκτησία;JSO;GR;ECB
+222;End;jtd;Javno trgovačko društvo;JTD;HR;ECB
+223;End;JV;Κοινοπραξία;JV;GR;ECB
+224;End;k s;Komanditná spoločnosť;K S;SK;ECB
+225;End;Kankenka;Krankenkasse;KANKENKA;BE;ECB
+226;End;kb;Kommandiittiyhtiö;KB;FI;ECB
+227;End;KB;Kooperatīvā sabiedrība;KB;LV;ECB
+228;End;KBS;Kooperatīvo biedrību savienība;KBS;LV;ECB
+229;End;KBU;Kooperatīvo biedrību uzņēmums;KBU;LV;ECB
+230;End;kd;Komanditno društvo;KD;HR;ECB
+231;End;kd;Komanditna družba;KD;SI;ECB
+232;End;KD;Командиртно дружество;KD;BG;ECB
+233;End;KDA;Командиртно дружество с акции;KDA;BG;ECB
+234;End;kdd;Komanditna delniška družba;KDD;SI;ECB
+235;End;Kft;Korlátolt felelosségu társaság;KFT;HU;ECB
+236;End;KG;Kommanditgesellschaft;KG;AT;ECB
+237;End;KG;Kommanditgesellschaft;KG;DE;ECB
+238;End;KGaA;Kommanditgesellschaft auf Aktien;KGAA;DE;ECB
+239;End;KGaA;Kommanditgesellschaft auf Aktien;KGAA;BE;ECB
+240;End;KGaAmsZ;Kommanditgesellschaft auf Aktien mit sozialer Zielsetzung;KGAAMSZ;BE;ECB
+241;End;Kht;Közhasznú társaság;KHT;HU;ECB
+242;End;KK;kabushiki kaisha;KK;JP;OWN
+243;End;KK;kabushiki gaisha;KK;JP;OWN
+244;End;Kkt;Közkereseti társaság;KKT;HU;ECB
+245;End;KO;Kooperatinė bendrovė;KO;LT;ECB
+246;End;KöR;Körperschaft des öffentlichen Rechts;KÖR;DE;ECB
+247;End;ks;Společnost komanditní;KS;CZ;ECB
+248;End;KS;Komandītsabiedrība;KS;LV;ECB
+249;End;kscc;Kuwaiti Joint Stock Company;KSCC;KW;OWN
+250;End;kscp;Kuwaiti Joint Stock Company;KSCP;KW;OWN
+251;End;KSS;Kooperatīvo biedrību savienības uzņēmums;KSS;LV;ECB
+252;End;KUB;Komanditinė ūkinė bendrija;KUB;LT;ECB
+253;End;ky;Kommandiittiyhtiö;KY;FI;ECB
+254;End;Lda;Sociedade por Quotas;LDA;PT;ECB
+255;End;LF;Labdaros ir paramos fondas;LF;LT;ECB
+256;End;LG;Landwirtschaftliche Gesellschaft;LG;BE;ECB
+257;End;LH;Pfandleihhaus;LH;BE;ECB
+258;End;LIG;Līgumsabiedrība ar pilnu atbildību;LIG;LV;ECB
+259;End;Limited;Company Limited by Guarantee;CO LTD;GB;OWN
+260;End;Limited & Co KG;Limited & Compagnie Kommanditgesellschaft;LIMITED & CO KG;DE;ECB
+261;End;Limited & Co KGaA;Limited & Compagnie Kommanditgesellschaft an Aktien;LIMITED & CO KGAA;DE;ECB
+262;End;Limited & Co OHG;Limited & Compagnie offene Handelsgesellschaft;LIMITED & CO OHG;DE;ECB
+263;End;LLC;Limited Liability Company;LLC;GB;Own
+264;End;LLP;limited liability partnership;LLP;GB;OWN
+265;End;LOKPOL;Lokale politiezone;LOKPOL;BE;ECB
+266;End;LP;Lokale Polizeizone;LP;BE;ECB
+267;End;LPRA;Lietuvos prekybos, pramonės ir amatų rūmų asociacija;LPRA;LT;ECB
+268;End;LTD;Ιδιωτική Εταιρεία;LTD;CY;ECB
+269;End;LTD;Private Company Limited by Shares;LTD;IE;ECB
+270;End;LTD;Limited;LTD;MT;ECB
+271;End;LTDA;Limitada;LTDA;BR;OWN
+272;End;LV;Landbouwvennootschap;LV;BE;ECB
+273;End;MB;Mažoji bendrija;MB;LT;ECB
+274;End;MEV;Miteigentümervereinigung;MEV;BE;ECB
+275;End;MS;Maatschap;MS;BE;ECB
+276;End;MTÜ;Mittetulundusühing;MTÜ;EE;ECB
+277;End;MUTU;Mutualité;MUTU;BE;ECB
+278;End;MWSE;Mehrwertsteuereinheit;MWSE;BE;ECB
+279;End;NA;Odborová organizace;NA;CZ;ECB
+280;End;NA;Organizace zaměstnavatelů;NA;CZ;ECB
+281;End;NA;Svěřenský fond;NA;CZ;ECB
+282;End;NA;Nuolatinė komercinio arbitražo institucija;NA;LT;ECB
+283;End;NO;Nezisková organizácia;NO;SK;ECB
+284;End;NV;Naamloze vennootschap;NV;NL;ECB
+285;End;NV;Naamloze vennootschap;NV;BE;ECB
+286;End;NV PR;Naamloze vennootschap van publiek recht;NV PR;BE;ECB
+287;End;NV SO;Naamloze vennootschap met een sociaal oogmerk;NV SO;BE;ECB
+288;End;OAO;Открытое акционерное общество;OAO;RU;OWN
+289;End;OAP;Organismo da Administração Pública;OAP;PT;ECB
+290;End;OBA;Országos betétbiztosítási alap;OBA;HU;ECB
+291;End;OC;Overseas Company;OC;MT;ECB
+292;End;OCMW;Openbaar centrum voor maatschappelijk welzijn;OCMW;BE;ECB
+293;End;OE;Ομόρρυθμη Εταιρεία;OE;GR;ECB
+294;End;ÖE;Öffentliche Einrichtung;ÖE;BE;ECB
+295;End;OFE;otwarte fundusze emerytalne;OFE;PL;ECB
+296;End;OFP;Organisme de financement de pensions;OFP;BE;ECB
+297;End;ÖfrGmbH;Öffentlich-rechtliche Genossenschaft mit beschränkter Haftung;ÖFRGMBH;BE;ECB
+298;End;OG;Offene Gesellschaft;OG;AT;ECB
+299;End;OHG;Offene Handelsgesellschaft;OHG;DE;ECB
+300;End;OHG;Offene Handelsgesellschaft;OHG;BE;ECB
+301;End;OHGmsZ;Offene Handelsgesellschaft mit sozialer Zielsetzung;OHGMSZ;BE;ECB
+302;End;OI;Organizações Internacionais;OI;PT;ECB
+303;End;OI;Openbare instelling;OI;BE;ECB
+304;End;OJSC;Open Joint Stock Company;OJSC;RU;OWN
+305;End;ONG;Organizație non-guvernamentală;ONG;RO;ECB
+306;End;OOD;Дружество с ограничена отговорност;OOD;BG;ECB
+307;End;op;Osuuspankki;OP;FI;ECB
+308;End;OPDRAVER;Opdrachthoudende vereniging;OPDRAVER;BE;ECB
+309;End;OPHLM;Office public d'habitation à loyer modéré;OPHLM;FR;ECB
+310;End;ops;Obecně prospěšná společnost;OPS;CZ;ECB
+311;End;Ö-rAG;Öffentlich-rechtliche Aktiengesellschaft;Ö-RAG;BE;ECB
+312;End;ÖrK;Öffentlich rechtliche Körperschaften;ÖRK;AT;ECB
+313;End;ÖrS;Öffentlich rechtliche Stiftungen;ÖRS;AT;ECB
+314;End;ÖrVgGe;Öffentlich-rechtliche Versicherungsvereinigung auf Gegenseitigkeit;ÖRVGGE;BE;ECB
+315;End;ÖrVohGza;Öffentlich-rechtliche Vereinigung ohne Gewinnerzielungsabsicht;ÖRVOHGZA;BE;ECB
+316;End;ÖSHZ;Öffentliches Sozialhilfezentrum;ÖSHZ;BE;ECB
+317;End;osk;Osuuskunta;OSK;FI;ECB
+318;End;OTH;Άλλη νομική μορφή;OTH;CY;ECB
+319;End;OÜ;Osaühing;OÜ;EE;ECB
+320;End;OVV;Caisse commune d'assurances de droit privé;OVV;BE;ECB
+321;End;OVV PR;Onderlinge verzekeringsvereniging van publiek recht;OVV PR;BE;ECB
+322;End;OWM;Onderlinge waarborgmaatschappij;OWM;NL;ECB
+323;End;oy;Osakeyhtiö;OY;FI;ECB
+324;End;oyj;Osakeyhtiö;OYJ;FI;ECB
+325;End;PA;PUBBLICA AMMINISTRAZIONE;PA;IT;ECB
+326;End;PAJ;Paju sabiedrība;PAJ;LV;ECB
+327;End;PAP;Sabiedrība ar papildu atbildību;PAP;LV;ECB
+328;End;PAR;Pārstāvniecība;PAR;LV;ECB
+329;End;PartG;Partnerschaftsgesellschaft;PARTG;DE;ECB
+330;End;PCC;Protected cell company;PCC;MT;ECB
+331;End;PCDP;Pessoa Coletiva de Direito Público;PCDP;PT;ECB
+332;End;PCOMM;En commandite;PCOMM;MT;ECB
+333;End;PCR;Pessoa Colectiva Religiosa;PCR;PT;ECB
+334;End;PDB;Privačių detektyvų bendrija;PDB;LT;ECB
+335;End;PETR;Pôle d'équilibre territorial et rural;PETR;FR;ECB
+336;End;PF;Ταμεία Προνοίας;PF;CY;ECB
+337;End;PGmbH;Privatgesellschaft mit beschränkter Haftung;PGMBH;BE;ECB
+338;End;PIETE;Monts-de-Piété;PIETE;BE;ECB
+339;End;PL;Νομικά Πρόσωπα Δημοσίου Δικαίου;PL;GR;ECB
+340;End;PL;Private Limited;PL;GB;OWN
+341;End;PLC;Δημόσια Εταιρεία;PLC;CY;ECB
+342;End;PLC;Public Limited Company;PLC;IE;ECB
+343;End;PLC;Public limited company;PLC;MT;ECB
+344;End;PmbHsZ;Privatgesellschaft mit beschränkter Haftung mit sozialer Zielsetzung;PMBHSZ;BE;ECB
+345;End;POD;Programmatorische federale overheidsdienst;POD;BE;ECB
+346;End;POLLOC;Police locale;POLLOC;BE;ECB
+347;End;PP;Politinė partija;PP;LT;ECB
+348;End;PPEU;Europese politieke partij;PPEU;BE;ECB
+349;End;PPEU;Parti politique européen;PPEU;BE;ECB
+350;End;PR;Prekybos, pramonės ir amatų rūmai;PR;LT;ECB
+351;End;PRIV ST;Private stichting;PRIV ST;BE;ECB
+352;End;Private Limited;Private Limited;PL;GB;OWN
+353;End;Prjverng;Projektvereinigung;PRJVERNG;BE;ECB
+354;End;PROJ V;Projectvereniging;PROJ V;BE;ECB
+355;End;Provbehö;Provinzialbehörde;PROVBEHÖ;BE;ECB
+356;End;PROVOVER;Provinciale overheid;PROVOVER;BE;ECB
+357;End;PRRFmRP;Andere privatrechtliche Rechtsform mit Rechtspersönlichkeit;PRRFMRP;BE;ECB
+358;End;PrSt;Privatstiftung;PRST;BE;ECB
+359;End;PRV;Andere privaatrechtelijke vorm met rechtspersoonlijkheid;PRV;BE;ECB
+360;End;PRVGaG;Onderlinge verzekeringsvereniging;PRVGAG;BE;ECB
+361;End;PS;Profesinė sąjunga ar susivienijimas;PS;LT;ECB
+362;End;PS;Pilnsabiedrība;PS;LV;ECB
+363;End;PSV;Pašvaldības uzņēmums;PSV;LV;ECB
+364;End;PTE LTD;Private Limited Company;PTE LTD;SY;OWN
+365;End;pty limited;Propreitary Limited Company;PTY LTD;SY;OWN
+366;End;PUBLaw;Οντότητες που διέπονται από το δημόσιο δίκαιο;PUBLAW;CY;ECB
+367;End;PVT LTD;Private Limited;PVT LTD;GB;OWN
+368;End;PW;Polder - wateringue;PW;BE;ECB
+369;End;PW;Polder - Watering;PW;BE;ECB
+370;End;RA;Regie autonomă;RA;RO;ECB
+371;End;RB;Religinė bendruomenė ar bendrija;RB;LT;ECB
+372;End;RBH;Behörde der Region Brüssel-Hauptstadt;RBH;BE;ECB
+373;End;RCOMAUT;Régie communale autonome;RCOMAUT;BE;ECB
+374;End;REGBRXCA;Autorité de la Région de Bruxelles-Capitale;REGBRXCA;BE;ECB
+375;End;REGCOMNL;Autorité de la Région flamande et de la Communauté flamande;REGCOMNL;BE;ECB
+376;End;REL;Reliģiskas organizācijas uzņēmums;REL;LV;ECB
+377;End;RFmsZ;Andere öffentlich-rechtliche Rechtsform mit sozialer Zielsetzung;RFMSZ;BE;ECB
+378;End;RKOA;Riigi ja kohaliku omavalitsuse asutused;RKOA;EE;ECB
+379;End;RPROVAUT;Régie provinciale autonome;RPROVAUT;BE;ECB
+380;End;Rt;Részvénytársaság;RT;HU;ECB
+381;End;RTK;Lietuvos radijo ir televizijos komisija;RTK;LT;ECB
+382;End;RW;Autorité de la Région wallonne;RW;BE;ECB
+383;End;S Agr;Société agricole;S AGR;BE;ECB
+384;End;S COM PA;Sociedad Comanditaria por acciones;S COM PA;ES;ECB
+385;End;S COOP;Sociedad Cooperativa;S COOP;ES;ECB
+386;End;S EN C o S COM;Sociedad Comanditaria Simple;S EN C O S COM;ES;ECB
+387;End;SA;spółki akcyjne;SA;PL;ECB
+388;End;SA;Sihtasutus;SA;EE;ECB
+389;End;SA;Sociedad Anónima;SA;ES;ECB
+390;End;SA;Ανώνυμη Εταιρεία;SA;GR;ECB
+391;End;SA;Société anonyme;SA;BE;ECB
+392;End;SA de CV;Sociedad Anónima de Capital Variable;SA DE CV;FR | ...;Wikipedia
+393;End;SA DPU;Société anonyme de droit public;SA DPU;BE;ECB
+394;End;SA FS;Société anonyme à finalité sociale;SA FS;BE;ECB
+395;End;SA LABORAL;Sociedad Anónima Laboral;SA LABORAL;ES;ECB
+396;End;SA ;Société anonyme;SA ;LU;ECB
+397;End;SA ;Sociedade Anónima;SA ;PT;ECB
+398;End;SA ;Societate pe acţiuni;SA ;RO;ECB
+399;End;SAA;SOCIETA' IN ACCOMANDITA PER AZIONI;SAA;IT;ECB
+400;End;SAB De CV;Sociedad Anónima Bursátil de Capital Variable;SAB DE CV;FR | ...;Wikipedia
+401;End;SAD;Sociedade Anónima Desportiva;SAD;PT;ECB
+402;End;SAL;Sociedad Anónima Laboral;SAL;ES;ECB
+403;End;SAM DPU;Association d'assurances mutuelles de droit public;SAM DPU;BE;ECB
+404;End;SARL ;Société à responsabilité limitée;SARL ;LU;ECB
+405;End;SARLS;Société à responsabilité limitée simplifiée;SARLS;LU;ECB
+406;End;SAS;SOCIETA' IN ACCOMANDITA SEMPLICE;SAS;IT;ECB
+407;End;SASPJ;Société ou association sans personnalité juridique;SASPJ;BE;ECB
+408;End;SAT;Sociedad agraria de transformación;SAT;ES;ECB
+409;End;SAU;Sociedad Anónima Unipersonal;SAU;ES;ECB
+410;End;sc;spółki cywilne;SC;PL;ECB
+411;End;SC;Sociedad colectiva;SC;ES;ECB
+412;End;SC;Ναυτική εταιρία;SC;GR;ECB
+413;End;SC;Société civile;SC;LU;ECB
+414;End;SC SA;Société civile sous forme de société anonyme;SC SA;BE;ECB
+415;End;SC SAGR;Société civile sous forme de société agricole;SC SAGR;BE;ECB
+416;End;SC SCA;Société civile sous forme de société en commandite par actions;SC SCA;BE;ECB
+417;End;SC SCRI;Société civile sous forme de société coopérative à responsabilité illimitée;SC SCRI;BE;ECB
+418;End;SC SCRL;Société civile sous forme de société coopérative à responsabilité limitée;SC SCRL;BE;ECB
+419;End;SC SCS;Société civile sous forme de société en commandite simple;SC SCS;BE;ECB
+420;End;SC SNC;Société civile sous forme de société en nom collectif;SC SNC;BE;ECB
+421;End;SC SPRL;Société civile sous forme de société privée à responsabilité limitée;SC SPRL;BE;ECB
+422;End;SCA;Societate în comandită pe acţiuni;SCA;RO;ECB
+423;End;SCA;Société en commandite par actions;SCA;BE;ECB
+424;End;SCA FS;Société en commandite par actions à finalité sociale;SCA FS;BE;ECB
+425;End;SCE;Societas Cooperativa Europea;SCE;-;ECB
+426;End;SCOP;Société coopérative;SCOP;LU;ECB
+427;End;SCPI;Société civile de placement collectif immobilier;SCPI;FR;ECB
+428;End;SCRI;Société coopérative à responsabilité illimitée;SCRI;BE;ECB
+429;End;SCRI CP;Coopérative à responsabilité illimitée, coopérative de participation, de droit public;SCRI CP;BE;ECB
+430;End;SCRI FS;Société coopérative à responsabilité illimitée à finalité sociale;SCRI FS;BE;ECB
+431;End;SCRL;Société coopérative à responsabilité limitée;SCRL;BE;ECB
+432;End;SCRL DPU;Société coopérative à responsabilité limitée de droit public;SCRL DPU;BE;ECB
+433;End;SCRL FS;Société coopérative à responsabilité limitée à finalité sociale;SCRL FS;BE;ECB
+434;End;SCS;Societate în comandită simplă;SCS;RO;ECB
+435;End;SCS;Société en commandite simple;SCS;BE;ECB
+436;End;SCS FS;Société en commandite simple à finalité sociale;SCS FS;BE;ECB
+437;End;SD;Sodininkų bendrija;SD;LT;ECB
+438;End;SD;Събирателно дружество;SD;BG;ECB
+439;End;SDC;Société de droit commun;SDC;BE;ECB
+440;End;sdd;Športsko dioničko društvo;SDD;HR;ECB
+441;End;SDF;SOCIETA' DI FATTO;SDF;IT;ECB
+442;End;SDIS;Service départemental d'incendie et de secours;SDIS;FR;ECB
+443;End;SDN BHD;Sendirian Berhad;SDN BHD;MY;Own
+444;End;SE;Societas Europea;SE;-;ECB
+445;End;SECA;Société en commandite par actions;SECA;LU;ECB
+446;End;SECS;Société en commandite simple;SECS;LU;ECB
+447;End;SECSP;Société en commandite speciale;SECSP;LU;ECB
+448;End;SEPCAV;Société d’épargne-pension à capital variable;SEPCAV;LU;ECB
+449;End;SERVFEDE;Autre service fédéral;SERVFEDE;BE;ECB
+450;End;SF;Σωματεία και Ιδρυμάτα;SF;CY;ECB
+451;End;SF;Société en formation;SF;BE;ECB
+452;End;SGPS;Sociedade Gestora de Participações Sociais ;SGPS;PT;OWN
+453;End;SGPS SA;Sociedade Gestora de Participações Sociais ;SGPS SA;PT;OWN
+454;End;SGR;Sociedad de garantía recíproca;SGR;ES;ECB
+455;End;SI;Savivaldybės įmonė;SI;LT;ECB
+456;End;SIA;Sabiedrība ar ierobežotu atbildību;SIA;LV;ECB
+457;End;SICAF;Société d'investissement à capital fixe;SICAF;LU;ECB
+458;End;SICAR;Société d'investissement à capital risque;SICAR;LU;ECB
+459;End;SICAV;Société d’Investissement à Capital Variable;SICAV;MT;ECB
+460;End;SICAV;Société d'investissement à capital variable;SICAV;LU;ECB
+461;End;S-ie;Съдружие;S-IE;BG;ECB
+462;End;SIVOM;Syndicat intercommunal à vocation multiple;SIVOM;FR;ECB
+463;End;SIVU;Syndicat intercommunal à vocation unique;SIVU;FR;ECB
+464;End;sj;spółki jawne;SJ;PL;ECB
+465;End;SKA;spółki komandytowo - akcyjne;SKA;PL;ECB
+466;End;SL;Sociedad de responsabilidad limitada;SL;ES;ECB
+467;End;SL LABORAL;Sociedad Limitada Laboral;SL LABORAL;ES;ECB
+468;End;SLL;Sociedad Limitada Laboral;SLL;ES;ECB
+469;End;SLNE;Sociedad Limitada Nueva Empresa;SLNE;ES;ECB
+470;End;SLP;Αφανής Εταιρεία;SLP;GR;ECB
+471;End;SLU;Sociedad Limitada Unipersonal;SLU;ES;ECB
+472;End;smba;Selskab med begrænset ansvar;SMBA;DK;ECB
+473;End;SMC;Single Member Company;SMC;IE;ECB
+474;End;SNC;Société en nom collectif;SNC;LU;ECB
+475;End;SNC;Sociedades em Nome Coletivo;SNC;PT;ECB
+476;End;SNC;Societate în nume colectiv;SNC;RO;ECB
+477;End;SNC;Société en nom collectif;SNC;BE;ECB
+478;End;SNC;SOCIETA' IN NOME COLLETTIVO;SNC;IT;ECB
+479;End;SNC FS;Société en nom collectif à finalité sociale;SNC FS;BE;ECB
+480;End;SOCI;Sociedade Civil;SOCI;PT;ECB
+481;End;SON;Stichting van openbaar nut;SON;BE;ECB
+482;End;SöR;Stiftung des öffentlichen Rechts;SÖR;DE;ECB
+483;End;SOU;Sabiedriskās organizācijas uzņēmums;SOU;LV;ECB
+484;End;sp;Státní podnik;SP;CZ;ECB
+485;End;SP;Αυτοτελώς εργαζόμενος;SP;CY;ECB
+486;End;SP;Sociedad profesional;SP;ES;ECB
+487;End;sp;Säästöpankki;SP;FI;ECB
+488;End;SP;Secteur public;SP;LU;ECB
+489;End;šp;Štátny podnik;ŠP;SK;ECB
+490;End;sp z oo;spółki z ograniczoną odpowiedzialnością;SP ZOO;PL;ECB
+491;End;SPA;SOCIETA' PER AZIONI;SPA;IT;ECB
+492;End;Spb;Sparbanker;SPB;SE;ECB
+493;End;SPF;Service public fédéral;SPF;BE;ECB
+494;End;SPFPL SARL;Société de Participations Financières de Profession Libérale Société à responsabilité limitée;SPFPL SARL;FR;ECB
+495;End;SPFPL SAS;Société de Participations Financières de Profession Libérale Société par actions simplifiée;SPFPL SAS;FR;ECB
+496;End;SPFPL SCA;Société de Participations Financières de Profession Libérale Société en commandite par actions;SPFPL SCA;FR;ECB
+497;End;spk;spółki komandytowe;SPK;PL;ECB
+498;End;SPöR;Sonstige juristische Person des öffentlichen Rechts;SPÖR;DE;ECB
+499;End;spp;spółki partnerskie;SPP;PL;ECB
+500;End;SPP;Service public fédéral de programmation;SPP;BE;ECB
+501;End;SpR;Stiftung des privaten Rechts;SPR;DE;ECB
+502;End;SPRL;Société privée à responsabilité limitée;SPRL;BE;ECB
+503;End;SPRL FS;Société privée à responsabilité limitée à finalité sociale;SPRL FS;BE;ECB
+504;End;SR;Sonstiger Rechtsträger;SR;AT;ECB
+505;End;sr;Säätiö;SR;FI;ECB
+506;End;SRC;Sociedad colectiva;SRC;ES;ECB
+507;End;SRL;Sociedad de responsabilidad limitada;SRL;ES;ECB
+508;End;SRL;Societate cu răspundere limitată;SRL;RO;ECB
+509;End;SRL;SOCIETA' A RESPONSABILITA' LIMITATA;SRL;IT;ECB
+510;End;SRLU;Sociedad Limitada Unipersonal;SRLU;ES;ECB
+511;End;sro;Společnost s ručením omezeným;SRO;CZ;ECB
+512;End;sro;Spoločnosť s ručením obmedzeným;SRO;SK;ECB
+513;End;SS;Šaulių sąjunga;SS;LT;ECB
+514;End;SS;SOCIETA' SEMPLICE;SS;IT;ECB
+515;End;Stiftung GmbH & Co KG;Stifungsgesellschaft mit beschränkter Haftung & Compagnie Kommanditgesellschaft;STIFTUNG GMBH & CO KG;DE;ECB
+516;End;Stiftung GmbH & Co KGaA;Stifungsgesellschaft mit beschränkter Haftung & Compagnie Kommanditgesellschaft an Aktien;STIFTUNG GMBH & CO KGAA;DE;ECB
+517;End;Stiftung GmbH & Co OHG;Stifungsgesellschaft mit beschränkter Haftung & Compagnie offene Handelsgesellschaft;STIFTUNG GMBH & CO OHG;DE;ECB
+518;End;SUni;Sociedade Unipessoal Por Quotas;SUNI;PT;ECB
+519;End;SV;Société d’Investissement à Capital Variable;SV;MT;ECB
+520;End;svj;Společenství vlastníků jednotek;SVJ;CZ;ECB
+521;End;TR;Tradicinė religinė bendruomenė ar bendrija;TR;LT;ECB
+522;End;TÜ;Täisühing;TÜ;EE;ECB
+523;End;TUB;Tikroji ūkinė bendrija;TUB;LT;ECB
+524;End;TuÜ;Tulundusühistu;TUÜ;EE;ECB
+525;End;TUW;towarzystwa ubezpieczeń wzajemnych;TUW;PL;ECB
+526;End;UAB;Uždaroji akcinė bendrovė;UAB;LT;ECB
+527;End;UC;Unlimited company ;UC;IE;ECB
+528;End;UCITS;Undertakings for Collective Investment in Transferable Securities;UCITS;IE;ECB
+529;End;UG;Unternehmergesellschaft;UG;;
+530;End;UG & Co KG;Unternehmergesellschaft  & Compagnie Kommanditgesellschaft;UG & CO KG;DE;ECB
+531;End;UG & Co KGaA;Unternehmergesellschaft  & Compagnie Kommanditgesellschaft an Aktien;UG & CO KGAA;DE;ECB
+532;End;UG & Co OHG;Unternehmergesellschaft  & Compagnie offene Handelsgesellschaft;UG & CO OHG;DE;ECB
+533;End;UG haftungsbeschränkt;Unternehmergesellschaft haftungsbeschränkt;UG (HAFTUNGSBESCHRÄNKT);DE;ECB
+534;End;UP;Union professionnelle;UP;BE;ECB
+535;End;UTVA;Unité TVA;UTVA;BE;ECB
+536;End;UÜ;Usaldusühing;UÜ;EE;ECB
+537;End;UZN;Uzņēmējsabiedrības uzņēmums;UZN;LV;ECB
+538;End;VER;Vereine;VER;AT;ECB
+539;End;VerOCMW;Vereniging van OCMW's;VEROCMW;BE;ECB
+540;End;VI;Valstybės įmonė;VI;LT;ECB
+541;End;VLGEWGEM;Overheid van het Vlaamse Gewest en van de Vlaamse Gemeenschap;VLGEWGEM;BE;ECB
+542;End;VME;Vereniging van mede-eigenaars;VME;BE;ECB
+543;End;VO;Voluntary;VO;MT;ECB
+544;End;VOF;Vennootschap onder firma;VOF;BE;ECB
+545;End;VOF SO;Vennootschap onder firma met een sociaal oogmerk;VOF SO;BE;ECB
+546;End;VoG;Vereinigung ohne Gewinnerzielungsabsicht;VOG;BE;ECB
+547;End;VORM SO;Andere vorm met een sociaal oogmerk van publiek recht;VORM SO;BE;ECB
+548;End;vos;Veřejná obchodní společnost;VOS;CZ;ECB
+549;End;vos;Verejná obchodná spoločnosť;VOS;SK;ECB
+550;End;VÖSHZ;Vereinigung von öffentlichen Sozialhilfezentren;VÖSHZ;BE;ECB
+551;End;VS;Viešoji įstaiga;VS;LT;ECB
+552;End;VU;Valsts uzņēmums;VU;LV;ECB
+553;End;VÚC;Samosprávny kraj;VÚC;SK;ECB
+554;End;VV;Vennootschap in oprichting;VV;BE;ECB
+555;End;VVaG;Versicherungsverein auf Gegenseitigkeit;VVAG;DE;ECB
+556;End;VVE;Vereniging van eigenaars;VVE;NL;ECB
+557;End;VVZRL;Vennootschap of vereniging zonder rechtspersoonlijkheid;VVZRL;BE;ECB
+558;End;VZW;Vereniging zonder winstoogmerk;VZW;BE;ECB
+559;End;VZW PR;Vereniging zonder winstoogmerk van publiek recht;VZW PR;BE;ECB
+560;End;WG;Overheid van het Waalse Gewest;WG;BE;ECB
+561;End;WIV;Wirtschaftliche Interessenvereinigung;WIV;BE;ECB
+562;End;WIVmsZ;Wirtschaftliche Interessenvereinigung mit sozialer Zielsetzung;WIVMSZ;BE;ECB
+563;End;WLL;With Limited Liability;CO WLL;JP;OWN
+564;End;WR;Behörde der Wallonischen Region;WR;BE;ECB
+565;End;WuR;Weltanschauungs- und Religionsgemeinschaft;WUR;DE;ECB
+566;End;wV;Wirtschaftlicher Verein;WV;DE;ECB
+567;End;YK;Yugen Kaisha;YK;JP;OWN
+568;End;ZAO; Закрытое акционерное общество;ZAO;RU;OWN
+569;End;zbo;Zadruga;ZBO;SI;ECB
+570;End;ZEM;Zemnieku saimniecība;ZEM;LV;ECB
+571;End;ZIEK F;Ziekenfonds;ZIEK F;BE;ECB
+572;End;zoo;Zadruga;ZOO;SI;ECB
+573;End;ZRG AG;Zivilrechtliche Gesellschaft in der Rechtsform einer Aktiengesellschaft;ZRG AG;BE;ECB
+574;End;ZRG EKG;Zivilrechtliche Gesellschaft in der Rechtsform einer einfachen Kommanditgesellschaft;ZRG EKG;BE;ECB
+575;End;ZRG KGaA;Zivilrechtliche Gesellschaft in der Rechtsform einer Kommanditgesellschaft auf Aktien;ZRG KGAA;BE;ECB
+576;End;ZRG LG;Zivilrechtliche Gesellschaft in der Rechtsform einer landwirtschaftlichen Gesellschaft;ZRG LG;BE;ECB
+577;End;ZRG OHG;Zivilrechtliche Gesellschaft in der Rechtsform einer offenen Handelsgesellschaft;ZRG OHG;BE;ECB
+578;End;ZUB;Žemės ūkio bendrovė;ZUB;LT;ECB
+579;End;ZvGGbH;Zivilrechtliche Gesellschaft in der Rechtsform einer Genossenschaft mit beschränkter Haftung;ZVGGBH;BE;ECB
+580;End;ZvGGugcH;Zivilrechtliche Gesellschaft in der Rechtsform einer Genossenschaft mit unbeschränkter Haftung;ZVGGUGCH;BE;ECB
+581;End;ZvGPgbH;Zivilrechtliche Gesellschaft in der Rechtsform einer Privatgesellschaft mit beschränkter Haftung;ZVGPGBH;BE;ECB
+582;End;ZVJ;Zvejnieku saimniecība;ZVJ;LV;ECB
+583;End;ZweckV;Zweckverband;ZWECKV;DE;ECB
+584;End;PJSC;Public Joint Stock Company ;PJSC;RU;OWN
