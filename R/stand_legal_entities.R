@@ -1,3 +1,138 @@
+<<<<<<< HEAD
+=======
+#' Standardize Legal Entities
+#'
+#' @param string The strings containing legal entities
+#' @param le.table A table with legal entities, if NULL the default table will be used
+#' @param standardized Is the input standardized?
+#'
+#' @return A dataframe with standardized legal entities
+#' @export
+stand_le <- function(string, le.table = NULL, standardized = FALSE) {
+  `%>%` <- magrittr::`%>%`
+  # prepare the legal entity table -------------------------------------------------------
+  legal.entity <- tpfuns::legal_entities %>%
+    dplyr::mutate(le_abbr = tpfuns::stand_chars(le_abbr)) %>%
+    dplyr::mutate(le_full = tpfuns::stand_chars(le_full)) %>%
+    dplyr::select(-source) %>%
+    dplyr::distinct(., .keep_all = TRUE)
+
+  legal.entity.full <- legal.entity %>%
+    dplyr::select(-le_abbr) %>%
+    dplyr::distinct(., .keep_all = TRUE) %>%
+    dplyr::mutate(le_regex = le_full) %>%
+    dplyr::mutate(le_regex = stringi::stri_replace_all_fixed(le_regex, " ", "\\s")) %>%
+    dplyr::mutate(le_regex = stringi::stri_replace_all_fixed(le_regex, "(", "\\(")) %>%
+    dplyr::mutate(le_regex = stringi::stri_replace_all_fixed(le_regex, ")", "\\)")) %>%
+    dplyr::mutate(le_regex = paste0("\\b", le_regex, "$")) %>%
+    dplyr::arrange(dplyr::desc(stringi::stri_count_fixed(le_full, " ") + 1))
+
+
+  legal.entity.abbr <- legal.entity %>%
+    dplyr::group_by(le_abbr) %>%
+    dplyr::summarise(
+      le_stand   = dplyr::first(le_stand),
+      le_country = stringi::stri_flatten(le_country, " | ")
+    ) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(le_regex = le_abbr) %>%
+    dplyr::mutate(le_regex = stringi::stri_replace_all_regex(le_regex, "([a-z])", "$1\\\\s?")) %>%
+    dplyr::mutate(le_regex = stringi::stri_replace_last_fixed(le_regex, "\\s?", "")) %>%
+    dplyr::mutate(le_regex = stringi::stri_replace_all_fixed(le_regex, " ", "\\s")) %>%
+    dplyr::mutate(le_regex = paste0("\\b", le_regex, "$")) %>%
+    dplyr::arrange(dplyr::desc(stringi::stri_count_fixed(le_stand, " ") + 1))
+
+
+  table <- tibble::tibble(name_orig = string, detect = FALSE) %>%
+    dplyr::mutate(legal_entity = "<NONE>") %>%
+    dplyr::mutate(country = "<NONE>")  %>%
+    dplyr::mutate(id = dplyr::row_number())
+
+  if (standardized == FALSE) {
+    table <- table %>%
+      dplyr::mutate(name = tpfuns::stand_chars(name_orig))
+  } else {
+    table <- table %>%
+      dplyr::mutate(name = name_orig)
+  }
+
+  table <- table %>%
+    dplyr::mutate(name = stringi::stri_replace_all_fixed(name, "(", "")) %>%
+    dplyr::mutate(name = stringi::stri_replace_all_fixed(name, ")", ""))
+
+  for (i in 1:nrow(legal.entity.abbr)) {
+    legal.regex   <- legal.entity.abbr$le_regex[i]
+    legal.stand   <- legal.entity.abbr$le_stand[i]
+    legal.country <- legal.entity.abbr$le_country[i]
+
+    table <- table %>%
+      dplyr::mutate(detect = dplyr::if_else(
+        detect == FALSE,
+        stringi::stri_detect_regex(name, legal.regex),
+        TRUE
+      )) %>%
+      dplyr::mutate(
+        name = dplyr::if_else(
+          detect == TRUE & legal_entity == "<NONE>",
+          stringi::stri_replace_all_regex(name, legal.regex, ""),
+          name
+        )
+      ) %>%
+      dplyr::mutate(
+        legal_entity = dplyr::if_else(
+          detect == TRUE & legal_entity == "<NONE>",
+          legal.stand,
+          legal_entity
+        )
+      ) %>%
+      dplyr::mutate(country = dplyr::if_else(detect == TRUE &
+                                               country == "<NONE>",
+                                             legal.country,
+                                             country))
+  }
+  for (i in 1:nrow(legal.entity.abbr)) {
+    legal.regex   <- legal.entity.full$le_regex[i]
+    legal.stand   <- legal.entity.full$le_stand[i]
+    legal.country <- legal.entity.full$le_country[i]
+
+    table <- table %>%
+      dplyr::mutate(detect = dplyr::if_else(
+        detect == FALSE,
+        stringi::stri_detect_regex(name, legal.regex),
+        TRUE
+      )) %>%
+      dplyr::mutate(
+        name = dplyr::if_else(
+          detect == TRUE & legal_entity == "<NONE>",
+          stringi::stri_replace_all_regex(name, legal.regex, ""),
+          name
+        )
+      ) %>%
+      dplyr::mutate(
+        legal_entity = dplyr::if_else(
+          detect == TRUE & legal_entity == "<NONE>",
+          legal.stand,
+          legal_entity
+        )
+      ) %>%
+      dplyr::mutate(country = dplyr::if_else(detect == TRUE & country == "<NONE>",
+                               legal.country,
+                               country))
+  }
+
+  table <- table %>%
+    dplyr::mutate(country = stringi::stri_replace_all_fixed(country, "<NONE>", "")) %>%
+    dplyr::mutate(legal_entity = stringi::stri_replace_all_fixed(legal_entity, "<NONE>", "")) %>%
+    dplyr::arrange(id) %>%
+    dplyr::select(name_orig, name, legal_entity, country) %>%
+    dplyr::mutate(name = stringi::stri_trim_both(name)) %>%
+    dplyr::mutate(name = stringi::stri_replace_all_regex(name, "\\s+", " "))
+
+  return(table)
+}
+
+
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 #' Standardize Legal Entities (Vectorized version)
 #'
 #' @param string The strings containing legal entities
@@ -21,6 +156,7 @@ stand_le_2 <- function(string, le.table = NULL, standardized = FALSE, nthreads =
 
   if (is.null(le.table)) le.table <- tpfuns::legal_entities
 
+<<<<<<< HEAD
   le <- le.table  %>%
     dplyr::mutate(le_name = tpfuns::stand_chars(le_name)) %>%
     dplyr::distinct(occurance, le_name, .keep_all = TRUE) %>%
@@ -46,11 +182,49 @@ stand_le_2 <- function(string, le.table = NULL, standardized = FALSE, nthreads =
 
   le <- dplyr::bind_rows(le.abbr, le.full)
   le.regex   <- le$regex
+=======
+  le.table <- le.table %>%
+    dplyr::mutate(le_abbr = tpfuns::stand_chars(le_abbr)) %>%
+    dplyr::mutate(le_full = tpfuns::stand_chars(le_full)) %>%
+    dplyr::mutate(abbr_ngram = stringi::stri_count_fixed(le_abbr, " ") + 1) %>%
+    dplyr::mutate(full_ngram = stringi::stri_count_fixed(le_full, " ") + 1) %>%
+    dplyr::mutate(le_abbr = stringi::stri_replace_all_fixed(le_abbr, " ", "\\s")) %>%
+    dplyr::mutate(le_abbr = stringi::stri_replace_all_regex(le_abbr, "([a-z])", "$1\\\\s?")) %>%
+    dplyr::mutate(le_abbr = stringi::stri_replace_last_fixed(le_abbr, "\\s?", "")) %>%
+    dplyr::mutate(le_full = stringi::stri_replace_all_fixed(le_full, " ", "\\s")) %>%
+    dplyr::mutate(le_abbr = stringi::stri_replace_all_fixed(le_abbr, "(", "\\(")) %>%
+    dplyr::mutate(le_abbr = stringi::stri_replace_all_fixed(le_abbr, ")", "\\)")) %>%
+    dplyr::mutate(le_full = stringi::stri_replace_all_fixed(le_full, "(", "\\(")) %>%
+    dplyr::mutate(le_full = stringi::stri_replace_all_fixed(le_full, ")", "\\)")) %>%
+    dplyr::mutate(le_abbr = paste0("\\b", le_abbr, "$")) %>%
+    dplyr::mutate(le_full = paste0("\\b", le_full, "$")) %>%
+    dplyr::distinct(., .keep_all = TRUE)
+
+  le.abbr <- le.table %>%
+    dplyr::select(le_abbr, abbr_ngram) %>%
+    dplyr::arrange(desc(abbr_ngram)) %>%
+    dplyr::distinct(le_abbr)
+
+  le.abbr.regex <- stringi::stri_flatten(le.abbr$le_abbr, "|")
+
+  le.full <- le.table %>%
+    dplyr::select(le_full, full_ngram) %>%
+    dplyr::arrange(desc(full_ngram)) %>%
+    dplyr::distinct(le_full)
+
+  le.full.regex <- stringi::stri_flatten(le.full$le_full, "|")
+
+  le.regex <- paste0(le.abbr.regex, le.full.regex, collapse = "|")
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 
   if (nthreads == 1) {
 
   if (standardized == FALSE) string <- tpfuns::stand_chars(string, nthreads = nthreads)
+<<<<<<< HEAD
   string <- stringi::stri_replace_all_regex(string, le.regex, "", vectorize_all = F)
+=======
+  string <- stringi::stri_replace_all_regex(string, le.regex, "")
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
   string <- stringi::stri_replace_all_regex(string, "\\s+", " ")
   string <- stringi::stri_trim_both(string)
   } else {
@@ -74,7 +248,11 @@ stand_le_2 <- function(string, le.table = NULL, standardized = FALSE, nthreads =
       .options.snow = opts,
       .combine = c
     ) %dopar% {
+<<<<<<< HEAD
       split[[i]] <- stringi::stri_replace_all_regex(split[[i]], le.regex, "", vectorize_all = F)
+=======
+      split[[i]] <- stringi::stri_replace_all_regex(split[[i]], le.regex, "")
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
       split[[i]] <- stringi::stri_replace_all_regex(split[[i]], "\\s+", " ")
       split[[i]] <- stringi::stri_trim_both(split[[i]])
     }

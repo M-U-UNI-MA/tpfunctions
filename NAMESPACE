@@ -9,13 +9,17 @@ export(get_freq)
 export(get_pdf_info)
 export(lemmatize_fast)
 export(list_files_tbl)
+<<<<<<< HEAD
 export(lower_ws)
+=======
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 export(match_comp)
 export(pdf_to_csv)
 export(pdf_to_txt)
 export(prepare_term_list)
 export(read_mult_csv)
 export(replace_words)
+<<<<<<< HEAD
 export(stand_chars)
 export(stand_chars_fast)
 export(stand_db_names)
@@ -23,3 +27,11 @@ export(stand_docs_fast)
 export(stand_le_2)
 export(string_sim)
 export(term_operation_fast)
+=======
+export(replace_words_2)
+export(stand_chars)
+export(stand_db_names)
+export(stand_le)
+export(stand_le_2)
+export(string_sim)
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b

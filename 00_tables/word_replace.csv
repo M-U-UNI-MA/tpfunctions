@@ -395,6 +395,10 @@ dairies;dairy;singular/plural
 dames;dame;singular/plural
 databases;database;singular/plural
 days;day;singular/plural
+<<<<<<< HEAD
+=======
+de;del;
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 decisions;decision;singular/plural
 deckers;decker;singular/plural
 deeps;deep;singular/plural
@@ -1559,5 +1563,8 @@ zeros;zero;singular/plural
 zhongguang;zhonguang;
 zones;zone;singular/plural
 zurcher;zuercher;
+<<<<<<< HEAD
 vct;venture capital trust;
 reit;real estate investment trust;
+=======
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b

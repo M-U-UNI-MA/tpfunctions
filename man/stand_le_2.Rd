@@ -4,14 +4,19 @@
 \alias{stand_le_2}
 \title{Standardize Legal Entities (Vectorized version)}
 \usage{
+<<<<<<< HEAD
 stand_le_2(string, le.table = NULL, standardized = FALSE,
   nthreads = 1)
+=======
+stand_le_2(string, le.table = NULL, standardized = FALSE)
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 }
 \arguments{
 \item{string}{The strings containing legal entities}
 
 \item{le.table}{A table with legal entities, if NULL the default table will be used}
 
+<<<<<<< HEAD
 \item{standardized}{Is the input already standardized? If not the standardization function
 stand_chars is used to standardize the input string}
 
@@ -21,12 +26,21 @@ nthreads = 0: All but one cores will be used (parallel::detectCores() - 1)}
 }
 \value{
 A string with legal entities removed
+=======
+\item{standardized}{Is the input standardized?}
+}
+\value{
+A dataframe with standardized legal entities
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 }
 \description{
 Standardize Legal Entities (Vectorized version)
 }
+<<<<<<< HEAD
 \examples{
 a <- c("BASF SE", "BASF AG")
 stand_le_2(a)
 
 }
+=======
+>>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
