@@ -20,3 +20,13 @@ text:   The text of the text file
 This function reads either a single of multiple text files into a dataframe. The content
 of each textfile is stored in a single string in one row of the datframe
 }
+\examples{
+# get path to test files
+file.path <- list.files("00_tables/test_files/txt_files/", "txt$", FALSE, TRUE)
+
+# read files in dataframe (without progressbar)
+files <- read_txt(file.path)
+
+# read files in dataframe (with progressbar)
+files <- read_txt(file.path, TRUE)
+}

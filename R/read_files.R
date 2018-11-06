@@ -17,7 +17,14 @@
 #' @export
 #'
 #' @examples
-#' files <- read(txt)
+#' # get path to test files
+#' file.path <- list.files("data/test_files/txt_files/", "txt$", FALSE, TRUE)
+#'
+#' # read files in dataframe (without progressbar)
+#' files <- read_txt(file.path)
+#'
+#' # read files in dataframe (with progressbar)
+#' files <- read_txt(file.path, TRUE)
 read_txt <- function(path, pb = FALSE) {
   if (pb == TRUE) {pboptions(type = "timer", char = "=", txt.width = 90)}
   else {pbapply::pboptions(type = "none")}
@@ -28,7 +35,6 @@ read_txt <- function(path, pb = FALSE) {
 }
 
 
-files <- read_txt(list.files("00_tables/test_files/txt_files/", "txt$", FALSE, TRUE))
 
 #' Read CSV Files
 #'
