@@ -13,7 +13,7 @@ read_txt(path, pb = FALSE)
 }
 \value{
 A dataframe with two columns: \cr
-doc_id: The document name of the text file
+doc_id: The document name of the text file\cr
 text:   The text of the text file
 }
 \description{
@@ -22,11 +22,11 @@ of each textfile is stored in a single string in one row of the datframe
 }
 \examples{
 # get path to test files
-file.path <- list.files("data/test_files/txt_files/", "txt$", FALSE, TRUE)
+file.path <- list.files(system.file("exdata/txt_files/", package = "tpfuns"), "txt$", F, T)
 
 # read files in dataframe (without progressbar)
-files <- read_txt(file.path)
+files.1 <- tpfuns::read_txt(file.path)
 
 # read files in dataframe (with progressbar)
-files <- read_txt(file.path, TRUE)
+files.2 <- tpfuns::read_txt(file.path, TRUE)
 }

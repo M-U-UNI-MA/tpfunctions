@@ -11,29 +11,28 @@
 #'
 #' @return
 #' A dataframe with two columns: \cr
-#' doc_id: The document name of the text file
+#' doc_id: The document name of the text file\cr
 #' text:   The text of the text file
 #'
 #' @export
 #'
 #' @examples
 #' # get path to test files
-#' file.path <- list.files("data/test_files/txt_files/", "txt$", FALSE, TRUE)
+#' file.path <- list.files(system.file("exdata/txt_files/", package = "tpfuns"), "txt$", F, T)
 #'
 #' # read files in dataframe (without progressbar)
-#' files <- read_txt(file.path)
+#' files.1 <- tpfuns::read_txt(file.path)
 #'
 #' # read files in dataframe (with progressbar)
-#' files <- read_txt(file.path, TRUE)
+#' files.2 <- tpfuns::read_txt(file.path, TRUE)
 read_txt <- function(path, pb = FALSE) {
-  if (pb == TRUE) {pboptions(type = "timer", char = "=", txt.width = 90)}
+  if (pb == TRUE) {pbapply::pboptions(type = "timer", char = "=", txt.width = 90)}
   else {pbapply::pboptions(type = "none")}
 
   tibble::tibble(
     doc_id = stringi::stri_replace_last_fixed(basename(path), ".txt", ""),
     text   = unlist(pbapply::pblapply(path, readr::read_file)))
 }
-
 
 
 #' Read CSV Files
@@ -59,7 +58,7 @@ read_csv <- function(path, pb = FALSE, delim = ";", col.types = "guess") {
 
   if (col.types == "guess") col.types <- readr::cols(.default = readr::col_guess())
 
-  if (pb == TRUE) {pboptions(type = "timer", char = "=", txt.width = 90)}
+  if (pb == TRUE) {pbapply::pboptions(type = "timer", char = "=", txt.width = 90)}
   else {pbapply::pboptions(type = "none")}
 
   df <- pblapply(path, function(x) {
