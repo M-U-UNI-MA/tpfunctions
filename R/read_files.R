@@ -15,14 +15,20 @@
 #' text:   The text of the text file
 #'
 #' @export
+#'
+#' @examples
+#' files <- read(txt)
 read_txt <- function(path, pb = FALSE) {
   if (pb == TRUE) {pboptions(type = "timer", char = "=", txt.width = 90)}
-  else {pboptions(type = "none")}
+  else {pbapply::pboptions(type = "none")}
 
   tibble::tibble(
     doc_id = stringi::stri_replace_last_fixed(basename(path), ".txt", ""),
     text   = unlist(pbapply::pblapply(path, readr::read_file)))
 }
+
+
+files <- read_txt(list.files("00_tables/test_files/txt_files/", "txt$", FALSE, TRUE))
 
 #' Read CSV Files
 #'
@@ -48,7 +54,7 @@ read_csv <- function(path, pb = FALSE, delim = ";", col.types = "guess") {
   if (col.types == "guess") col.types <- readr::cols(.default = readr::col_guess())
 
   if (pb == TRUE) {pboptions(type = "timer", char = "=", txt.width = 90)}
-  else {pboptions(type = "none")}
+  else {pbapply::pboptions(type = "none")}
 
   df <- pblapply(path, function(x) {
     readr::read_delim(file = x, delim = delim, progress = F, col_types = col.types)})
