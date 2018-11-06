@@ -1,8 +1,8 @@
 Package: tpfuns
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A Package with different useful functions for textual analysis
 Version: 0.1.0
-Author: Who wrote it
+Author: Matthias Uckert
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
