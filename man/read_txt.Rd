@@ -22,7 +22,7 @@ of each textfile is stored in a single string in one row of the datframe
 }
 \examples{
 # get path to test files
-file.path <- list.files("00_tables/test_files/txt_files/", "txt$", FALSE, TRUE)
+file.path <- list.files("data/test_files/txt_files/", "txt$", FALSE, TRUE)
 
 # read files in dataframe (without progressbar)
 files <- read_txt(file.path)
