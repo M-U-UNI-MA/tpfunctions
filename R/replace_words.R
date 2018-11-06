@@ -11,13 +11,11 @@
 #' Note: If no table is specified the default table will be used \cr
 #' Note: The table will be checked for incorrect replacenemts
 #' Note: The table will be checked for replacement dependencies (A -> B, B -> C <=> A -> C)
-<<<<<<< HEAD
-=======
 #' @param nthreads
 #' Number of threads for paralell processing (as integer) \cr
 #' nthreads = 1: No parallel processing (default) \cr
 #' nthreads = 0: All but one cores will be used (parallel::detectCores() - 1)
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
+
 #'
 #' @return A string with replaced words
 #' @export
@@ -27,14 +25,8 @@
 #' test <- c("investments", "assets")
 #' replace_words(test)
 #'
-<<<<<<< HEAD
-replace_words <- function(string, replace_table = NULL) {
-  `%>%` <- magrittr::`%>%`
-
-=======
 replace_words <- function(string, replace_table = NULL, nthreads = 1) {
   `%>%` <- magrittr::`%>%`
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
   # read table, either default of specified by replace_table
   if (is.null(replace_table)) {
     replace.word <- tpfuns::word_replace
@@ -63,7 +55,7 @@ replace_words <- function(string, replace_table = NULL, nthreads = 1) {
     i <- i - 1
 
   }
-<<<<<<< HEAD
+
     string.table <- tibble::tibble(phrases = string) %>%
       dplyr::mutate(phrase_id = dplyr::row_number()) %>%
       tidytext::unnest_tokens(words, phrases, "words")
@@ -84,8 +76,6 @@ replace_words <- function(string, replace_table = NULL, nthreads = 1) {
 
   string <- stringi::stri_replace_all_regex(string, regex, replace, vectorize_all = FALSE)
   string <- stringi::stri_trim_both(string)
-
-=======
 
   # prepare the regex
   replace.word <- replace.word %>% dplyr::mutate(regex = paste0("\\b", word, "\\b"))
@@ -191,5 +181,5 @@ replace_words_2 <- function(string, replace_table = NULL) {
   string <- stringi::stri_replace_all_regex(string, regex, replace, vectorize_all = FALSE)
   string <- stringi::stri_trim_both(string)
   return(string)
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
+
 }

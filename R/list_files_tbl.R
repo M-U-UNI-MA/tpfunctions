@@ -9,6 +9,7 @@
 #' @return a dataframe with two columns
 #'
 #' @export
+#'
 list_files_tbl <- function(path, file.type, id) {
   `%>%` <- magrittr::`%>%`
 

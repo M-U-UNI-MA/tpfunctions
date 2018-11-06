@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #' Standardize Legal Entities
 #'
 #' @param string The strings containing legal entities
@@ -132,7 +130,6 @@ stand_le <- function(string, le.table = NULL, standardized = FALSE) {
 }
 
 
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 #' Standardize Legal Entities (Vectorized version)
 #'
 #' @param string The strings containing legal entities
@@ -156,7 +153,6 @@ stand_le_2 <- function(string, le.table = NULL, standardized = FALSE, nthreads =
 
   if (is.null(le.table)) le.table <- tpfuns::legal_entities
 
-<<<<<<< HEAD
   le <- le.table  %>%
     dplyr::mutate(le_name = tpfuns::stand_chars(le_name)) %>%
     dplyr::distinct(occurance, le_name, .keep_all = TRUE) %>%
@@ -182,7 +178,6 @@ stand_le_2 <- function(string, le.table = NULL, standardized = FALSE, nthreads =
 
   le <- dplyr::bind_rows(le.abbr, le.full)
   le.regex   <- le$regex
-=======
   le.table <- le.table %>%
     dplyr::mutate(le_abbr = tpfuns::stand_chars(le_abbr)) %>%
     dplyr::mutate(le_full = tpfuns::stand_chars(le_full)) %>%
@@ -215,16 +210,12 @@ stand_le_2 <- function(string, le.table = NULL, standardized = FALSE, nthreads =
   le.full.regex <- stringi::stri_flatten(le.full$le_full, "|")
 
   le.regex <- paste0(le.abbr.regex, le.full.regex, collapse = "|")
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 
   if (nthreads == 1) {
 
   if (standardized == FALSE) string <- tpfuns::stand_chars(string, nthreads = nthreads)
-<<<<<<< HEAD
   string <- stringi::stri_replace_all_regex(string, le.regex, "", vectorize_all = F)
-=======
   string <- stringi::stri_replace_all_regex(string, le.regex, "")
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
   string <- stringi::stri_replace_all_regex(string, "\\s+", " ")
   string <- stringi::stri_trim_both(string)
   } else {
@@ -248,11 +239,9 @@ stand_le_2 <- function(string, le.table = NULL, standardized = FALSE, nthreads =
       .options.snow = opts,
       .combine = c
     ) %dopar% {
-<<<<<<< HEAD
+
       split[[i]] <- stringi::stri_replace_all_regex(split[[i]], le.regex, "", vectorize_all = F)
-=======
       split[[i]] <- stringi::stri_replace_all_regex(split[[i]], le.regex, "")
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
       split[[i]] <- stringi::stri_replace_all_regex(split[[i]], "\\s+", " ")
       split[[i]] <- stringi::stri_trim_both(split[[i]])
     }

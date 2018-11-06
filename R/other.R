@@ -10,6 +10,7 @@
 #' A character of character vector
 #'
 #' @return
+#' A string
 #' @export
 lower_ws <- function(string){
   string <- stringi::stri_trans_tolower(string)

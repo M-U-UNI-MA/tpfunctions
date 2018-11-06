@@ -5,11 +5,13 @@
 #' the number of characters (n_char). Based on this the ration words per page (n_word_page)
 #' and characters per words (n_char_word) is calculated
 #'
-#' @param path_docs
+#' @param path
+#' The path to the textfiles (get with list.files())
+#'
 #' @return
 #' A Dataframe
 #' @export
-docs_stats <- function (path_docs) {
+docs_stats <- function (path) {
 
   `%>%` <- magrittr::`%>%`
 

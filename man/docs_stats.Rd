@@ -4,7 +4,10 @@
 \alias{docs_stats}
 \title{Staistics for text documents}
 \usage{
-docs_stats(path_docs)
+docs_stats(path)
+}
+\arguments{
+\item{path}{The path to the textfiles (get with list.files())}
 }
 \value{
 A Dataframe

@@ -9,6 +9,9 @@ lower_ws(string)
 \arguments{
 \item{string}{A character of character vector}
 }
+\value{
+A string
+}
 \description{
 A simple wrapper around some stringi function \cr
 - Replaces multiple blanks with a single blank \cr
