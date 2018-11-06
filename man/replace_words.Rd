@@ -4,11 +4,7 @@
 \alias{replace_words}
 \title{Replacement of commonly misspelled words}
 \usage{
-<<<<<<< HEAD
-replace_words(string, replace_table = NULL)
-=======
 replace_words(string, replace_table = NULL, nthreads = 1)
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 }
 \arguments{
 \item{string}{The input string}
@@ -20,13 +16,10 @@ the first column \cr
 Note: If no table is specified the default table will be used \cr
 Note: The table will be checked for incorrect replacenemts
 Note: The table will be checked for replacement dependencies (A -> B, B -> C <=> A -> C)}
-<<<<<<< HEAD
-=======
 
 \item{nthreads}{Number of threads for paralell processing (as integer) \cr
 nthreads = 1: No parallel processing (default) \cr
 nthreads = 0: All but one cores will be used (parallel::detectCores() - 1)}
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 }
 \value{
 A string with replaced words

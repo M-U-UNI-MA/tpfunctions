@@ -4,7 +4,6 @@
 \alias{stand_db_names}
 \title{Standardizes Names from Accounting Data Provider (e.g. Datastream)}
 \usage{
-<<<<<<< HEAD
 stand_db_names(string, regex.table = NULL, standardized = FALSE,
   nthreads = 1)
 }
@@ -19,12 +18,6 @@ stand_chars is used to standardize the input string}
 \item{nthreads}{Number of threads for paralell processing (as integer) \cr
 nthreads = 1: No parallel processing (default) \cr
 nthreads = 0: All but one cores will be used (parallel::detectCores() - 1)}
-=======
-stand_db_names(string, regex.table = NULL, standardized = FALSE)
-}
-\arguments{
-\item{string}{String with company names to be standardized}
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 }
 \value{
 A string with standardized names
@@ -32,12 +25,9 @@ A string with standardized names
 \description{
 Standardizes Names from Accounting Data Provider (e.g. Datastream)
 }
-<<<<<<< HEAD
 \examples{
 a <- "BASF SE dead 31/12/2005"
 stand_db_names(a)
 
 
 }
-=======
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b

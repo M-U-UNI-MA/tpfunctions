@@ -13,11 +13,7 @@ stand_chars(string, stand.table = NULL, nthreads = 1)
 chracters that needs to be standardized (in hex values) and a column for the replacement)
 See the attached table as example. If no table is specified the default table will be used}
 
-<<<<<<< HEAD
 \item{nthreads}{Number of threads for paralell processing (as integer) \cr
-=======
-\item{nthreads}{#' Number of threads for paralell processing (as integer) \cr
->>>>>>> 5bee9322e471aa5caa34e38bdb38fc23bdf9259b
 nthreads = 1: No parallel processing (default) \cr
 nthreads = 0: All but one cores will be used (parallel::detectCores() - 1)}
 }
