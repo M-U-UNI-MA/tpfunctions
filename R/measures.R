@@ -26,3 +26,37 @@ unique_pairs <- function(vec) {
 }
 
 
+#' COsine Similarity between two Strings
+#'
+#' @param a
+#' A String (or a vector of strings)
+#' @param b
+#' A String (or a vector of strings)
+#'
+#' @return
+#' The cosine similarity (either a single number or a vector of numbers)
+#' @export
+cos_string_pair <- function(a, b) {
+  `%>%` <- magrittr::`%>%`
+
+  cos <- unlist(lapply(1:length(a), function(x) {
+
+  table.a <- tibble::tibble(a = a[x]) %>%
+    tidytext::unnest_tokens(word_a, a) %>%
+    dplyr::anti_join(tidytext::stop_words, by = c("word_a" = "word")) %>%
+    dplyr::count(word_a)
+
+  table.b <- tibble::tibble(b = b[x]) %>%
+    tidytext::unnest_tokens(word_b, b) %>%
+    dplyr::anti_join(tidytext::stop_words, by = c("word_b" = "word")) %>%
+    dplyr::count(word_b)
+
+  table <- dplyr::full_join(table.a, table.b, by = c("word_a" = "word_b")) %>%
+    dplyr::mutate(n.x = tidyr::replace_na(n.x, 0)) %>%
+    dplyr::mutate(n.y = tidyr::replace_na(n.y, 0))
+
+  cos.0 <- coop::cosine(table$n.x, table$n.y)
+  return(cos.0)
+  }))
+  return(cos)
+}

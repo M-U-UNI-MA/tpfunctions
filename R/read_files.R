@@ -1,3 +1,4 @@
+# Read Text Files ========================================================================
 #' Read Text Files
 #'
 #' @description
@@ -26,15 +27,18 @@
 #' # read files in dataframe (with progressbar)
 #' files.2 <- tpfuns::read_txt(file.path, TRUE)
 read_txt <- function(path, pb = FALSE) {
-  if (pb == TRUE) {pbapply::pboptions(type = "timer", char = "=", txt.width = 90)}
-  else {pbapply::pboptions(type = "none")}
-
+  if (pb == TRUE) {
   tibble::tibble(
     doc_id = stringi::stri_replace_last_fixed(basename(path), ".txt", ""),
     text   = unlist(pbapply::pblapply(path, readr::read_file)))
+  } else {
+    tibble::tibble(
+      doc_id = stringi::stri_replace_last_fixed(basename(path), ".txt", ""),
+      text   = unlist(lapply(path, readr::read_file)))
+  }
 }
 
-
+# Read Text Files ========================================================================
 #' Read CSV Files
 #'
 #' @description
@@ -58,11 +62,33 @@ read_csv <- function(path, pb = FALSE, delim = ";", col.types = "guess") {
 
   if (col.types == "guess") col.types <- readr::cols(.default = readr::col_guess())
 
-  if (pb == TRUE) {pbapply::pboptions(type = "timer", char = "=", txt.width = 90)}
-  else {pbapply::pboptions(type = "none")}
+  if (pb == TRUE) {
+    df <- pbapply::pblapply(path, function(x) {
+      readr::read_delim(file = x, delim = delim, progress = pb, col_types = col.types)})
+  } else {
+    df <- lapply(path, function(x) {
+      readr::read_delim(file = x, delim = delim, progress = pb, col_types = col.types)})
+  }
 
-  df <- pblapply(path, function(x) {
-    readr::read_delim(file = x, delim = delim, progress = F, col_types = col.types)})
   names(df) <- stringi::stri_replace_last_fixed(basename(path), ".csv", "")
   df <- dplyr::bind_rows(df, .id = "doc_id")
+
+}
+
+# Read Text Files ========================================================================
+#' Function that saves files both as csv and rds
+#'
+#' @param x
+#' A dataframe
+#' @param path
+#' The full path to the file (without file endings)
+#' @return
+#' two saved files
+#' @export
+write_csv_rds <- function(x, path, format = c("csv", "rds")) {
+
+  if (!any(format %in% c("csv", "rds"))) stop("no valid file format")
+  if ("csv" %in% format) readr::write_delim(x, paste0(path, ".csv"), ";", "")
+  if ("rds" %in% format) readr::write_rds(x, paste0(path, ".rds"))
+
 }

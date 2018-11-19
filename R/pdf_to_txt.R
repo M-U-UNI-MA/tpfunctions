@@ -14,7 +14,9 @@ pdf_to_txt <- function(file, outdir = NULL) {
     if (!dir.exists(outdir)) dir.create(outdir, FALSE)
   }
 
-  outfile <- paste0(outdir, "/", gsub("\\.pdf$", ".txt", basename(file)))
+  outfile <- paste0(outdir, "/", gsub("\\.pdf", ".txt", basename(file)))
+  file    <- paste0('"', file, '"')
+  outfile <- paste0('"', outfile, '"')
 
   suppressWarnings(tryCatch(
     system(paste('"pdftotext.exe"', file, outfile), ignore.stderr = TRUE),

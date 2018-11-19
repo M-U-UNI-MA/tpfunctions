@@ -15,7 +15,7 @@ docs_stats <- function (path) {
 
   `%>%` <- magrittr::`%>%`
 
-  docs <- readtext::readtext(path_docs) %>%
+  docs <- tpfuns::read_txt(path) %>%
     dplyr::mutate(n_page = stringi::stri_count_regex(text, "\\f")) %>%
     tidytext::unnest_tokens(words, text) %>%
     dplyr::mutate(n_word = 1) %>%

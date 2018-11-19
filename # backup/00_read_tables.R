@@ -19,9 +19,15 @@ word_replace <- readr::read_delim("00_tables/word_replace.csv", ";",
 usethis::use_data(word_replace, overwrite = TRUE)
 
 
-table_stand_ae_be <- readr::read_delim("00_tables/ae_be.csv", ";",
-  col_types = readr::cols(.default = "c"), na = character())
-usethis::use_data(table_stand_ae_be, overwrite = TRUE)
+table_americanize <- readr::read_delim("data-raw/table_americanize.csv", ";",
+                                       col_types = readr::cols(.default = "c"), na = character())
+usethis::use_data(table_americanize, overwrite = TRUE)
+
+table_repl_words <- readr::read_delim("data-raw/table_repl_words.csv", ";",
+                                       col_types = readr::cols(.default = "c"), na = character())
+usethis::use_data(table_repl_words, overwrite = TRUE)
+
+
 
 datatream_countries <- readr::read_delim("00_tables/datastream_countries.csv", ";",
                                        col_types = readr::cols(.default = "c"), na = character())
