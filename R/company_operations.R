@@ -150,3 +150,83 @@ stand_db_names <- function(string, regex.table = NULL, standardized = FALSE, nth
   return(string)
 
 }
+
+# MATCH COMPANIES ========================================================================
+cop_match_comp <- function(string) {
+
+  `%>%` <- magrittr::`%>%`
+  cat("\rreading match file, this might take a while ...")
+  name.match <- readr::read_rds("data/03_name_matching_doc_selection/00_match_names.rds")
+  pbapply::pboptions(type = "timer", char = "=", txt.width = 90)
+
+  match <- pbapply::pblapply(string, function(x) {
+    string.adj <- tpfuns::top_rem_punct(tpfuns::top_stand_punct(x))
+    match <- fastmatch::fmatch(string.adj, name.match$comp_name_stand)
+    match.temp <- tibble::tibble(
+      comp_name       = x,
+      ident           = name.match$ident[match],
+      ident_type      = name.match$ident_type[match],
+      db_type         = name.match$db_type[match],
+      match_type_db   = name.match$name_id[match],
+      match_type_comp = 1
+    )
+
+
+    if (is.na(match)) {
+      string.adj.le <- tpfuns::cop_rem_le(string.adj)
+      match <- fastmatch::fmatch(string.adj.le, name.match$comp_name_stand)
+      match.temp <- tibble::tibble(
+        comp_name       = x,
+        ident           = name.match$ident[match],
+        ident_type      = name.match$ident_type[match],
+        db_type         = name.match$db_type[match],
+        match_type_db   = name.match$name_id[match],
+        match_type_comp = 2
+      )
+
+      if (is.na(match)) {
+        string.adj.space <-
+          stringi::stri_replace_all_fixed(string.adj, " ", "")
+        match <-
+          fastmatch::fmatch(string.adj.space, name.match$comp_name_stand)
+        match.temp <- tibble::tibble(
+          comp_name       = x,
+          ident           = name.match$ident[match],
+          ident_type      = name.match$ident_type[match],
+          db_type         = name.match$db_type[match],
+          match_type_db   = name.match$name_id[match],
+          match_type_comp = 3
+        )
+
+        if (is.na(match)) {
+          string.adj.le.space <-
+            stringi::stri_replace_all_fixed(string.adj.le, " ", "")
+          match <-
+            fastmatch::fmatch(string.adj.le.space, name.match$comp_name_stand)
+          match.temp <- tibble::tibble(
+            comp_name       = x,
+            ident           = name.match$ident[match],
+            ident_type      = name.match$ident_type[match],
+            db_type         = name.match$db_type[match],
+            match_type_db   = name.match$name_id[match],
+            match_type_comp = 4
+          )
+
+          if (is.na(match)) {
+            match.temp <- tibble::tibble(
+              comp_name       = x,
+              ident           = NA,
+              ident_type      = NA,
+              db_type         = NA,
+              match_type_db   = NA,
+              match_type_comp = NA
+            )
+          }
+        }
+      }
+    }
+    return(match.temp)
+  }) %>% dplyr::bind_rows()
+
+  return(match)
+}
