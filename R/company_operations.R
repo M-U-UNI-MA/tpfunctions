@@ -152,81 +152,101 @@ stand_db_names <- function(string, regex.table = NULL, standardized = FALSE, nth
 }
 
 # MATCH COMPANIES ========================================================================
-cop_match_comp <- function(string) {
+#' Matches Companies against Datastream and Orbis
+#'
+#' @param string
+#' A character string with company names to match
+#' @param match.table
+#' The match table (not part of the package, needs to be defined seperately!)
+#'
+#' @return
+#' A dtaframe with matched companies
+#' @export
+cop_match_comp <- function(names, match.table = NULL) {
+    `%>%` <- magrittr::`%>%`
 
-  `%>%` <- magrittr::`%>%`
-  cat("\rreading match file, this might take a while ...")
-  name.match <- readr::read_rds("data/03_name_matching_doc_selection/00_match_names.rds")
-  pbapply::pboptions(type = "timer", char = "=", txt.width = 90)
+    if (is.null(match.table)) stop("function needs matching table, see documentation")
 
-  match <- pbapply::pblapply(string, function(x) {
-    string.adj <- tpfuns::top_rem_punct(tpfuns::top_stand_punct(x))
-    match <- fastmatch::fmatch(string.adj, name.match$comp_name_stand)
-    match.temp <- tibble::tibble(
-      comp_name       = x,
-      ident           = name.match$ident[match],
-      ident_type      = name.match$ident_type[match],
-      db_type         = name.match$db_type[match],
-      match_type_db   = name.match$name_id[match],
-      match_type_comp = 1
-    )
+    name.match.ds  <- match.table %>%
+      dplyr::filter(db_type == "ds") %>%
+      dplyr::rename(match_type_db = name_id)
 
+    name.match.bvd <- match.table %>%
+      dplyr::filter(db_type == "bvd") %>%
+      dplyr::rename(match_type_db = name_id)
 
-    if (is.na(match)) {
-      string.adj.le <- tpfuns::cop_rem_le(string.adj)
-      match <- fastmatch::fmatch(string.adj.le, name.match$comp_name_stand)
-      match.temp <- tibble::tibble(
-        comp_name       = x,
-        ident           = name.match$ident[match],
-        ident_type      = name.match$ident_type[match],
-        db_type         = name.match$db_type[match],
-        match_type_db   = name.match$name_id[match],
-        match_type_comp = 2
-      )
+    cat("\r matching procedure 1 (datastream)                                             ")
+    match.table.0 <- tibble::tibble(name = names) %>%
+      dplyr::mutate(name_1 =tpfuns::top_rem_punct(tpfuns::top_stand_punct(name))) %>%
+      dplyr::mutate(name_1 =tpfuns::cop_repl_words(name_1)) %>%
+      dplyr::mutate(name_1 =tpfuns::top_americanize(name_1))
+    match <- fastmatch::fmatch(match.table.0$name_1, name.match.ds$comp_name_stand)
+    match.table.1 <- tibble::tibble(name = match.table.0$name) %>%
+      dplyr::bind_cols(name.match.ds[match, -1]) %>%
+      dplyr::filter(!is.na(ident)) %>%
+      dplyr::mutate(match_type_comp = 1)
 
-      if (is.na(match)) {
-        string.adj.space <-
-          stringi::stri_replace_all_fixed(string.adj, " ", "")
-        match <-
-          fastmatch::fmatch(string.adj.space, name.match$comp_name_stand)
-        match.temp <- tibble::tibble(
-          comp_name       = x,
-          ident           = name.match$ident[match],
-          ident_type      = name.match$ident_type[match],
-          db_type         = name.match$db_type[match],
-          match_type_db   = name.match$name_id[match],
-          match_type_comp = 3
-        )
+    cat("\r matching procedure 2 (datastream)                                             ")
+    match.table.0 <- dplyr::anti_join(match.table.0, match.table.1 %>% select(name), by = "name") %>%
+      dplyr::mutate(name_2 = tpfuns::cop_rem_le(name_1))
+    match <- fastmatch::fmatch(match.table.0$name_2, name.match.ds$comp_name_stand)
+    match.table.2 <- tibble::tibble(name = match.table.0$name) %>%
+      dplyr::bind_cols(name.match.ds[match, -1]) %>%
+      dplyr::filter(!is.na(ident)) %>%
+      dplyr::mutate(match_type_comp = 2)
 
-        if (is.na(match)) {
-          string.adj.le.space <-
-            stringi::stri_replace_all_fixed(string.adj.le, " ", "")
-          match <-
-            fastmatch::fmatch(string.adj.le.space, name.match$comp_name_stand)
-          match.temp <- tibble::tibble(
-            comp_name       = x,
-            ident           = name.match$ident[match],
-            ident_type      = name.match$ident_type[match],
-            db_type         = name.match$db_type[match],
-            match_type_db   = name.match$name_id[match],
-            match_type_comp = 4
-          )
+    cat("\r matching procedure 3 (datastream)                                             ")
+    match.table.0 <- dplyr::anti_join(match.table.0, match.table.2 %>% select(name), by = "name") %>%
+      dplyr::mutate(name_3 = stringi::stri_replace_all_fixed(name_1, " ", ""))
+    match <- fastmatch::fmatch(match.table.0$name_3, name.match.ds$comp_name_stand)
+    match.table.3 <- tibble::tibble(name = match.table.0$name) %>%
+      dplyr::bind_cols(name.match.ds[match, -1]) %>%
+      dplyr::filter(!is.na(ident)) %>%
+      dplyr::mutate(match_type_comp = 3)
 
-          if (is.na(match)) {
-            match.temp <- tibble::tibble(
-              comp_name       = x,
-              ident           = NA,
-              ident_type      = NA,
-              db_type         = NA,
-              match_type_db   = NA,
-              match_type_comp = NA
-            )
-          }
-        }
-      }
-    }
-    return(match.temp)
-  }) %>% dplyr::bind_rows()
+    cat("\r matching procedure 4 (datastream)                                             ")
+    match.table.0 <- dplyr::anti_join(match.table.0, match.table.3 %>% select(name), by = "name") %>%
+      dplyr::mutate(name_4 = stringi::stri_replace_all_fixed(name_2, " ", ""))
+    match <- fastmatch::fmatch(match.table.0$name_4, name.match.ds$comp_name_stand)
+    match.table.4 <- tibble::tibble(name = match.table.0$name) %>%
+      dplyr::bind_cols(name.match.ds[match, -1]) %>%
+      dplyr::filter(!is.na(ident)) %>%
+      dplyr::mutate(match_type_comp = 4)
 
-  return(match)
-}
+    cat("\r matching procedure 1 (orbis)                                                  ")
+    match.table.0 <- dplyr::anti_join(match.table.0, match.table.4 %>% select(name), by = "name")
+    match <- fastmatch::fmatch(match.table.0$name_1, name.match.bvd$comp_name_stand)
+    match.table.5 <- tibble::tibble(name = match.table.0$name) %>%
+      dplyr::bind_cols(name.match.bvd[match, -1]) %>%
+      dplyr::filter(!is.na(ident)) %>%
+      dplyr::mutate(match_type_comp = 1)
+
+    cat("\r matching procedure 2 (orbis)                                                  ")
+    match.table.0 <- dplyr::anti_join(match.table.0, match.table.5 %>% select(name), by = "name")
+    match <- fastmatch::fmatch(match.table.0$name_1, name.match.bvd$comp_name_stand)
+    match.table.6 <- tibble::tibble(name = match.table.0$name) %>%
+      dplyr::bind_cols(name.match.bvd[match, -1]) %>%
+      dplyr::filter(!is.na(ident)) %>%
+      dplyr::mutate(match_type_comp = 2)
+
+    cat("\r matching procedure 3 (orbis)                                                  ")
+    match.table.0 <- dplyr::anti_join(match.table.0, match.table.6 %>% select(name), by = "name")
+    match <- fastmatch::fmatch(match.table.0$name_1, name.match.bvd$comp_name_stand)
+    match.table.7 <- tibble::tibble(name = match.table.0$name) %>%
+      dplyr::bind_cols(name.match.bvd[match, -1]) %>%
+      dplyr::filter(!is.na(ident)) %>%
+      dplyr::mutate(match_type_comp = 3)
+
+    cat("\r matching procedure 4 (orbis)                                                  ")
+    match.table.0 <- dplyr::anti_join(match.table.0, match.table.7 %>% select(name), by = "name")
+    match <- fastmatch::fmatch(match.table.0$name_1, name.match.bvd$comp_name_stand)
+    match.table.8 <- tibble::tibble(name = match.table.0$name) %>%
+      dplyr::bind_cols(name.match.bvd[match, -1]) %>%
+      dplyr::filter(!is.na(ident)) %>%
+      dplyr::mutate(match_type_comp = 4)
+
+    match.table <- bind_rows(match.table.0 %>% select(name), match.table.1, match.table.2, match.table.3,
+                             match.table.4, match.table.5, match.table.6, match.table.7,
+                             match.table.8)
+    return(match.table)
+  }

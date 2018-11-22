@@ -17,7 +17,3 @@ lower_ws <- function(string){
   string <- stringi::stri_replace_all_regex(string, "\\s+", " ")
   string <- stringi::stri_trim_both(string)
 }
-
-
-
-get

@@ -1,3 +1,7 @@
+table_db_names <- readr::read_rds("data-raw/00_match_names.rds")
+usethis::use_data(table_db_names, overwrite = TRUE)
+
+
 legal_entities <-
   readr::read_delim("00_tables/legal_entities_utf8_5.csv",";",
     col_types = readr::cols(.default = "c"), na = character())
