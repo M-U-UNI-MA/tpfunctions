@@ -5,6 +5,7 @@ table_legal_entities <- readr::read_delim("data-raw/table_legal_entities.csv", "
   dplyr::mutate(regex = tpfuns::escape_regex(le_name)) %>%
   dplyr::mutate(regex = dplyr::case_when(occurance == "Start" ~ paste0("^", regex, "\\b"),
                                          occurance == "End" ~ paste0("\\b", regex, "$"))) %>%
+  dplyr::mutate(regex = stringi::stri_replace_all_fixed(regex, " ", "\\s?")) %>%
   dplyr::mutate(ngram = stringi::stri_count_fixed(le_name, " ") + 1) %>%
   dplyr::mutate(ngram = dplyr::if_else(type == "abbr", ngram, 0)) %>%
   dplyr::group_by(le_stand) %>%

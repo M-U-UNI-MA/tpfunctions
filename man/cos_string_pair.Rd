@@ -2,18 +2,20 @@
 % Please edit documentation in R/measures.R
 \name{cos_string_pair}
 \alias{cos_string_pair}
-\title{COsine Similarity between two Strings}
+\title{Cosine Similarity between two Strings}
 \usage{
-cos_string_pair(a, b)
+cos_string_pair(a, b, rem.stop = FALSE)
 }
 \arguments{
 \item{a}{A String (or a vector of strings)}
 
 \item{b}{A String (or a vector of strings)}
+
+\item{rem.stop}{Shall stopwords be removed?}
 }
 \value{
 The cosine similarity (either a single number or a vector of numbers)
 }
 \description{
-COsine Similarity between two Strings
+Cosine Similarity between two Strings
 }
