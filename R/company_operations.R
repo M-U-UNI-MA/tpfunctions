@@ -76,13 +76,32 @@ cop_repl_words <- function(string, replace_table = NULL) {
 #'
 #' @examples
 #' tpfuns::cop_rem_le("basf se")
-cop_rem_le <- function(string) {
+cop_rem_le <- function(string, le.return = FALSE) {
+  `%>%` <- magrittr::`%>%`
   regex <- tpfuns::table_legal_entities$regex
-  string <- stringi::stri_replace_all_regex(string, regex, "", vectorize_all = FALSE)
-  string <- stringi::stri_trim_both(string)
+  string.adj <- string
+  string.adj <- stringi::stri_replace_all_regex(string.adj, regex, "", vectorize_all = FALSE)
+  string.adj <- stringi::stri_trim_both(string.adj)
 
-  return(string)
-
+  if (le.return == FALSE) {
+    return(string.adj)
+  } else {
+    table <-
+      tibble::tibble(comp_orig = string, comp_adj = string.adj) %>%
+      dplyr::mutate(id = dplyr::row_number()) %>%
+      dplyr::mutate(legal_entity = stringi::stri_replace_all_fixed(comp_orig, comp_adj, "")) %>%
+      dplyr::mutate(legal_entity = stringi::stri_trim_both(legal_entity)) %>%
+      naniar::replace_with_na(replace = list(legal_entity = "")) %>%
+      fuzzyjoin::fuzzy_left_join(
+        tpfuns::table_legal_entities,
+        by = c("legal_entity" = "regex"),
+        match_fun = stringi::stri_detect_regex
+      ) %>%
+      dplyr::arrange(id, dplyr::desc(ngram)) %>%
+      dplyr::distinct(id, .keep_all = TRUE) %>%
+      dplyr::select(-regex, -ngram, -id)
+    return(table)
+  }
 }
 
 
