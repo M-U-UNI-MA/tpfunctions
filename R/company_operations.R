@@ -181,9 +181,10 @@ stand_db_names <- function(string, regex.table = NULL, standardized = FALSE, nth
 #' @return
 #' A dtaframe with matched companies
 #' @export
-cop_match_comp <- function(names, match.table = NULL, sub.ratio = 0.5, sim.ratio = 0.5) {
+cop_match_comp <- function(names, match.table = NULL, match = c("full", "sub", "approx"),
+                           sub.ratio = 0.5, sim.ratio = 0.5) {
   if (is.null(match.table)) stop("function needs matching table, see documentation")
-  no <- names
+
   # set internal functions ===============================================================
   `%>%`   <- magrittr::`%>%`
   `%fin%` <- fastmatch::`%fin%`
@@ -222,55 +223,89 @@ cop_match_comp <- function(names, match.table = NULL, sub.ratio = 0.5, sim.ratio
   # nsl:  standardized names w/o legal entity (name_stand_le)
   # nss:  standardized names w/o spaces (name_stand_space)
   # nsls: standardized names w/o legal entity and spaces (name_stand_le_space)
+  no <- names
+  ns <- f_4(f_3(f_2(f_1(no))))
 
-  # 1: matching standardized names =======================================================
-  cat("\r1: matching standardized names ------------------------------------------------")
-  ns            <- f_4(f_3(f_2(f_1(no))))
-  match.1       <- fastmatch::fmatch(ns, match.table$comp_name_stand)
-  match.table.1 <- f_match_table(name = no, match = match.1, match.type = 1)
+  if ("full" %in% match) {
+    # 1: matching standardized names =====================================================
+    cat("\r1: matching standardized names ------------------------------------------------")
+    match.1       <- fastmatch::fmatch(ns, match.table$comp_name_stand)
+    match.table.1 <- f_match_table(name = no, match = match.1, match.type = 1)
 
-  select <- which(is.na(match.1))
-  no <- no[select]; ns <- ns[select]
-  match.table <- dplyr::filter(match.table, !ident %fin% match.table.1$ident)
+    select <- which(is.na(match.1))
+    no <- no[select]; ns <- ns[select]
+    match.table <- dplyr::filter(match.table, !ident %fin% match.table.1$ident)
 
-  # 2: matching standardized names (w/o legal entity) ====================================
-  cat("\r2: matching standardized names (w/o legal entity) -----------------------------")
-  nsl           <- tpfuns::cop_rem_le(ns)
-  match.2       <- fastmatch::fmatch(nsl, match.table$comp_name_stand)
-  match.table.2 <- f_match_table(name = no, match = match.2, match.type = 2)
+    # 2: matching standardized names (w/o legal entity) ==================================
+    cat("\r2: matching standardized names (w/o legal entity) -----------------------------")
+    nsl           <- tpfuns::cop_rem_le(ns)
+    match.2       <- fastmatch::fmatch(nsl, match.table$comp_name_stand)
+    match.table.2 <- f_match_table(name = no, match = match.2, match.type = 2)
 
-  select <- which(is.na(match.2))
-  no <- no[select]; ns <- ns[select]; nsl <- nsl[select]
-  match.table <- dplyr::filter(match.table, !ident %fin% match.table.2$ident)
+    select <- which(is.na(match.2))
+    no <- no[select]; ns <- ns[select]; nsl <- nsl[select]
+    match.table <- dplyr::filter(match.table, !ident %fin% match.table.2$ident)
 
-  # 3: matching standardized names (w/o space) ===========================================
-  cat("\r3: matching standardized names (w/o space) ------------------------------------")
-  nss           <- f_5(ns)
-  match.3       <- fastmatch::fmatch(nss, match.table$comp_name_stand)
-  match.table.3 <- f_match_table(name = no, match = match.3, match.type = 3)
+    # 3: matching standardized names (w/o space) =========================================
+    cat("\r3: matching standardized names (w/o space) ------------------------------------")
+    nss           <- f_5(ns)
+    match.3       <- fastmatch::fmatch(nss, match.table$comp_name_stand)
+    match.table.3 <- f_match_table(name = no, match = match.3, match.type = 3)
 
-  select <- which(is.na(match.3))
-  no <- no[select]; ns <- ns[select]; nsl <- nsl[select]; nss <- nss[select]
-  match.table <- dplyr::filter(match.table, !ident %fin% match.table.3$ident)
+    select <- which(is.na(match.3))
+    no <- no[select]; ns <- ns[select]; nsl <- nsl[select]; nss <- nss[select]
+    match.table <- dplyr::filter(match.table, !ident %fin% match.table.3$ident)
 
-  # 4: matching standardized names (w/o legal entity and space) ==========================
-  cat("\r4: matching standardized names (w/o legal entity and space) ----------------")
-  nsls          <- f_5(nsl)
-  match.4       <- fastmatch::fmatch(nsls, match.table$comp_name_stand)
-  match.table.4 <- f_match_table(name = no, match = match.4, match.type = 4)
+    # 4: matching standardized names (w/o legal entity and space) ========================
+    cat("\r4: matching standardized names (w/o legal entity and space) ----------------")
+    nsls          <- f_5(nsl)
+    match.4       <- fastmatch::fmatch(nsls, match.table$comp_name_stand)
+    match.table.4 <- f_match_table(name = no, match = match.4, match.type = 4)
 
-  select <- which(is.na(match.4))
-  no  <- no[select];  ns   <- ns[select]; nsl <- nsl[select]
-  nss <- nss[select]; nsls <- nsls[select]
-  match.table <- dplyr::filter(match.table, !ident %fin% match.table.4$ident)
+    select <- which(is.na(match.4))
+    no  <- no[select];  ns   <- ns[select]; nsl <- nsl[select]
+    nss <- nss[select]; nsls <- nsls[select]
+    match.table <- dplyr::filter(match.table, !ident %fin% match.table.4$ident)
 
-  # matching equalized length ============================================================
-  # 5: equalized matching standardized names ---------------------------------------------
+    # append table =======================================================================
+    match.table.full <- dplyr::bind_rows(match.table.1,
+                                          match.table.2,
+                                          match.table.3,
+                                          match.table.4) %>%
+      dplyr::select(
+        ident,
+        name_comp = name,
+        name_match = comp_name_stand,
+        name_db = comp_name,
+        match_type_comp,
+        match_type_db,
+        name_type_db = name_type
+      )
+  }
+
+  if ("sub" %in% match) {
+    # 5: equalized matching standardized names ---------------------------------------------
   cat("\r5: equalized matching standardized names --------------------------------------")
   match.table.5 <- f_match_table_sub(names = ns, match.type = 5) %>%
     dplyr::mutate(sim_type = "sub")
+    # append table =======================================================================
+  match.table.sub <- match.table.5 %>%
+    dplyr::select(
+      ident,
+      name_comp = name,
+      name_match,
+      name_db = comp_name,
+      match_type_comp,
+      match_type_db,
+      name_type_db = name_type,
+      sim,
+      sim_type
+    ) %>%
+    dplyr::arrange(name_comp, match_type_comp, dplyr::desc(sim))
+  }
 
-  # 6: approximate matching standardized names -------------------------------------------
+  if ("approx" %in% match) {
+    # 6: approximate matching standardized names -------------------------------------------
   cat("\r6: approximate matching standardized names ------------------------------------")
   match.table.6 <- lapply(1:length(ns), function(x){
     y <- tibble::tibble(sim = stringdist::stringsim(a = ns[x],
@@ -285,16 +320,29 @@ cop_match_comp <- function(names, match.table = NULL, sub.ratio = 0.5, sim.ratio
   }) %>% dplyr::bind_rows() %>%
     dplyr::select(-id) %>%
     dplyr::mutate(sim_type = "lev")
+    # append table =======================================================================
+  match.table.approx <- match.table.6 %>%
+    dplyr::select(
+      ident,
+      name_comp = name,
+      name_db = comp_name,
+      match_type_comp,
+      match_type_db,
+      name_type_db = name_type,
+      sim,
+      sim_type
+    ) %>%
+    dplyr::arrange(name_comp, match_type_comp, dplyr::desc(sim))
+
+  }
 
   # append tables ========================================================================
-  match.table.exact <- dplyr::bind_rows(match.table.1, match.table.2, match.table.3, match.table.4) %>%
-    dplyr::select(ident, name_comp = name, name_match = comp_name_stand, name_db = comp_name,
-                  match_type_comp, match_type_db, name_type_db = name_type)
+  if (!"full" %in% match) match.table.full <- NULL
+  if (!"sub" %in% match) match.table.sub <- NULL
+  if (!"approx" %in% match) match.table.approx <- NULL
 
-  match.table.sub <- dplyr::bind_rows(match.table.5, match.table.6) %>%
-    dplyr::select(ident, name_comp = name, name_match, name_db = comp_name, match_type_comp,
-                  match_type_db, name_type_db = name_type, sim, sim_type) %>%
-    arrange(name_comp, match_type_comp, dplyr::desc(sim))
+  return.list <- list(match.table.full, match.table.sub, match.table.approx)
+  names(return.list) <- c("full", "sub", "approx")
 
-  return(list(match.table.exact, match.table.sub))
+  return(return.list)
 }

@@ -1111,7 +1111,7 @@ End;full;zvejnieku saimniecība;ZVJ;ECB
 End;abbr;zvj;ZVJ;ECB
 End;abbr;zweckv;ZWECKV;ECB
 End;full;zweckverband;ZWECKV;ECB
-;;plc company;CO PLC;
+End;abbr;plc company;CO PLC;OWN
 End;abbr;sa cie;SA CIE;OWN
 End;abbr;sa cies;SA CIE;OWN
 End;abbr;sa cie de;SA CIE DE;OWN
