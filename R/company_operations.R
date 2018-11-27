@@ -197,7 +197,7 @@ cop_match_comp <- function(names, match.table = NULL, match = c("full", "sub", "
     tibble::tibble(name = name) %>%
       dplyr::bind_cols(match.table[match,]) %>%
       dplyr::filter(!is.na(ident)) %>%
-      dplyr::mutate(match_type_comp = 1)
+      dplyr::mutate(match_type_comp = match.type)
   }
   f_match_table_sub <- function(names, match.type) {
     lapply(max(nchar(names)):4, function(i) {

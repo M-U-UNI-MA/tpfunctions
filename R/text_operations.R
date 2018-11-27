@@ -41,14 +41,23 @@ tox_doc_stats <- function (path, lan = FALSE) {
   )
 
   if (lan == TRUE) {
-    lan.stats <- lapply(text$text, function(x){
-    lan.detect <- cld2::detect_language_mixed(x)[["classificaton"]]
-    lan <- tibble::tibble(
-      lan_1 = lan.detect$code[1],
-      lan_2 = lan.detect$code[2],
-      rel_1 = lan.detect$proportion[1],
-      rel_2 = lan.detect$proportion[2]
-    )
+    lan.stats <- lapply(1:nrow(text), function(x) {
+      if (text.stats$n_word[x] == 0) {
+        lan <- tibble::tibble(
+          lan_1 = "un",
+          lan_2 = "un",
+          rel_1 = 0,
+          rel_2 = 0
+        )
+      } else {
+        lan.detect <- cld2::detect_language_mixed(text$text[x])[["classificaton"]]
+        lan <- tibble::tibble(
+          lan_1 = lan.detect$code[1],
+          lan_2 = lan.detect$code[2],
+          rel_1 = lan.detect$proportion[1],
+          rel_2 = lan.detect$proportion[2]
+        )
+      }
     }) %>% dplyr::bind_rows()
     text.stats <- dplyr::bind_cols(text.stats, lan.stats)
   }
