@@ -28,7 +28,7 @@
 #' @export
 tox_doc_stats <- function (path, lan = c("single", "mixed")) {
   `%>%` <- magrittr::`%>%`
-  text <- tpfuns::read_txt(path)
+  text <- readtext::readtext(path)
 
   text.stats <- tibble::tibble(
     doc_id = text$doc_id,
