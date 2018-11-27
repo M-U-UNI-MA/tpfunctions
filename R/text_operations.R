@@ -26,7 +26,7 @@
 #' rel_1: reliability of the first detected language (optional)\cr
 #' rel_2: reliability of the second detected language (optional)
 #' @export
-tox_doc_stats <- function (path, lan = FALSE) {
+tox_doc_stats <- function (path, lan = c("single", "mixed")) {
   `%>%` <- magrittr::`%>%`
   text <- tpfuns::read_txt(path)
 
@@ -40,7 +40,7 @@ tox_doc_stats <- function (path, lan = FALSE) {
     size   = round(file.size(path) / 1000, 4)
   )
 
-  if (lan == TRUE) {
+  if (lan == "mixed") {
     lan.stats <- lapply(1:nrow(text), function(x) {
       if (text.stats$n_word[x] == 0) {
         lan <- tibble::tibble(
@@ -62,5 +62,8 @@ tox_doc_stats <- function (path, lan = FALSE) {
     text.stats <- dplyr::bind_cols(text.stats, lan.stats)
   }
 
+  if (lan == "single") {
+    text.stats$lan <- cld2::detect_language(text$text)
+}
   return(text.stats)
 }
