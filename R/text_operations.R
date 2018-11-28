@@ -28,6 +28,7 @@
 #' @export
 tox_doc_stats <- function (path, lan = c("single", "mixed")) {
   `%>%` <- magrittr::`%>%`
+  if (!lan %in% c("single", "mixed")) stop("wrong language identifier")
   text <- readtext::readtext(path)
 
   text.stats <- tibble::tibble(
