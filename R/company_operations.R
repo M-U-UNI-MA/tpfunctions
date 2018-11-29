@@ -177,6 +177,12 @@ stand_db_names <- function(string, regex.table = NULL, standardized = FALSE, nth
 #' A character string with company names to match
 #' @param match.table
 #' The match table (not part of the package, needs to be defined seperately!)
+#' @param match
+#' Type of match, any combination of 'full', 'sub' and 'approx'
+#' @param sub.ratio
+#' Similarity threshold for the substring matching
+#' @param sim.ratio
+#' Similarity threshold for the approximate matching
 #'
 #' @return
 #' A dtaframe with matched companies

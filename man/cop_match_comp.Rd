@@ -4,10 +4,17 @@
 \alias{cop_match_comp}
 \title{Matches Companies against Datastream and Orbis}
 \usage{
-cop_match_comp(names, match.table = NULL)
+cop_match_comp(names, match.table = NULL, match = c("full", "sub",
+  "approx"), sub.ratio = 0.5, sim.ratio = 0.5)
 }
 \arguments{
 \item{match.table}{The match table (not part of the package, needs to be defined seperately!)}
+
+\item{match}{Type of match, any combination of 'full', 'sub' and 'approx'}
+
+\item{sub.ratio}{Similarity threshold for the substring matching}
+
+\item{sim.ratio}{Similarity threshold for the approximate matching}
 
 \item{string}{A character string with company names to match}
 }

@@ -4,7 +4,7 @@
 \alias{cop_rem_le}
 \title{Remove Legal Entities from String}
 \usage{
-cop_rem_le(string)
+cop_rem_le(string, le.return = FALSE)
 }
 \arguments{
 \item{string}{A chracter string}

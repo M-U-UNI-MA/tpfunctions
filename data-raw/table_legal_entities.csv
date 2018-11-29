@@ -1115,3 +1115,16 @@ End;abbr;plc company;CO PLC;OWN
 End;abbr;sa cie;SA CIE;OWN
 End;abbr;sa cies;SA CIE;OWN
 End;abbr;sa cie de;SA CIE DE;OWN
+End;abbr;co cjsc;CO CJSC;OWN
+End;abbr;company kscc;CO KSCC;OWN
+End;abbr;CORPORATION LIMITED;CORP LTD;OWN
+End;abbr;INCORPORATED CO;CO INC;OWN
+End;abbr;Incorporated Company;CO INC;OWN
+End;abbr;co psc;CO PSC;OWN
+End;abbr;COMPANY PUBLIC LIMITED COMPANY;CO PLC;OWN
+End;abbr;kpsc;KPSC;OWN
+End;abbr;scarl;SCARL;OWN
+End;abbr;qpsc;QPSC;OWN
+End;abbr;qsc;QSC;OWN
+End;abbr;Ltd Partnership;LP;OWN
+End;abbr;ae;AE;OWN
