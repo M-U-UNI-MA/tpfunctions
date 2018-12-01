@@ -21,14 +21,15 @@ End;abbr;acp;ACP;ECB
 End;full;association des copropriétaires;ACP;ECB
 End;abbr;ad;AD;ECB
 End;abbr;adsic;ADSIC;ECB
+End;abbr;ae;AE;OWN
 End;abbr;ag;AG;ECB
 End;full;aktiengesellschaft;AG;ECB
 End;abbr;ag company kg;AG & CO AG;OWN
 End;abbr;ag & co kg;AG & CO KG;ECB
 End;full;aktiengesellschaft & compagnie kommanditgesellschaft;AG & CO KG;ECB
-End;abbr; ag co kommanditgesellschaft auf aktien;AG & CO KG AA;OWN
-End;abbr;ag company kgaa;AG & CO KG AA;OWN
 End;abbr;ag & co kgaa;AG & CO KG AA;ECB
+End;abbr;ag company kgaa;AG & CO KG AA;OWN
+End;abbr;ag co kommanditgesellschaft auf aktien;AG & CO KG AA;OWN
 End;full;aktiengesellschaft & compagnie kommanditgesellschaft an aktien;AG & CO KG AA;ECB
 End;abbr;ag & co ohg;AG & CO OHG;ECB
 End;full;aktiengesellschaft & compagnie offene handelsgesellschaft;AG & CO OHG;ECB
@@ -69,7 +70,7 @@ End;abbr;asbl;ASBL;ECB
 End;full;association sans but lucratif;ASBL;ECB
 End;abbr;asbl dpu;ASBL DPU;ECB
 End;full;association sans but lucratif de droit public;ASBL DPU;ECB
-End;abbr;ASC;ASC;OWN
+End;abbr;asc;ASC;OWN
 End;abbr;ass serv;ASS SERV;ECB
 End;full;association prestataire de services;ASS SERV;ECB
 End;abbr;asscpas;ASSCPAS;ECB
@@ -142,60 +143,127 @@ End;abbr;cla;CLA;ECB
 End;abbr;clf;CLF;ECB
 End;abbr;clg;CLG;ECB
 End;full;company limited by guarantee;CLG;ECB
-End;full;Company;CO;OWN
-End;abbr;Company ab;CO AB;OWN
-End;abbr;Company ab publ;CO AB (PUBL);OWN
-End;abbr;Company ag;CO AG;OWN
+End;full;company;CO;OWN
+End;abbr;co;CO;OWN
+End;abbr;company ab;CO AB;OWN
+End;abbr;co ab;CO AB;OWN
+End;abbr;company ab publ;CO AB (PUBL);OWN
+End;abbr;co ab publ;CO AB (PUBL);OWN
+End;abbr;company ag;CO AG;OWN
+End;abbr;co ag;CO AG;OWN
 End;abbr;company aps;CO APS;OWN
+End;abbr;co aps;CO APS;OWN
 End;abbr;co as;CO AS;OWN
 End;abbr;company as;CO AS;OWN
-End;abbr;Company ASA;CO ASA;OWN
+End;abbr;co as;CO AS;OWN
+End;abbr;company asa;CO ASA;OWN
+End;abbr;co asa;CO ASA;OWN
 End;abbr;company bhd;CO BHD;OWN
+End;abbr;co bhd;CO BHD;OWN
 End;abbr;company bsc;CO BSC;OWN
-End;abbr;Company bv;CO BV;OWN
-End;abbr;Company dd;CO DD;OWN
+End;abbr;co bsc;CO BSC;OWN
+End;abbr;company bv;CO BV;OWN
+End;abbr;co bv;CO BV;OWN
+End;abbr;company cjsc;CO JSC;OWN
+End;abbr;co cjsc;CO CJSC;OWN
+End;abbr;company dd;CO DD;OWN
+End;abbr;co dd;CO DD;OWN
 End;abbr;company gmbh;CO GMBH;OWN
+End;abbr;co gmbh;CO GMBH;OWN
 End;abbr;gmbh company gmbh;CO GMBH;OWN
+End;abbr;gmbh co gmbh;CO GMBH;OWN
 End;abbr;co inc;CO INC;Own
-End;full;company incorporated;CO INC;Own
-End;abbr;Incorporated Com;CO INC;OWN
+End;abbr;company inc;CO INC;Own
+End;abbr;company incorporated;CO INC;Own
+End;abbr;incorporated co;CO INC;Own
+End;abbr;inc co;CO INC;Own
+End;abbr;inc company;CO INC;Own
+End;abbr;incorporated com;CO INC;Own
+End;abbr;incorporated company;CO INC;OWN
 End;abbr;company jsc;CO JSC;OWN
+End;abbr;co jsc;CO JSC;OWN
 End;abbr;company kg;CO KG;OWN
+End;abbr;co kg;CO KG;OWN
 End;abbr;company ksc;CO KSC;OWN
+End;abbr;co ksc;CO KSC;OWN
+End;abbr;company kscc;CO KSCC;OWN
+End;abbr;co kscc;CO KSCC;OWN
 End;abbr;company kscp;CO KSCP;OWN
+End;abbr;co kscp;CO KSCP;OWN
 End;abbr;co llc;CO LLC;OWN
 End;abbr;company llc;CO LLC;OWN
-End;abbr;company limited partnership;CO LP;OWN
+End;full;company limited partnership;CO LP;OWN
+End;abbr;co limited partnership;CO LP;OWN
 End;abbr;company lp;CO LP;OWN
+End;abbr;co lp;CO LP;OWN
 End;abbr;co ltd;CO LTD;OWN
 End;full;company limited;CO LTD;OWN
 End;abbr;company ltd;CO LTD;OWN
 End;abbr;company ltd incorporated;CO LTD INC;OWN
+End;abbr;company limited inc;CO LTD INC;OWN
+End;full;company limited incorporated;CO LTD INC;OWN
+End;abbr;co limited incorporated;CO LTD INC;OWN
+End;abbr;co ltd incorporated;CO LTD INC;OWN
+End;abbr;co ltd inc;CO LTD INC;OWN
 End;abbr;company ltd saog;CO LTD SAOG;OWN
+End;abbr;company limited saog;CO LTD SAOG;OWN
+End;abbr;co ltd saog;CO LTD SAOG;OWN
+End;abbr;co limited saog;CO LTD SAOG;OWN
 End;abbr;co mit beschrankter haftung;CO MBH;OWN
+End;abbr;co mbh;CO MBH;OWN
+End;abbr;company mbh;CO MBH;OWN
+End;full;company mit beschrankter haftung;CO MBH;OWN
 End;abbr;mbh;CO MBH;OWN
 End;abbr;mbh co kg;CO MBH KG;OWN
+End;abbr;co mbh kg;CO MBH KG;OWN
+End;abbr;company mbh kg;CO MBH KG;OWN
 End;abbr;company ord;CO ORD;OWN
+End;abbr;co ord;CO ORD;OWN
 End;abbr;company pjsc;CO PJSC;OWN
+End;abbr;co psjc;CO PJSC;OWN
 End;abbr;company plc;CO PLC;OWN
-End;abbr;Company PSC;CO PSC;OWN
+End;abbr;co plc;CO PLC;OWN
+End;full;company public limited company;CO PLC;OWN
+End;abbr;plc company;CO PLC;OWN
+End;abbr;plc co;CO PLC;OWN
+End;abbr;co psc;CO PSC;OWN
+End;abbr;company psc;CO PSC;OWN
+End;abbr;company qsc;CO QSC;OWN
+End;abbr;co qsc;CO QSC;OWN
+End;abbr;company qpsc;CO QPSC;OWN
+End;abbr;co qpsc;CO QPSC;OWN
 End;abbr;company sa;CO SA;OWN
-End;abbr;SA COMP;CO SA;OWN
-End;abbr;CO SAE;CO SAE;Own
+End;abbr;co sa;CO SA;OWN
+End;abbr;sa comp;CO SA;OWN
+End;abbr;sa co;CO SA;OWN
+End;abbr;co sae;CO SAE;Own
 End;abbr;company sae;CO SAE;OWN
 End;abbr;company sakp;CO SAKP;OWN
+End;abbr;co sakp;CO SAKP;OWN
 End;abbr;company sal;CO SAL;OWN
+End;abbr;co sal;CO SAL;OWN
 End;abbr;company saoc;CO SAOC;OWN
+End;abbr;co saoc;CO SAOC;OWN
 End;abbr;company saog;CO SAOG;OWN
+End;abbr;co saog;CO SAOG;OWN
 End;abbr;company sarl;CO SARL;OWN
+End;abbr;co sarl;CO SARL;OWN
 End;abbr;company sas;CO SAS;OWN
+End;abbr;co sas;CO SAS;OWN
 End;abbr;company sca;CO SCA;OWN
+End;abbr;co sca;CO SCA;OWN
 End;abbr;company se;CO SE;OWN
-End;abbr;Company SJSC;CO SJSC;OWN
+End;abbr;co se;CO SE;OWN
+End;abbr;company sjsc;CO SJSC;OWN
+End;abbr;co sjsc;CO SJSC;OWN
 End;abbr;company spa;CO SPA;OWN
+End;abbr;co spa;CO SPA;OWN
 End;abbr;company tbk;CO TBK;OWN
+End;abbr;co tbk;CO TBK;OWN
 End;abbr;co wll;CO WLL;OWN
+End;abbr;company wll;CO WLL;OWN
 End;full;company with limited liabilities;CO WLL;OWN
+End;full;co with limited liabilities;CO WLL;OWN
 End;full;with limited liability;CO WLL;OWN
 End;abbr;wll;CO WLL;OWN
 End;abbr;coman;COMAN;ECB
@@ -216,15 +284,16 @@ End;full;cooperatives;COOP;ECB
 End;full;societa' cooperativa;COOP;ECB
 End;abbr;corp;CORP;OWN
 End;full;corporation;CORP;OWN
-End;abbr;Corporation (PUBL);CORP (PUBL);OWN
-End;abbr;Corporation AG;CORP AG;OWN
-End;abbr;Corporation ASA;CORP ASA;OWN
-End;abbr;Corporation BHD;CORP BHD;OWN
-End;abbr;Corporation Ltd;CORP LTD;OWN
-End;abbr;Corporation NL;CORP NL;OWN
-End;abbr;Corporation NV;CORP NV;OWN
-End;abbr;Corporation PLC;CORP PLC;OWN
-End;abbr;Corporation SA;CORP SA;OWN
+End;abbr;corporation (publ);CORP (PUBL);OWN
+End;abbr;corporation ag;CORP AG;OWN
+End;abbr;corporation asa;CORP ASA;OWN
+End;abbr;corporation bhd;CORP BHD;OWN
+End;abbr;corporation limited;CORP LTD;OWN
+End;abbr;corporation ltd;CORP LTD;OWN
+End;abbr;corporation nl;CORP NL;OWN
+End;abbr;corporation nv;CORP NV;OWN
+End;abbr;corporation plc;CORP PLC;OWN
+End;abbr;corporation sa;CORP SA;OWN
 End;full;centre public d'action sociale;CPAS;ECB
 End;abbr;cpas;CPAS;ECB
 End;full;bendras valdymo ir pranešimų centras;CRC;ECB
@@ -393,11 +462,11 @@ End;abbr;gmbh and company kg;GMBH & CO KG;OWN
 End;abbr;gmbh company kg;GMBH & CO KG;OWN
 End;abbr;gmbh co kg;GMBH & CO KG;OWN
 End;abbr;gmbh co kommanditgesellschaft;GMBH & CO KG;OWN
+End;full;gesellschaft mit beschränkter haftung & compagnie kommanditgesellschaft an aktien;GMBH & CO KG AA;ECB
+End;abbr;gmbh & co kgaa;GMBH & CO KG AA;ECB
 End;abbr;gmbh and company kgaa;GMBH & CO KG AA;OWN
 End;abbr;gmbh company kgaa;GMBH & CO KG AA;OWN
 End;abbr;gmbh co kgaa;GMBH & CO KG AA;OWN
-End;full;gesellschaft mit beschränkter haftung & compagnie kommanditgesellschaft an aktien;GMBH & CO KG AA;ECB
-End;abbr;gmbh & co kgaa;GMBH & CO KG AA;ECB
 End;full;gesellschaft mit beschränkter haftung & compagnie offene handelsgesellschaft;GMBH & CO OHG;ECB
 End;abbr;gmbh & co ohg;GMBH & CO OHG;ECB
 End;abbr;gmuhgb;GMUHGB;ECB
@@ -423,7 +492,7 @@ End;full;interkommunale;IK;ECB
 End;abbr;ike;IKE;ECB
 End;abbr;inc;INC;Own
 End;full;incorporated;INC;OWN
-End;full;INCORPORATION;INC;OWN
+End;full;incorporation;INC;OWN
 End;abbr;ind;IND;ECB
 End;full;individuālais uzņēmums;IND;ECB
 End;abbr;invag;INVAG;ECB
@@ -445,7 +514,7 @@ End;full;juristische person alten hamburgischen rechts;JPAHR;ECB
 End;full;joint stock co;JSC;OWN
 End;full;joint stock company;JSC;OWN
 End;abbr;jsc;JSC;OWN
-End;abbr;JSTCORP;JSC;OWN
+End;abbr;jstcorp;JSC;OWN
 End;abbr;jso;JSO;ECB
 End;full;javno trgovačko društvo;JTD;ECB
 End;abbr;jtd;JTD;ECB
@@ -485,6 +554,7 @@ End;abbr;ko;KO;ECB
 End;full;kooperatinė bendrovė;KO;ECB
 End;abbr;kör;KÖR;ECB
 End;full;körperschaft des öffentlichen rechts;KÖR;ECB
+End;abbr;kpsc;KPSC;OWN
 End;full;komandītsabiedrība;KS;ECB
 End;abbr;ks;KS;ECB
 End;full;společnost komanditní;KS;ECB
@@ -523,6 +593,7 @@ End;abbr;lokpol;LOKPOL;ECB
 End;full;limited partnership;LP;OWN
 End;full;lokale polizeizone;LP;ECB
 End;abbr;lp;LP;ECB
+End;abbr;ltd partnership;LP;OWN
 End;full;lietuvos prekybos, pramonės ir amatų rūmų asociacija;LPRA;ECB
 End;abbr;lpra;LPRA;ECB
 End;abbr;limited;LTD;OWN
@@ -549,8 +620,8 @@ End;full;nuolatinė komercinio arbitražo institucija;NA;ECB
 End;full;odborová organizace;NA;ECB
 End;full;organizace zaměstnavatelů;NA;ECB
 End;full;svěřenský fond;NA;ECB
-End;abbr;NL;NL;OWN
-End;full;No liability;NL;OWN
+End;abbr;nl;NL;OWN
+End;full;no liability;NL;OWN
 End;full;nezisková organizácia;NO;ECB
 End;abbr;no;NO;ECB
 End;full;naamloze vennootschap;NV;ECB
@@ -604,7 +675,7 @@ End;full;obecně prospěšná společnost;OPS;ECB
 End;abbr;ops;OPS;ECB
 End;full;öffentlich-rechtliche aktiengesellschaft;Ö-RAG;ECB
 End;abbr;ö-rag;Ö-RAG;ECB
-End;abbr;ORD;ORD;OWN
+End;abbr;ord;ORD;OWN
 End;full;öffentlich rechtliche körperschaften;ÖRK;ECB
 End;abbr;örk;ÖRK;ECB
 End;full;öffentlich rechtliche stiftungen;ÖRS;ECB
@@ -628,7 +699,7 @@ End;full;onderlinge waarborgmaatschappij;OWM;ECB
 End;abbr;owm;OWM;ECB
 End;full;osakeyhtiö;OY;ECB
 End;abbr;oy;OY;ECB
-End;abbr;OY AB;OY AB;OWN
+End;abbr;oy ab;OY AB;OWN
 End;abbr;oyj;OYJ;ECB
 End;abbr;pa;PA;ECB
 End;full;pubblica amministrazione;PA;ECB
@@ -658,13 +729,13 @@ End;full;privatgesellschaft mit beschränkter haftung;PGMBH;ECB
 End;full;monts-de-piété;PIETE;ECB
 End;abbr;piete;PIETE;ECB
 End;abbr;pjsc;PJSC;OWN
-Start;abbr;PJSC;PJSC;OWN
-End;full;public joint stock company ;PJSC;OWN
+Start;abbr;pjsc;PJSC;OWN
+End;full;public joint stock company;PJSC;OWN
 End;abbr;pl;PL;ECB
 End;abbr;private limited;PL;OWN
-End;abbr;PCL;PLC;OWN
+End;abbr;pcl;PLC;OWN
 End;abbr;plc;PLC;ECB
-End;full;Public Company Limited;PLC;OWN
+End;full;public company limited;PLC;OWN
 End;full;public limited company;PLC;ECB
 End;abbr;pmbhsz;PMBHSZ;ECB
 End;full;privatgesellschaft mit beschränkter haftung mit sozialer zielsetzung;PMBHSZ;ECB
@@ -700,7 +771,7 @@ End;abbr;prvgag;PRVGAG;ECB
 End;full;pilnsabiedrība;PS;ECB
 End;full;profesinė sąjunga ar susivienijimas;PS;ECB
 End;abbr;ps;PS;ECB
-End;abbr;PSC;PSC;OWN
+End;abbr;psc;PSC;OWN
 End;full;pašvaldības uzņēmums;PSV;ECB
 End;abbr;psv;PSV;ECB
 Start;abbr;pt;PT TBK;OWN
@@ -716,6 +787,8 @@ End;abbr;pvt ltd;PVT LTD;OWN
 End;full;polder - watering;PW;ECB
 End;full;polder - wateringue;PW;ECB
 End;abbr;pw;PW;ECB
+End;abbr;qpsc;QPSC;OWN
+End;abbr;qsc;QSC;OWN
 End;abbr;ra;RA;ECB
 End;full;regie autonomă;RA;ECB
 End;abbr;rb;RB;ECB
@@ -755,6 +828,9 @@ End;full;sihtasutus;SA;ECB
 End;full;sociedad anónima;SA;ECB
 End;full;société anonyme;SA;ECB
 End;full;spółki akcyjne;SA;ECB
+End;abbr;sa cie;SA CIE;OWN
+End;abbr;sa cies;SA CIE;OWN
+End;abbr;sa cie de;SA CIE DE;OWN
 End;abbr;sa de cv;SA DE CV;Wikipedia
 End;full;sociedad anónima de capital variable;SA DE CV;Wikipedia
 End;abbr;sa dpu;SA DPU;ECB
@@ -769,17 +845,17 @@ End;abbr;saa;SAA;ECB
 End;full;societa' in accomandita per azioni;SAA;ECB
 End;abbr;sab de cv;SAB DE CV;Wikipedia
 End;full;sociedad anónima bursátil de capital variable;SAB DE CV;Wikipedia
-End;abbr;SAC EI;SAC EI;OWN
+End;abbr;sac ei;SAC EI;OWN
 End;abbr;sad;SAD;ECB
 End;full;sociedade anónima desportiva;SAD;ECB
 End;abbr;sae;SAE;OWN
-End;full;Sharikat al-Mossahamah;SAE;OWN
+End;full;sharikat al-mossahamah;SAE;OWN
 End;full;single asset entity;SAE;OWN
-End;full;Société anonyme égyptienne;SAE;OWN
-End;abbr;SAIC;SAIC;OWN
-End;abbr;SAICYF;SAICYF;OWN
-End;abbr;SAKC;SAKC;OWN
-End;abbr;SAKP;SAKP;OWN
+End;full;société anonyme égyptienne;SAE;OWN
+End;abbr;saic;SAIC;OWN
+End;abbr;saicyf;SAICYF;OWN
+End;abbr;sakc;SAKC;OWN
+End;abbr;sakp;SAKP;OWN
 End;abbr;sal;SAL;ECB
 End;full;sociedad anónima laboral;SAL;ECB
 End;full;association d'assurances mutuelles de droit public;SAM DPU;ECB
@@ -823,7 +899,8 @@ End;full;societate în comandită pe acţiuni;SCA;ECB
 End;full;société en commandite par actions;SCA;ECB
 End;abbr;sca fs;SCA FS;ECB
 End;full;société en commandite par actions à finalité sociale;SCA FS;ECB
-End;abbr;SCACV;SCACV;OWN
+End;abbr;scacv;SCACV;OWN
+End;abbr;scarl;SCARL;OWN
 End;abbr;sce;SCE;ECB
 End;full;societas cooperativa europea;SCE;ECB
 End;abbr;scop;SCOP;ECB
@@ -898,7 +975,7 @@ End;abbr;sivu;SIVU;ECB
 End;full;syndicat intercommunal à vocation unique;SIVU;ECB
 End;abbr;sj;SJ;ECB
 End;full;spółki jawne;SJ;ECB
-End;abbr;SJSC;SJSC;OWN
+End;abbr;sjsc;SJSC;OWN
 End;abbr;ska;SKA;ECB
 End;full;spółki komandytowo - akcyjne;SKA;ECB
 End;abbr;sl;SL;ECB
@@ -1008,11 +1085,11 @@ End;full;undertakings for collective investment in transferable securities;UCITS
 End;abbr;ug;UG;OWN
 End;full;unternehmergesellschaft;UG;OWN
 End;abbr;ug & co kg;UG & CO KG;ECB
-End;full;unternehmergesellschaft  & compagnie kommanditgesellschaft;UG & CO KG;ECB
+End;full;unternehmergesellschaft & compagnie kommanditgesellschaft;UG & CO KG;ECB
 End;abbr;ug & co kgaa;UG & CO KGAA;ECB
-End;full;unternehmergesellschaft  & compagnie kommanditgesellschaft an aktien;UG & CO KGAA;ECB
+End;full;unternehmergesellschaft & compagnie kommanditgesellschaft an aktien;UG & CO KGAA;ECB
 End;abbr;ug & co ohg;UG & CO OHG;ECB
-End;full;unternehmergesellschaft  & compagnie offene handelsgesellschaft;UG & CO OHG;ECB
+End;full;unternehmergesellschaft & compagnie offene handelsgesellschaft;UG & CO OHG;ECB
 End;abbr;ug haftungsbeschränkt;UG (HAFTUNGSBESCHRÄNKT);ECB
 End;full;unternehmergesellschaft haftungsbeschränkt;UG (HAFTUNGSBESCHRÄNKT);ECB
 End;full;union professionnelle;UP;ECB
@@ -1111,20 +1188,3 @@ End;full;zvejnieku saimniecība;ZVJ;ECB
 End;abbr;zvj;ZVJ;ECB
 End;abbr;zweckv;ZWECKV;ECB
 End;full;zweckverband;ZWECKV;ECB
-End;abbr;plc company;CO PLC;OWN
-End;abbr;sa cie;SA CIE;OWN
-End;abbr;sa cies;SA CIE;OWN
-End;abbr;sa cie de;SA CIE DE;OWN
-End;abbr;co cjsc;CO CJSC;OWN
-End;abbr;company kscc;CO KSCC;OWN
-End;abbr;CORPORATION LIMITED;CORP LTD;OWN
-End;abbr;INCORPORATED CO;CO INC;OWN
-End;abbr;Incorporated Company;CO INC;OWN
-End;abbr;co psc;CO PSC;OWN
-End;abbr;COMPANY PUBLIC LIMITED COMPANY;CO PLC;OWN
-End;abbr;kpsc;KPSC;OWN
-End;abbr;scarl;SCARL;OWN
-End;abbr;qpsc;QPSC;OWN
-End;abbr;qsc;QSC;OWN
-End;abbr;Ltd Partnership;LP;OWN
-End;abbr;ae;AE;OWN

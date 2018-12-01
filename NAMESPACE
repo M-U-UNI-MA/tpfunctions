@@ -2,8 +2,8 @@
 
 export(bind_df_list)
 export(cop_match_comp)
-export(cop_rem_le)
 export(cop_repl_words)
+export(cop_stand_le)
 export(cos_string_pair)
 export(decrypt_pdf)
 export(escape_regex)

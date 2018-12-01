@@ -59,50 +59,82 @@ cop_repl_words <- function(string, replace_table = NULL) {
   return(string)
 }
 
-# REPLACE LEGAL ENTITIES =================================================================
+# STANDARDIZE LEGAL ENTITIES =============================================================
 #' Remove Legal Entities from String
 #'
 #' @description
 #' This function is part of the 'company operations' (cop) function set\cr
-#' This function removes legal entities from company names
+#' This function standardizes or removes legal entities from character strings with company
+#' name
 #'
 #' @param string
 #' A chracter string
 #'
+#' @param le.op
+#' Legal Entity Operation: Should the legal entity be removed or standardized?
+#'
+#' @param table.return
+#' Should the whole table with legal entity information be returned?
+#'
 #' @return
-#' A character String without legal entities
+#' Either a string in the case of le.op = "remove" or le.op = "stand", or a dataframe in
+#' case le.op = c("remove", "stand") or table.return = TRUE
 #'
 #' @export
 #'
 #' @examples
-#' tpfuns::cop_rem_le("basf se")
-cop_rem_le <- function(string, le.return = FALSE) {
+#' companies <- c("basf co ltd", "basf company ltd", "basf ag", "basf se", "basf aktiengesellschaft")
+#' tpfuns::cop_stand_le(companies, le.op = "remove")
+#' tpfuns::cop_stand_le(companies, le.op = "stand")
+#' tpfuns::cop_stand_le(companies)
+#' tpfuns::cop_stand_le(companies,  table.return = TRUE)
+#'
+cop_stand_le <- function(string, le.op = c("remove", "stand"), table.return = FALSE) {
+  if (!any(c("remove", "stand") %in% le.op)) stop("wrong operation on legal entities")
+
   `%>%` <- magrittr::`%>%`
   regex <- tpfuns::table_legal_entities$regex
   string.adj <- string
   string.adj <- stringi::stri_replace_all_regex(string.adj, regex, "", vectorize_all = FALSE)
   string.adj <- stringi::stri_trim_both(string.adj)
 
-  if (le.return == FALSE) {
-    return(string.adj)
-  } else {
-    table <-
-      tibble::tibble(comp_orig = string, comp_adj = string.adj) %>%
-      dplyr::mutate(id = dplyr::row_number()) %>%
-      dplyr::mutate(legal_entity = stringi::stri_replace_all_fixed(comp_orig, comp_adj, "")) %>%
-      dplyr::mutate(legal_entity = stringi::stri_trim_both(legal_entity)) %>%
-      naniar::replace_with_na(replace = list(legal_entity = "")) %>%
-      fuzzyjoin::fuzzy_left_join(
-        tpfuns::table_legal_entities,
-        by = c("legal_entity" = "regex"),
-        match_fun = stringi::stri_detect_regex
-      ) %>%
-      dplyr::arrange(id, dplyr::desc(ngram)) %>%
-      dplyr::distinct(id, .keep_all = TRUE) %>%
-      dplyr::select(-regex, -ngram, -id)
+  if (any(string.adj == "")) {
+    string.adj[which(string.adj == "")] <- string[which(string.adj == "")]
+  }
+
+  table <-
+    tibble::tibble(comp_orig = string, comp_adj = string.adj) %>%
+    dplyr::mutate(id = dplyr::row_number()) %>%
+    dplyr::mutate(legal_entity = stringi::stri_replace_all_fixed(comp_orig, comp_adj, "")) %>%
+    dplyr::mutate(legal_entity = stringi::stri_trim_both(legal_entity)) %>%
+    naniar::replace_with_na(replace = list(legal_entity = "")) %>%
+    fuzzyjoin::fuzzy_left_join(
+      tpfuns::table_legal_entities,
+      by = c("legal_entity" = "regex"),
+      match_fun = stringi::stri_detect_regex
+    ) %>%
+    dplyr::arrange(id, dplyr::desc(ngram)) %>%
+    dplyr::distinct(id, .keep_all = TRUE) %>%
+    dplyr::select(-regex, -ngram, -id) %>%
+    dplyr::mutate(comp_le_stand =
+                    dplyr::if_else(
+                      is.na(legal_entity),
+                      comp_adj,
+                      paste(comp_adj, stringi::stri_trans_tolower(le_stand))
+                    ))
+
+  if (table.return == TRUE) {
     return(table)
+  } else if (all(le.op == "remove")) {
+    return(table$comp_adj)
+  } else if (all(le.op == "stand")){
+    return(table$comp_le_stand)
+  } else {
+    return(dplyr::select(table, comp_adj, comp_le_stand))
   }
 }
+
+
 
 
 
@@ -177,177 +209,110 @@ stand_db_names <- function(string, regex.table = NULL, standardized = FALSE, nth
 #' A character string with company names to match
 #' @param match.table
 #' The match table (not part of the package, needs to be defined seperately!)
-#' @param match
+#' @param match.type
 #' Type of match, any combination of 'full', 'sub' and 'approx'
-#' @param sub.ratio
-#' Similarity threshold for the substring matching
-#' @param sim.ratio
-#' Similarity threshold for the approximate matching
 #'
 #' @return
 #' A dtaframe with matched companies
 #' @export
-cop_match_comp <- function(names, match.table = NULL, match = c("full", "sub", "approx"),
-                           sub.ratio = 0.5, sim.ratio = 0.5) {
-  if (is.null(match.table)) stop("function needs matching table, see documentation")
+cop_match_comp <- function(names, match.table = NULL,
+                           match.type = c("full", "sub", "approx")) {
+
+  if (!all(match.type %in%  c("full", "sub", "approx")))
+    stop("wrong specification of matching type")
 
   # set internal functions ===============================================================
-  `%>%`   <- magrittr::`%>%`
-  `%fin%` <- fastmatch::`%fin%`
-  f_1 <- function(x) {tpfuns::top_stand_punct(string = x, lower = TRUE, ascii = TRUE)}
-  f_2 <- function(x) {tpfuns::top_rem_punct(string = x, punct.replacement = TRUE)}
-  f_3 <- function(x) {tpfuns::cop_repl_words(string = x, replace_table = NULL)}
-  f_4 <- function(x) {tpfuns::top_americanize(string = x)}
-  f_5 <- function(x) {stringi::stri_replace_all_fixed(str = x, pattern = " ", replacement = "")}
-  f_match_table <- function(name, match, match.type) {
-    tibble::tibble(name = name) %>%
-      dplyr::bind_cols(match.table[match,]) %>%
-      dplyr::filter(!is.na(ident)) %>%
-      dplyr::mutate(match_type_comp = match.type)
+  int_stand_names <- function(string) {
+    tpfuns::top_americanize(
+      tpfuns::cop_repl_words(
+        tpfuns::top_rem_punct(
+          tpfuns::top_stand_punct(string), TRUE)))
   }
-  f_match_table_sub <- function(names, match.type) {
-    lapply(max(nchar(names)):4, function(i) {
-      name.sub <- stringi::stri_sub(names, 1, i)
-      match.table <- match.table %>%
-        dplyr::filter(match_type_db == 1) %>%
-        dplyr::mutate(name_match = stringi::stri_sub(comp_name_stand, 1, i))
-
-      match <- tibble::tibble(name = no, name_match = name.sub, co = nchar(names)) %>%
-        dplyr::inner_join(match.table, by = "name_match") %>%
-        dplyr::mutate(match_type_comp = match.type) %>%
-        dplyr::mutate(cs = i) %>%
-        dplyr::mutate(sim = round(cs / co, 4)) %>%
-        dplyr::filter(sim >= sub.ratio) %>%
-        dplyr::top_n(3, sim)
-    }) %>% dplyr::bind_rows() %>%
-      dplyr::arrange(name, ident, dplyr::desc(cs)) %>%
-      dplyr::distinct(name, ident, .keep_all = TRUE)
+  int_rem_space <- function(string) {
+    stringi::stri_replace_all_fixed(string, " ", "")
   }
 
-  # no:   names (names_original)
-  # ns:   standardized names (name_stand)
-  # nsl:  standardized names w/o legal entity (name_stand_le)
-  # nss:  standardized names w/o spaces (name_stand_space)
-  # nsls: standardized names w/o legal entity and spaces (name_stand_le_space)
-  no <- names
-  ns <- f_4(f_3(f_2(f_1(no))))
+  # adjust company names =================================================================
+  names <- tibble::tibble(no = names)
+  cat("\rstandardize company names -----------------------------------------------------")
+  names <- dplyr::mutate(names, ns = int_stand_names(no))
 
-  if ("full" %in% match) {
-    # 1: matching standardized names =====================================================
-    cat("\r1: matching standardized names ------------------------------------------------")
-    match.1       <- fastmatch::fmatch(ns, match.table$comp_name_stand)
-    match.table.1 <- f_match_table(name = no, match = match.1, match.type = 1)
+  cat("\rstandardize and remove legal entities -----------------------------------------")
+  le.stand <- tpfuns::cop_stand_le(names$ns)
+  names <- dplyr::mutate(names, ls = le.stand$comp_le_stand, lr = le.stand$comp_adj)
 
-    select <- which(is.na(match.1))
-    no <- no[select]; ns <- ns[select]
-    match.table <- dplyr::filter(match.table, !ident %fin% match.table.1$ident)
+  cat("\rremove spaces from company names ----------------------------------------------")
+  names <- dplyr::mutate(names,
+                         nss = int_rem_space(names$ns),
+                         lss = int_rem_space(names$ls),
+                         lrs = int_rem_space(names$lr)
+  ) %>% dplyr::mutate(id = dplyr::row_number())
 
-    # 2: matching standardized names (w/o legal entity) ==================================
-    cat("\r2: matching standardized names (w/o legal entity) -----------------------------")
-    nsl           <- tpfuns::cop_rem_le(ns)
-    match.2       <- fastmatch::fmatch(nsl, match.table$comp_name_stand)
-    match.table.2 <- f_match_table(name = no, match = match.2, match.type = 2)
+  match.cols  <- c("ns", "ls", "lr", "nss", "lss", "lrs")
 
-    select <- which(is.na(match.2))
-    no <- no[select]; ns <- ns[select]; nsl <- nsl[select]
-    match.table <- dplyr::filter(match.table, !ident %fin% match.table.2$ident)
+  if ("full" %in% match.type) {
+    # get main matches ===================================================================
+    table.match.full <- tibble::tibble()
+    for (i in 1:length(match.cols)) {
+      cat("\rmain matching procedure:", i, "--------------------------------------------")
+      match.names <- names[match.cols[i]] %>% dplyr::pull()
 
-    # 3: matching standardized names (w/o space) =========================================
-    cat("\r3: matching standardized names (w/o space) ------------------------------------")
-    nss           <- f_5(ns)
-    match.3       <- fastmatch::fmatch(nss, match.table$comp_name_stand)
-    match.table.3 <- f_match_table(name = no, match = match.3, match.type = 3)
+      match <- fastmatch::fmatch(match.names, match.table$comp_name_stand)
 
-    select <- which(is.na(match.3))
-    no <- no[select]; ns <- ns[select]; nsl <- nsl[select]; nss <- nss[select]
-    match.table <- dplyr::filter(match.table, !ident %fin% match.table.3$ident)
+      temp.match <- dplyr::bind_cols(names, match.table[match,]) %>%
+        dplyr::filter(!is.na(ident)) %>%
+        dplyr::mutate(match_type_comp = i)
+      table.match.full <- dplyr::bind_rows(table.match.full, temp.match)
 
-    # 4: matching standardized names (w/o legal entity and space) ========================
-    cat("\r4: matching standardized names (w/o legal entity and space) ----------------")
-    nsls          <- f_5(nsl)
-    match.4       <- fastmatch::fmatch(nsls, match.table$comp_name_stand)
-    match.table.4 <- f_match_table(name = no, match = match.4, match.type = 4)
+      names       <- anti_join(names, table.match.full %>% select(id), by = "id")
+      match.table <- anti_join(match.table, table.match.full %>% select(ident), by = "ident")
 
-    select <- which(is.na(match.4))
-    no  <- no[select];  ns   <- ns[select]; nsl <- nsl[select]
-    nss <- nss[select]; nsls <- nsls[select]
-    match.table <- dplyr::filter(match.table, !ident %fin% match.table.4$ident)
-
-    # append table =======================================================================
-    match.table.full <- dplyr::bind_rows(match.table.1,
-                                          match.table.2,
-                                          match.table.3,
-                                          match.table.4) %>%
-      dplyr::select(
-        ident,
-        name_comp = name,
-        name_match = comp_name_stand,
-        name_db = comp_name,
-        match_type_comp,
-        match_type_db,
-        name_type_db = name_type
-      )
+    }
+    table.match.full <- table.match.full %>%
+      select(ident, name = no, name_match = comp_name_stand, name_type, match_type_comp,
+             match_type_db)
   }
 
-  if ("sub" %in% match) {
-    # 5: equalized matching standardized names ---------------------------------------------
-  cat("\r5: equalized matching standardized names --------------------------------------")
-  match.table.5 <- f_match_table_sub(names = ns, match.type = 5) %>%
-    dplyr::mutate(sim_type = "sub")
-    # append table =======================================================================
-  match.table.sub <- match.table.5 %>%
-    dplyr::select(
-      ident,
-      name_comp = name,
-      name_match,
-      name_db = comp_name,
-      match_type_comp,
-      match_type_db,
-      name_type_db = name_type,
-      sim,
-      sim_type
-    ) %>%
-    dplyr::arrange(name_comp, match_type_comp, dplyr::desc(sim))
+  if ("sub" %in% match.type) {
+    # get substring matches ==============================================================
+    table.match.sub <- list()
+    for (i in 1:length(match.cols)) {
+      cat("\rsubstring matching procedure:", i, "----------------------------------------")
+      match.table.sub <- dplyr::filter(match.table, match_type_db == i)
+      names.sub <- names[match.cols[i]] %>% dplyr::pull()
+
+      table.match.sub[[i]] <- lapply(max(nchar(names.sub)):4, function(x) {
+        sub <- stringi::stri_sub(names.sub, 1, x)
+        match.table.sub <- match.table.sub %>%
+          dplyr::mutate(name_match = stringi::stri_sub(comp_name_stand, 1, x))
+
+        match <- tibble::tibble(name = names$no, name_match = sub) %>%
+          dplyr::inner_join(match.table.sub, by = "name_match") %>%
+          dplyr::mutate(match_type_comp = i)
+      }) %>% dplyr::bind_rows()
+    }
+    table.match.sub <- dplyr::bind_rows(table.match.sub) %>%
+      dplyr::mutate(sim = round(nchar(name_match) / nchar(comp_name_stand), 4)) %>%
+      dplyr::arrange(name, dplyr::desc(sim)) %>%
+      dplyr::distinct(name, .keep_all = TRUE)
   }
 
-  if ("approx" %in% match) {
-    # 6: approximate matching standardized names -------------------------------------------
-  cat("\r6: approximate matching standardized names ------------------------------------")
-  match.table.6 <- lapply(1:length(ns), function(x){
-    y <- tibble::tibble(sim = stringdist::stringsim(a = ns[x],
-                                                    b = match.table$comp_name_stand,
-                                                    method = "lv")) %>%
-      dplyr::mutate(id = dplyr::row_number()) %>%
-      dplyr::mutate(name = no[x]) %>%
-      dplyr::top_n(n = 3, wt = sim) %>%
-      dplyr::filter(sim >= sim.ratio) %>%
+  if ("approx" %in% match.type) {
+    # get approximate matches ============================================================
+    cat("\rapproximate matching procedure ----------------------------------------------")
+    dist.matrix <- stringdist::stringdistmatrix(names$ns, match.table$comp_name_stand, method = "lv")
+    min.dist <- sapply(1:nrow(dist.matrix), function(x){which.min(dist.matrix[x, ])})
+    table.match.approx <- tibble::tibble(name = names$no, name_stand = names$ns) %>%
+      bind_cols(match.table[min.dist, ]) %>%
+      dplyr::mutate(sim = stringdist::stringsim(name_stand, comp_name_stand, method = "lv")) %>%
       dplyr::mutate(match_type_comp = 1)
-    y <- dplyr::bind_cols(y, match.table[y$id, ])
-  }) %>% dplyr::bind_rows() %>%
-    dplyr::select(-id) %>%
-    dplyr::mutate(sim_type = "lev")
-    # append table =======================================================================
-  match.table.approx <- match.table.6 %>%
-    dplyr::select(
-      ident,
-      name_comp = name,
-      name_db = comp_name,
-      match_type_comp,
-      match_type_db,
-      name_type_db = name_type,
-      sim,
-      sim_type
-    ) %>%
-    dplyr::arrange(name_comp, match_type_comp, dplyr::desc(sim))
-
   }
 
-  # append tables ========================================================================
-  if (!"full" %in% match) match.table.full <- NULL
-  if (!"sub" %in% match) match.table.sub <- NULL
-  if (!"approx" %in% match) match.table.approx <- NULL
+  if (!"full" %in% match.type) table.match.full <- NULL
+  if (!"sub" %in% match.type) table.match.sub <- NULL
+  if (!"approx" %in% match.type) table.match.approx <- NULL
 
-  return.list <- list(match.table.full, match.table.sub, match.table.approx)
+  return.list <- list(table.match.full, table.match.sub, table.match.approx)
   names(return.list) <- c("full", "sub", "approx")
 
   return(return.list)
