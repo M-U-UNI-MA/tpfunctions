@@ -8,11 +8,6 @@ table_legal_entities <- readr::read_delim("data-raw/table_legal_entities.csv", "
                                          occurance == "End" ~ paste0("\\b", regex, "$"))) %>%
   dplyr::mutate(regex = stringi::stri_replace_all_fixed(regex, " ", "\\s?")) %>%
   dplyr::mutate(ngram = stringi::stri_count_fixed(le_name, " ") + 1) %>%
-  dplyr::mutate(ngram = dplyr::if_else(type == "abbr", ngram, 0)) %>%
-  dplyr::group_by(le_stand) %>%
-  dplyr::summarise(regex = stringi::stri_flatten(regex, "|"),
-                   ngram = max(ngram)) %>%
-  dplyr::ungroup() %>%
   dplyr::arrange(dplyr::desc(ngram))
 
 usethis::use_data(table_legal_entities, overwrite = TRUE)

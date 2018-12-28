@@ -4,8 +4,8 @@
 \alias{cop_match_comp}
 \title{Matches Companies against Datastream and Orbis}
 \usage{
-cop_match_comp(names, match.table = NULL, match.type = c("full", "sub",
-  "approx"))
+cop_match_comp(names, match.table = NULL, cols.ident = NULL,
+  match.type = c("full", "sub", "approx"))
 }
 \arguments{
 \item{match.table}{The match table (not part of the package, needs to be defined seperately!)}

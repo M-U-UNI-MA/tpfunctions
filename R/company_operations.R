@@ -215,11 +215,24 @@ stand_db_names <- function(string, regex.table = NULL, standardized = FALSE, nth
 #' @return
 #' A dtaframe with matched companies
 #' @export
-cop_match_comp <- function(names, match.table = NULL,
+cop_match_comp <- function(names, match.table = NULL, cols.ident = NULL,
                            match.type = c("full", "sub", "approx")) {
 
+  `%>%` <- magrittr::`%>%`
   if (!all(match.type %in%  c("full", "sub", "approx")))
     stop("wrong specification of matching type")
+
+  if (is.null(cols.ident))
+    stop("identifier has to be selected")
+
+  if (!all(cols.ident %in% colnames(match.table)))
+    stop("wrong identifiers are selected")
+
+  ident <- character(nrow(match.table))
+  for (i in 1:length(cols.ident)) {
+    ident <- paste0(ident, match.table[[cols.ident[i]]])
+  }
+  match.table$ident <-ident
 
   # set internal functions ===============================================================
   int_stand_names <- function(string) {
@@ -230,6 +243,12 @@ cop_match_comp <- function(names, match.table = NULL,
   }
   int_rem_space <- function(string) {
     stringi::stri_replace_all_fixed(string, " ", "")
+  }
+  int_free_mem <- function() {
+    free.mem <- system('wmic OS get FreePhysicalMemory /Value', intern = TRUE)
+    free.mem <- as.integer(unlist(stringi::stri_extract_all_regex(free.mem, "[0-9]+")))
+    free.mem <- free.mem[!is.na(free.mem)]
+    return(free.mem)
   }
 
   # adjust company names =================================================================
@@ -248,8 +267,8 @@ cop_match_comp <- function(names, match.table = NULL,
                          lrs = int_rem_space(names$lr)
   ) %>% dplyr::mutate(id = dplyr::row_number())
 
+  # matching procedures ==================================================================
   match.cols  <- c("ns", "ls", "lr", "nss", "lss", "lrs")
-
   if ("full" %in% match.type) {
     # get main matches ===================================================================
     table.match.full <- tibble::tibble()
@@ -262,15 +281,23 @@ cop_match_comp <- function(names, match.table = NULL,
       temp.match <- dplyr::bind_cols(names, match.table[match,]) %>%
         dplyr::filter(!is.na(ident)) %>%
         dplyr::mutate(match_type_comp = i)
+
       table.match.full <- dplyr::bind_rows(table.match.full, temp.match)
 
-      names       <- anti_join(names, table.match.full %>% select(id), by = "id")
-      match.table <- anti_join(match.table, table.match.full %>% select(ident), by = "ident")
+      names <- dplyr::anti_join(names, table.match.full %>%
+                                  dplyr::select(id), by = "id")
+
+      match.table <- dplyr::anti_join(match.table, table.match.full %>%
+                                        dplyr::select(ident), by = "ident")
 
     }
-    table.match.full <- table.match.full %>%
-      select(ident, name = no, name_match = comp_name_stand, name_type, match_type_comp,
-             match_type_db)
+
+    cols.select <-
+      c(cols.ident, "no", "comp_name_stand", "comp_name", "match_type_comp", "match_type_db")
+    table.match.full <- table.match.full[, cols.select]
+    colnames(table.match.full) <-
+      c(cols.ident, "name_comp", "name_match", "name_db", "match_type_comp", "match_type_db")
+
   }
 
   if ("sub" %in% match.type) {
@@ -281,31 +308,69 @@ cop_match_comp <- function(names, match.table = NULL,
       match.table.sub <- dplyr::filter(match.table, match_type_db == i)
       names.sub <- names[match.cols[i]] %>% dplyr::pull()
 
-      table.match.sub[[i]] <- lapply(max(nchar(names.sub)):4, function(x) {
+      chars <- max(nchar(names.sub)):4
+      chars <- chars[c(seq(1, length(chars), 2), length(chars))]
+      table.match.sub[[i]] <- lapply(chars, function(x) {
         sub <- stringi::stri_sub(names.sub, 1, x)
         match.table.sub <- match.table.sub %>%
           dplyr::mutate(name_match = stringi::stri_sub(comp_name_stand, 1, x))
 
-        match <- tibble::tibble(name = names$no, name_match = sub) %>%
+        match <- tibble::tibble(name_comp = names$no, name_match = sub) %>%
           dplyr::inner_join(match.table.sub, by = "name_match") %>%
-          dplyr::mutate(match_type_comp = i)
+          dplyr::mutate(match_type_comp = i) %>%
+          dplyr::mutate(sim = round(nchar(name_match) / nchar(name_comp), 4)) %>%
+          dplyr::arrange(name_comp, dplyr::desc(sim)) %>%
+          dplyr::distinct(name_comp, .keep_all = TRUE)
+
       }) %>% dplyr::bind_rows()
+
     }
     table.match.sub <- dplyr::bind_rows(table.match.sub) %>%
-      dplyr::mutate(sim = round(nchar(name_match) / nchar(comp_name_stand), 4)) %>%
-      dplyr::arrange(name, dplyr::desc(sim)) %>%
-      dplyr::distinct(name, .keep_all = TRUE)
+      dplyr::arrange(name_comp, dplyr::desc(sim)) %>%
+      dplyr::distinct(name_comp, .keep_all = TRUE)
+
+
+    cols.select <-
+      c(cols.ident, "name_comp", "name_match", "comp_name", "match_type_comp", "match_type_db", "sim")
+    table.match.sub <- table.match.sub[, cols.select]
+    colnames(table.match.sub) <-
+      c(cols.ident, "name_comp", "name_match", "name_db", "match_type_comp", "match_type_db", "sim")
+
   }
 
   if ("approx" %in% match.type) {
     # get approximate matches ============================================================
-    cat("\rapproximate matching procedure ----------------------------------------------")
-    dist.matrix <- stringdist::stringdistmatrix(names$ns, match.table$comp_name_stand, method = "lv")
-    min.dist <- sapply(1:nrow(dist.matrix), function(x){which.min(dist.matrix[x, ])})
-    table.match.approx <- tibble::tibble(name = names$no, name_stand = names$ns) %>%
-      bind_cols(match.table[min.dist, ]) %>%
-      dplyr::mutate(sim = stringdist::stringsim(name_stand, comp_name_stand, method = "lv")) %>%
-      dplyr::mutate(match_type_comp = 1)
+    print("approximate matching procedure ----------------------------------------------")
+
+    # adjust matching table to only type 1 names -----------------------------------------
+    match.table.approx <- dplyr::filter(match.table, match_type_db == 1)
+
+    # calculate available memory and split names -----------------------------------------
+    mem.free <- int_free_mem()
+    mem.mat  <- nrow(names) * nrow(match.table.approx) * 8
+    loops <- ceiling((mem.mat / mem.free) / 0.5)
+    names.list <- split(names, ceiling(1:nrow(names) / ceiling(nrow(names) / loops)))
+
+    # approximate matching procedure -----------------------------------------------------
+    pbapply::pboptions(type = "timer", char = "=", txt.width = 90)
+    table.match.approx <- pbapply::pblapply(1:length(names.list), function(i) {
+      dist.matrix <- stringdist::stringdistmatrix(names.list[[i]]$ns, match.table.approx$comp_name_stand, method = "lv")
+      min.dist <- sapply(1:nrow(dist.matrix), function(x) which.min(dist.matrix[x,]))
+
+      table.match.approx <- tibble::tibble(name_comp = names.list[[i]]$no, name_stand = names.list[[i]]$ns) %>%
+        dplyr::bind_cols(match.table.approx[min.dist,]) %>%
+        dplyr::mutate(sim = stringdist::stringsim(name_stand, comp_name_stand, method = "lv")) %>%
+        dplyr::mutate(match_type_comp = 1)
+      gc()
+      return(table.match.approx)
+    }) %>% dplyr::bind_rows()
+
+    cols.select <-
+      c(cols.ident, "name_comp", "comp_name", "match_type_comp", "match_type_db", "sim")
+    table.match.approx <- table.match.approx[, cols.select]
+    colnames(table.match.approx) <-
+      c(cols.ident, "name_comp", "name_db", "match_type_comp", "match_type_db", "sim")
+
   }
 
   if (!"full" %in% match.type) table.match.full <- NULL
@@ -314,6 +379,5 @@ cop_match_comp <- function(names, match.table = NULL,
 
   return.list <- list(table.match.full, table.match.sub, table.match.approx)
   names(return.list) <- c("full", "sub", "approx")
-
   return(return.list)
 }

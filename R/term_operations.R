@@ -26,63 +26,69 @@ top_stand_punct <- function(string, lower = TRUE, ascii = TRUE) {
   repl <- function(string, pattern, replace)
     stringi::stri_replace_all_regex(string, pattern, replace)
 
+  string.adj <- string
   # blank characters =====================================================================
-  string <- repl(string, "([[:space:]]|[[:blank:]])+", " ")
+  string.adj <- repl(string.adj, "([[:space:]]|[[:blank:]])+", " ")
 
   # quotes ===============================================================================
-  string <- repl(string, "[\x91-\x94\xB4\x60]+", "'")
+  string.adj <- repl(string.adj, "[\x91-\x94\xB4\x60]+", "'")
 
   # hyphens ==============================================================================
-  string <- repl(string, "[\x96-\x97]+", "-")
+  string.adj <- repl(string.adj, "[\x96-\x97]+", "-")
 
   # ampersand ============================================================================
-  string <- repl(string, "(\\s+)?\x26(\\s+)?", " & ")
+  string.adj <- repl(string.adj, "(\\s+)?\x26(\\s+)?", "&")
 
   # plus sign ============================================================================
-  string <- repl(string, "(\\s+)?\\\x2B(\\s+)?", " + ")
+  string.adj <- repl(string.adj, "(\\s+)?\\\x2B(\\s+)?", "+")
 
   # comma ================================================================================
-  string <- repl(string, "(\\s+)?\x2C+(\\s+)?", ", ")
+  string.adj <- repl(string.adj, "(\\s+)?(?<=[a-zA-Z\\s])\x2C+(?=[a-zA-Z\\s])(\\s+)?", ", ")
 
   # forward slash ========================================================================
-  string <- repl(string, "(\\s+)?\x2F(\\s+)?", " / ")
+  string.adj <- repl(string.adj, "(\\s+)?\x2F(\\s+)?", "/")
 
   # left paranthesis =====================================================================
-  string <- repl(string, "(\\s+)?\\\x28(\\s+)?", " (")
+  string.adj <- repl(string.adj, "(\\s+)?\\\x28(\\s+)?", " (")
 
   # right paranthesis ====================================================================
-  string <- repl(string, "(\\s+)?\\\x29(\\s+)?", ") ")
+  string.adj <- repl(string.adj, "(\\s+)?\\\x29(\\s+)?", ") ")
 
   # left square bracket ==================================================================
-  string <- repl(string, "(\\s+)?\\\x5B(\\s+)?", " [")
+  string.adj <- repl(string.adj, "(\\s+)?\\\x5B(\\s+)?", " [")
 
   # right square bracket =================================================================
-  string <- repl(string, "(\\s+)?\\\x5D(\\s+)?", "] ")
+  string.adj <- repl(string.adj, "(\\s+)?\\\x5D(\\s+)?", "] ")
 
   # colon ================================================================================
-  string <- repl(string, "(\\s+)?\3A(\\s+)?", ": ")
+  string.adj <- repl(string.adj, "(\\s+)?\3A(\\s+)?", ": ")
 
   # semicolon ============================================================================
-  string <- repl(string, "(\\s+)?\3B(\\s+)?", "; ")
+  string.adj <- repl(string.adj, "(\\s+)?\3B(\\s+)?", "; ")
 
   # currencies ===========================================================================
-  string <- repl(string, "(\\p{Sc})(\\s+)?([\\d,\\.]+)", "$1$3")
+  string.adj <- repl(string.adj, "(\\p{Sc})(\\s+)?([\\d,\\.]+)", "$1$3")
 
-  # punctuation ===========================================================================
-  string <- repl(string, "\\s([\\.\\!\\?])", "$1")
+  # punctuation ==========================================================================
+  string.adj <- repl(string.adj, "\\s([\\.\\!\\?])", "$1")
 
   # abbreviations ========================================================================
-  string <- repl(string, "(\\b\\w\\b\\.)\\s?(?!\\w{2,})", "$1")
+  string.adj <- repl(string.adj, "(\\b\\w\\b\\.)\\s?(?!\\w{2,})", "$1")
 
-  string <- stringi::stri_trans_general(string, "latin-ascii")
+  # convert to ascii charcters ===========================================================
+  string.adj <- stringi::stri_trans_general(string.adj, "latin-ascii")
 
   # trim and double spaces ===============================================================
-  string <- stringi::stri_trim_both(repl(string, "\\s+", " "))
+  string.adj <- stringi::stri_trim_both(repl(string.adj, "\\s+", " "))
 
   # lower ================================================================================
-  if (lower == TRUE) string <- stringi::stri_trans_tolower(string)
+  if (lower == TRUE) string.adj <- stringi::stri_trans_tolower(string.adj)
 
-  return(string)
+  # replace adjusted string with original, in case asjusted string  is empty =============
+  string.adj[which(string.adj == "")] <- string[which(string.adj == "")]
+
+  # return output ========================================================================
+  return(string.adj)
 
 }
 
@@ -144,17 +150,24 @@ top_rem_punct <- function(string, punct.replacement = FALSE) {
 
   repl <- function(string, pattern, replace)
     stringi::stri_replace_all_regex(string, pattern, replace)
-  string <- repl(string, "'", "")
-  string <- repl(string, "\\.", "")
+
+  string.adj <- string
+  string.adj <- repl(string.adj, "'s", "")
+  string.adj <- repl(string.adj, "'", "")
+  string.adj <- repl(string.adj, "\\.", "")
 
   if (punct.replacement == TRUE) {
-    string <- repl(string, "(\\s+)?[&\\+](\\s+)?", " and ")
+    string.adj <- repl(string.adj, "(\\s+)?[&\\+](\\s+)?", " and ")
   }
 
-  string <- repl(string, "[[:punct:]]", " ")
-  string <- repl(string, "([[:space:]]|[[:blank:]])+", " ")
-  string <- stringi::stri_trim_both(string)
-  return(string)
+  string.adj <- repl(string.adj, "[[:punct:]]", " ")
+  string.adj <- repl(string.adj, "([[:space:]]|[[:blank:]])+", " ")
+  string.adj <- stringi::stri_trim_both(string.adj)
+
+  string.adj[which(string.adj == "")] <- string[which(string.adj == "")]
+  return(string.adj)
+
+  return(string.adj)
 }
 
 
@@ -268,4 +281,23 @@ top_lem_term <- function(string) {
 
   return(out)
 
+}
+
+#' Replace strings
+#'
+#' @param table a
+#' @param col a
+#' @param string.match a
+#' @param string.repl a
+#'
+#' @return a
+#' @export
+#'
+#' @examples a
+top_repl_strings <- function(table, col, string.match, string.repl) {
+  match.1 <- fastmatch::fmatch(table[[col]], string.match)
+  match.2 <- which(!is.na(match.1))
+  match.1 <- match.1[!is.na(match.1)]
+  table[match.2, col] <- string.repl[match.1]
+  return(table)
 }
