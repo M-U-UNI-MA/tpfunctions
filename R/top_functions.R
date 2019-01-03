@@ -180,6 +180,9 @@ top_punct <- function(string, lower = TRUE, punct.stand = TRUE,
 #' top_term_lookup(a, b, c)
 #' top_term_lookup(a, b, c, TRUE)
 top_term_lookup <- function(terms, key.match, key.reassign = NULL, tokenize = FALSE) {
+
+  if (any(duplicated(key.match))) stop("matching string must not have duplicates")
+
   if (isTRUE(tokenize)) {
     a <- tokenizers::tokenize_regex(terms, "\\b")
     b <- unlist(lapply(1:length(a), function(y) rep(y, length(a[[y]]))))
