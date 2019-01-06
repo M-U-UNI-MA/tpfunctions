@@ -129,10 +129,10 @@ top_punct <- function(string, lower = TRUE, punct.stand = TRUE,
 
     # punctuation replacement (partial) ==================================================
     if (punct.rem == "partial")
-      string.adj <- repl(string.adj, "(?![\\&\\/\\-])[[:punct:]]|\\=", " ")
+      string.adj <- gsub("(?![\\&\\/\\-])[[:punct:]]", " ", string.adj, perl = TRUE)
 
     if (punct.rem == "complete")
-      string.adj <- repl(string.adj, "[[:punct:]]|\\=", " ")
+      string.adj <- gsub("[[:punct:]]", " ", string.adj, perl = TRUE)
 
     string.adj <- repl(string.adj, "([[:space:]]|[[:blank:]])+", " ")
     string.adj <- stringi::stri_trim_both(string.adj)
@@ -146,7 +146,6 @@ top_punct <- function(string, lower = TRUE, punct.stand = TRUE,
   return(string.adj)
 
 }
-
 
 
 # TERM LOOKUP  ===========================================================================

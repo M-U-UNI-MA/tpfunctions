@@ -14,12 +14,10 @@
 #' locked:    binary\cr
 #' size:      numeric (in KB)
 #' @export
+# usethis::use_package("pdftools")
 pop_pdf_info <- function(file) {
   `%>%` <- magrittr::`%>%`
-
-  suppressMessages(
-    info <- tryCatch(pdftools::pdf_info(file), error = function(e) "error")
-  )
+  suppressMessages(info <- tryCatch(pdftools::pdf_info(file), error = function(e) "error"))
 
   info.tbl <- tibble::tibble(readable = NA, n_page = NA, encrypted = NA, locked = NA, size = NA)
 
@@ -35,13 +33,8 @@ pop_pdf_info <- function(file) {
     info.tbl$encrypted = as.numeric(info[["encrypted"]])
     info.tbl$locked    = as.numeric(info[["locked"]])
     info.tbl$size      = round(file.size(file) / 1000, 2)
-
   }
-
-
-
   return(info.tbl)
-
 }
 
 
@@ -84,4 +77,28 @@ pop_pdf_to_txt <- function(file, outdir = NULL, wait = FALSE) {
     error = function(e)
       "error"
   ))
+}
+# DECRYPT PDFs ===========================================================================
+#' Decrypt pdfs
+#'
+#' @description
+#' A wrapper around the qpdf command line tool.
+#' - First:  The qpdf tool must be downloaded (https://sourceforge.net/projects/qpdf/files/qpdf/).\cr
+#' - Second: The zipped file must be extracted.\cr
+#' - Third, environment variables must be updated.\cr
+#' Program is tested on qpdf version 8.1.0.
+#'
+#'
+#' @param path.in complete path to the encrypted pdf file
+#' (must be different than path.out)
+#' @param path.out complete path where the decrypted file should be written
+#' (must be different than path.in)
+#'
+#' @return A pdf file (decrypted)
+#' @export
+pop_decrypt_pdf <- function(file.in, file.out) {
+  tryCatch({
+    system(paste('qpdf --decrypt', file.in, file.out))
+  }, error = function(e)
+    "error")
 }

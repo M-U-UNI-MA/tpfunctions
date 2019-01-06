@@ -4,10 +4,10 @@
 \alias{tox_doc_stats}
 \title{Text Statistics for Documents}
 \usage{
-tox_doc_stats(path, lan = c("single", "mixed"))
+tox_doc_stats(text, lan = c("single", "mixed"))
 }
 \arguments{
-\item{path}{The path to the textfiles (get with list.files())}
+\item{text}{a character string of texts}
 
 \item{lan}{If the language of the text is unknown it can be determined}
 }

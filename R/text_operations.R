@@ -6,8 +6,8 @@
 #' This function counts pages, words and characters, it determines the filesize and
 #' calculates ratios. (optional the language of the text is returned)
 #'
-#' @param path
-#' The path to the textfiles (get with list.files())
+#' @param text
+#' a character string of texts
 #'
 #' @param lan
 #' If the language of the text is unknown it can be determined
@@ -26,23 +26,20 @@
 #' rel_1: reliability of the first detected language (optional)\cr
 #' rel_2: reliability of the second detected language (optional)
 #' @export
-tox_doc_stats <- function (path, lan = c("single", "mixed")) {
+tox_doc_stats <- function (text, lan = c("single", "mixed")) {
   `%>%` <- magrittr::`%>%`
   if (!lan %in% c("single", "mixed")) stop("wrong language identifier")
-  text <- readtext::readtext(path)
 
   text.stats <- tibble::tibble(
-    doc_id = text$doc_id,
-    n_page = stringi::stri_count_regex(text$text, "\\f"),
-    n_word = stringi::stri_count_words(text$text),
-    n_char = stringi::stri_count_boundaries(text$text, type = "character") - (n_word - 1),
+    n_page = stringi::stri_count_regex(text, "\\f"),
+    n_word = stringi::stri_count_words(text),
+    n_char = stringi::stri_count_boundaries(text, type = "character") - (n_word - 1),
     r_word_page = round(n_word / n_page, 4),
-    r_char_word = round(n_char / n_word, 4),
-    size   = round(file.size(path) / 1000, 4)
+    r_char_word = round(n_char / n_word, 4)
   )
 
   if (lan == "mixed") {
-    lan.stats <- lapply(1:nrow(text), function(x) {
+    lan.stats <- lapply(1:length(text), function(x) {
       if (text.stats$n_word[x] == 0) {
         lan <- tibble::tibble(
           lan_1 = "un",
@@ -51,7 +48,7 @@ tox_doc_stats <- function (path, lan = c("single", "mixed")) {
           rel_2 = 0
         )
       } else {
-        lan.detect <- cld2::detect_language_mixed(text$text[x])[["classificaton"]]
+        lan.detect <- cld2::detect_language_mixed(text[x])[["classificaton"]]
         lan <- tibble::tibble(
           lan_1 = lan.detect$code[1],
           lan_2 = lan.detect$code[2],
@@ -64,7 +61,7 @@ tox_doc_stats <- function (path, lan = c("single", "mixed")) {
   }
 
   if (lan == "single") {
-    text.stats$lan <- cld2::detect_language(text$text)
+    text.stats$lan <- cld2::detect_language(text)
 }
   return(text.stats)
 }
