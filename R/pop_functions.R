@@ -16,7 +16,6 @@
 #' @export
 # usethis::use_package("pdftools")
 pop_pdf_info <- function(file) {
-  `%>%` <- magrittr::`%>%`
   suppressMessages(info <- tryCatch(pdftools::pdf_info(file), error = function(e) "error"))
 
   info.tbl <- tibble::tibble(readable = NA, n_page = NA, encrypted = NA, locked = NA, size = NA)
@@ -34,6 +33,7 @@ pop_pdf_info <- function(file) {
     info.tbl$locked    = as.numeric(info[["locked"]])
     info.tbl$size      = round(file.size(file) / 1000, 2)
   }
+  gc()
   return(info.tbl)
 }
 
