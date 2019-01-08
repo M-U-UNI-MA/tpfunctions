@@ -4,12 +4,15 @@
 \alias{mes_cos}
 \title{Cosine Similarity}
 \usage{
-mes_cos(freq.table, return = c("normal", "matrix"))
+mes_cos(freq.table, obj = c("normal", "matrix"),
+  normalize = c("tf-idf", "none"))
 }
 \arguments{
 \item{freq.table}{A Table}
 
-\item{return}{Table or Matrix}
+\item{obj}{Shall a matrix of dataframe be returned}
+
+\item{normalize}{none or tf-idf}
 }
 \value{
 Table or Matrix

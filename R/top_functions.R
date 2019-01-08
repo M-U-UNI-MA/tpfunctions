@@ -213,45 +213,38 @@ top_term_lookup <- function(terms, key.match, key.reassign = NULL, tokenize = FA
 #' @return
 #' A new vector with reassigned values
 #' @export
-top_lookup_wrap <-
-  function(string,
-           type = c("lemmas", "lemmas_select", "americanize", "errors", "split"),
-           tokenize = FALSE) {
+top_lookup_wrap <- function(string,
+                            type = c("lemmatize", "americanize", "errors", "split", "all"),
+                            tokenize = FALSE)
+{
+  if (length(type) != 1)
+    stop("you must select ONE type")
+  if (!type %in% c("lemmatize", "americanize", "errors", "split", "all"))
+    stop("wrong type selected")
+  if (type == "all")
+    tokenize <- TRUE
 
-    if (length(type) != 1)
-      stop("you must select ONE type")
-    if (!type %in% c("lemmas", "lemmas_select", "americanize", "errors", "split"))
-      stop("wrong type selected")
-
-    if (type == "lemmas") {
-      match <- tpfuns::table_lemmas$term
-      reass <- tpfuns::table_lemmas$lemma
-    }
-    if (type == "lemmas_select") {
-      match <- tpfuns::table_lemmas_selected$term
-      reass <- tpfuns::table_lemmas_selected$lemma
-    }
-    if (type == "errors") {
-      match <- tpfuns::table_errors$match
-      reass <- tpfuns::table_errors$reassign
-    }
-    if (type == "split") {
-      match <- tpfuns::table_split$match
-      reass <- tpfuns::table_split$reassign
-    }
-    if (type == "americanize") {
-      match <- tpfuns::table_americanize$term_uk
-      reass <- tpfuns::table_americanize$term_us
-    }
-
-    tpfuns::top_term_lookup(
-      terms = string,
-      key.match = match,
-      key.reassign = reass,
-      tokenize = tokenize
-    )
-
+  if (type %in% c("lemmatize", "all")) {
+    match <- tpfuns::table_lemmas$term
+    reass <- tpfuns::table_lemmas$lemma
+    string <- tpfuns::top_term_lookup(string, match, reass, tokenize)
   }
+  if (type %in% c("errors", "all")) {
+    match <- tpfuns::table_errors$error
+    reass <- tpfuns::table_errors$correction
+    string <- tpfuns::top_term_lookup(string, match, reass, tokenize)
+  }
+  if (type %in% c("split", "all")) {
+    match <- tpfuns::table_split$orig
+    reass <- tpfuns::table_split$split
+    string <- tpfuns::top_term_lookup(string, match, reass, tokenize)
+  }
+  if (type %in% c("americanize", "all")) {
+    match <- tpfuns::table_americanize$uk
+    reass <- tpfuns::table_americanize$us
+    string <- tpfuns::top_term_lookup(string, match, reass, tokenize)
+  }
+  return(string)
 
 
-
+}

@@ -4,8 +4,8 @@
 \alias{top_lookup_wrap}
 \title{Wrapper around the top_term_lookup function}
 \usage{
-top_lookup_wrap(string, type = c("lemmas", "lemmas_select",
-  "americanize", "errors", "split"), tokenize = FALSE)
+top_lookup_wrap(string, type = c("lemmatize", "americanize", "errors",
+  "split", "all"), tokenize = FALSE)
 }
 \arguments{
 \item{string}{Input string}

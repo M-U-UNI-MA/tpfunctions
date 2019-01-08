@@ -4,12 +4,19 @@
 \alias{mes_pbs}
 \title{Profile Based Standardization}
 \usage{
-mes_pbs(freq.table, return = c("normal", "matrix"))
+mes_pbs(freq.table, obj = c("normal", "matrix"), cons = FALSE,
+  weigh = c("equal", "freq"), freq.cap = NULL)
 }
 \arguments{
 \item{freq.table}{A Table}
 
-\item{return}{Table or Matrix}
+\item{obj}{Matrix or dataframe}
+
+\item{cons}{shall the output be consolidated (sum up concepts)}
+
+\item{weigh}{shall the output be weighted (equally or by frequency)}
+
+\item{freq.cap}{apply a minimum frequency}
 }
 \value{
 Table or Matrix

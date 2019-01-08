@@ -13,7 +13,7 @@
 #' @return
 #' A string
 #' @export
-lower_ws <- function(string){
+oth_lower_ws <- function(string){
   string <- stringi::stri_trans_tolower(string)
   string <- stringi::stri_replace_all_regex(string, "\\s+", " ")
   string <- stringi::stri_trim_both(string)
@@ -53,3 +53,24 @@ par_stop <- function() {
     parallel::stopCluster(cl)
   }
 }
+
+#' BACKUP NAME creation
+#'
+#' @param dir The folder where the file should be saved
+#' @param file The file name with file ending
+#'
+#' @return
+#' A character string
+#' @export
+#'
+#' @examples
+#' tpfuns::oth_bu_name("test_folder", "file.csv")
+oth_bu_name <- function(dir, file) {
+  dir <- gsub("\\\\+", "/", dir)
+  if (!stringi::stri_detect(dir, regex = "/$"))
+    dir <- paste0(dir, "/")
+  paste0(dir, format(Sys.time(), "%Y%m%d-%H%M%S"), "_", file)
+
+}
+
+
