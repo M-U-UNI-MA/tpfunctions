@@ -41,7 +41,8 @@ usethis::use_data(table_errors, overwrite = TRUE)
 table_lemmas <- int_read("data-raw/table_lemmas.csv") %>%
   filter(!term == lemma) %>%
   filter(!stri_detect(lemma, fixed = " ")) %>%
-  filter(!stri_detect(term, fixed = " "))
+  filter(!stri_detect(term, fixed = " ")) %>%
+  filter(nchar(term) != 1)
 usethis::use_data(table_lemmas, overwrite = TRUE)
 
 # table: split ===========================================================================
@@ -76,9 +77,8 @@ table_sent_abbr <- int_read("data-raw/table_sent_tok_abbr.csv")
 usethis::use_data(table_sent_abbr, overwrite = TRUE)
 
 # table: legal_entities ==================================================================
-table_legal_entities <- readr::read_delim("data-raw/table_legal_entities.csv", ";") %>%
-  dplyr::mutate(le_name = tpfuns::top_stand_punct(le_name)) %>%
-  dplyr::mutate(le_name = tpfuns::top_rem_punct(le_name, punct.replacement = TRUE)) %>%
+table_legal_entities <- int_read("data-raw/table_legal_entities.csv") %>%
+  dplyr::mutate(le_name = int_punct_complete(le_name)) %>%
   dplyr::mutate(regex = tpfuns::escape_regex(le_name)) %>%
   dplyr::mutate(regex = dplyr::if_else(type == "abbr", stringi::stri_replace_all_regex(regex, "(\\w)", "$1\\\\s?"), regex)) %>%
   dplyr::mutate(regex = dplyr::case_when(occurance == "Start" ~ paste0("^", regex, "\\b"),
@@ -89,3 +89,19 @@ table_legal_entities <- readr::read_delim("data-raw/table_legal_entities.csv", "
 
 usethis::use_data(table_legal_entities, overwrite = TRUE)
 
+# table: acronyms ========================================================================
+gen <- read_tsv("data-orig/2of12inf.txt", col_types = cols("c")) %>% pull()
+table_acronyms <- int_read("data-raw/table_acronym.csv") %>%
+  mutate(acronym = int_punct_complete(acronym), term = int_punct_complete(term)) %>%
+  distinct() %>% mutate(counter = 1) %>%
+  spread(origin, counter, fill = 0) %>%
+  mutate(gen = as.numeric(acronym %in% gen), nchar = nchar(acronym)) %>%
+  group_by(acronym) %>% mutate(poly = if_else(n() > 1, 1, 0)) %>%
+  select(acronym, term, nchar, gen, poly, everything())
+usethis::use_data(table_acronyms, overwrite = TRUE)
+
+# table: foreign =========================================================================
+table_foreign <- int_read("data-raw/table_foreign.csv") %>%
+  mutate(term = int_punct_complete(term)) %>%
+  distinct(term, .keep_all = TRUE)
+usethis::use_data(table_foreign, overwrite = TRUE)
