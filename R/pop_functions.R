@@ -18,7 +18,11 @@
 pop_pdf_info <- function(file) {
   suppressMessages(info <- tryCatch(pdftools::pdf_info(file), error = function(e) "error"))
 
-  info.tbl <- tibble::tibble(readable = NA, n_page = NA, encrypted = NA, locked = NA, size = NA)
+  doc.id <- gsub(".pdf", "", basename(file))
+
+  info.tbl <- tibble::tibble(doc_id = doc.id, readable = NA, n_page = NA,
+                             encrypted = NA, locked = NA, size = NA)
+
 
   if (is.character(info)) {
     info.tbl$readable  = 0
