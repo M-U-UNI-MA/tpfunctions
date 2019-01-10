@@ -151,6 +151,9 @@ fop_tok <- function(input = NULL, ident = NULL,
       dplyr::ungroup()
 
     detect.abbr <- stringi::stri_detect_regex(table.text$token, abbr, case_insensitive = TRUE)
+    # in case the last entry is an abbreviation set it to FALSE
+    detect.abbr[length(detect.abbr)] <- FALSE
+
     adj.0 <- which(detect.abbr)
     adj.1 <- adj.0 + 1
     adj.0 <- table.text$sen_id[adj.0]
