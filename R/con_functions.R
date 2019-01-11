@@ -1,12 +1,4 @@
-test <- tibble::tibble(
-  con_id = c( 1,   1,   1,   2,   2,   3,   3,   4,   4 ,  5,   5,   5,   6,   6 ),
-  term   = c("a", "c", "b", "a", "b", "d", "e", "e", "f", "e", "f", "g", "b", "a")
-)
-
-df <- test
-col.term <- "term"
-col.conid <- "con_id"
-
+# DEDUPLICATE CONCEPTS ===================================================================
 #' Deduplicate Concepts
 #'
 #' @description
@@ -50,7 +42,7 @@ con_dedup <- function(df, col.term, col.conid) {
 }
 
 
-
+# DISAMBIGUATE CONCEPTS ==================================================================
 #' Disambiguate Concepts
 #'
 #' #' @description
@@ -105,7 +97,7 @@ con_disambig <- function(df, col.term, col.conid) {
   return(df)
 }
 
-
+# MERGE CONCEPTS =========================================================================
 #' Merge Concepts
 #'
 #' @description

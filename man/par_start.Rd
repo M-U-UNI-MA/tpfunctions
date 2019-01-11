@@ -4,7 +4,7 @@
 \alias{par_start}
 \title{Make Cluster and Progress Bar for PBAPPLY functions}
 \usage{
-par_start(nthread = 1)
+par_start(nthread = 1, pb = c("timer", "txt", "win", "tk", "none"))
 }
 \arguments{
 \item{nthread}{Number of cores to be used}

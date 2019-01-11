@@ -31,8 +31,12 @@ oth_lower_ws <- function(string){
 # usethis::use_package("parallel")
 # usethis::use_package("pbapply")
 # usethis::use_package("doSNOW")
-par_start <- function(nthread = 1) {
-  pbapply::pboptions(type = "timer", char = "=", txt.width = 90)
+par_start <- function(nthread = 1, pb = c("timer", "txt", "win", "tk", "none")) {
+  if (!any(pb %in% c("timer", "txt", "win", "tk", "none")))
+    stop("wrong progress bar option")
+  if (length(pb) > 1)
+    pb <- pb[1]
+  pbapply::pboptions(type = pb, char = "=", txt.width = 90)
   if (nthread == 1) {
     cl <<- NULL
   } else {
@@ -73,4 +77,40 @@ oth_bu_name <- function(dir, file) {
 
 }
 
+#' Wrapper Around the Split Function
+#'
+#' @description
+#' Splits an object into chunk sizes and puts them into a list
+#'
+#' @param x
+#' The object
+#' @param chunk.size
+#' The number of elements
+#' @param type
+#' How should the elements be ordered?
+#'
+#' @return
+#' A list
+#' @export
+#'
+#' @examples
+#' libraray(tpfuns)
+#'
+#' split_chunk(1:10, 4, "sort")
+#' split_chunk(1:10, 4, "equal")
+#' split_chunk(1:10, 4, "rand")
+split_chunk <- function(x, chunk.size, type = c("sort", "equal", "rand")) {
+  if (!any(type %in% c("sort", "equal", "rand"))) stop("wrong split type")
+  if (length(type) > 1) type <- type[1]
 
+  if (is.table(x) | is.matrix(x)) {l <- nrow(x)} else {l <- length(x)}
+
+  ids  <- rep(1:ceiling(l / chunk.size), chunk.size)[1:l]
+
+  if (type == "sort") ids <- sort(ids)
+  if (type == "equal") ids <- ids
+  if (type == "rand") ids <- sample(ids)
+
+  out <- split(x, ids)
+  return(out)
+}
