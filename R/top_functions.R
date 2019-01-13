@@ -224,11 +224,6 @@ top_lookup_wrap <- function(string,
   if (type == "all")
     tokenize <- TRUE
 
-  if (type %in% c("lemmatize", "all")) {
-    match <- tpfuns::table_lemmas$term
-    reass <- tpfuns::table_lemmas$lemma
-    string <- tpfuns::top_term_lookup(string, match, reass, tokenize)
-  }
   if (type %in% c("errors", "all")) {
     match <- tpfuns::table_errors$error
     reass <- tpfuns::table_errors$correction
@@ -242,6 +237,11 @@ top_lookup_wrap <- function(string,
   if (type %in% c("americanize", "all")) {
     match <- tpfuns::table_americanize$uk
     reass <- tpfuns::table_americanize$us
+    string <- tpfuns::top_term_lookup(string, match, reass, tokenize)
+  }
+  if (type %in% c("lemmatize", "all")) {
+    match <- tpfuns::table_lemmas$term
+    reass <- tpfuns::table_lemmas$lemma
     string <- tpfuns::top_term_lookup(string, match, reass, tokenize)
   }
   return(string)
