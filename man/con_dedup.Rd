@@ -14,7 +14,8 @@ con_dedup(df, col.term, col.conid)
 \item{col.conid}{The name of the column containing the concept ids as character string}
 }
 \value{
-A dataframe with deduplicated concepts
+A list containing (a) the adjusted dataframe, (b) the removed concepts and c() the
+adjustment matrix
 }
 \description{
 This function checks if two concepts in the dataframe contain exactly the same terms

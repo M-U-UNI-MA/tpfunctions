@@ -14,7 +14,7 @@ con_merge(df, col.term, col.conid)
 \item{col.conid}{The name of the column containing the concept ids as character string}
 }
 \value{
-A dataframe with merged concepts (reassigned concept ids)
+A dataframe with reassigned concept ids
 }
 \description{
 this function reassigns concept ids if different concepts contain same terms

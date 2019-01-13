@@ -24,5 +24,5 @@ libraray(tpfuns)
 
 split_chunk(1:10, 4, "sort")
 split_chunk(1:10, 4, "equal")
-split_chunk(1:10, 4, "rand")
+split_chunk(1:10, 15, "rand")
 }

@@ -98,7 +98,7 @@ oth_bu_name <- function(dir, file) {
 #'
 #' split_chunk(1:10, 4, "sort")
 #' split_chunk(1:10, 4, "equal")
-#' split_chunk(1:10, 4, "rand")
+#' split_chunk(1:10, 15, "rand")
 split_chunk <- function(x, chunk.size, type = c("sort", "equal", "rand")) {
   if (!any(type %in% c("sort", "equal", "rand"))) stop("wrong split type")
   if (length(type) > 1) type <- type[1]
