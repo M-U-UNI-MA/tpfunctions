@@ -14,4 +14,7 @@ Imports:
     pdftools,
     parallel,
     pbapply,
-    doSNOW
+    doSNOW,
+    Rcpp
+LinkingTo: 
+    Rcpp
